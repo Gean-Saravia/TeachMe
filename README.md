@@ -42,6 +42,6 @@ Nuestra plataforma actúa como un punto de encuentro entre estudiantes y profeso
 En el futuro, queremos transformar nuestra plataforma en un espacio de intercambio de habilidades. Los usuarios podrán enseñar lo que saben y aprender lo que desean, conectándose con personas que tienen intereses complementarios. La plataforma será gratuita, promoviendo el acceso universal a la educación y el aprendizaje continuo.
 
 ## Conclusión
-Nuestro proyecto está diseñado para hacer que encontrar y contratar profesores particulares sea tan fácil como hacer un clic. Queremos mejorar la educación personalizada para todos, ofreciendo una plataforma donde estudiantes y profesores se beneficien mutuamente. Con nuestra visión de futuro, buscamos no solo conectar a estudiantes y profesores, sino también crear una comunidad de intercambio de habilidades accesible para todos.
+Nuestro proyecto está diseñado para hacer que encontrar y contratar profesores particulares sea tan fácil como hacer un click. Queremos mejorar la educación personalizada para todos, ofreciendo una plataforma donde estudiantes y profesores se beneficien mutuamente. Con nuestra visión de futuro, buscamos no solo conectar a estudiantes y profesores, sino también crear una comunidad de intercambio de habilidades accesible para todos.
 
 **<p align="center">¡Únete a nosotros y transforma tu manera de aprender y enseñar!</p>**
