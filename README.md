@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/8a517dd3-eeb8-4e82-9329-dfc818ebf987" alt="Logo TeachMe">
 </p>
 
-## **Introducción**
+## Introducción
 ¡Hola a todos! Estamos emocionados de presentar nuestra plataforma, una herramienta revolucionaria que facilita la conexión entre estudiantes y profesores particulares. Este proyecto no solo simplifica el proceso de encontrar clases personalizadas, sino que también optimiza la experiencia educativa para todos.
 
 ## Descripción del Proyecto
