@@ -42,7 +42,7 @@ Nuestra plataforma actúa como un punto de encuentro entre estudiantes y profeso
 
 En nuestra plataforma, valoramos tanto a estudiantes como a profesores, proporcionando diferentes planes para satisfacer sus necesidades. Es importante destacar que ningún usuario puede ver la grilla de profesores hasta que se cree una cuenta. Esto garantiza una experiencia más segura y personalizada para todos nuestros usuarios.
 
--#### Plan Normal
+#### Plan Normal
 
 El Plan Normal está disponible para todos los usuarios registrados sin costo adicional y ofrece las siguientes características:
 
