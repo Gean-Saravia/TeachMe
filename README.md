@@ -45,4 +45,4 @@ En el futuro, queremos transformar nuestra plataforma en un espacio de intercamb
 ## Conclusión
 Nuestro proyecto está diseñado para hacer que encontrar y contratar profesores particulares sea tan fácil como hacer un clic. Queremos mejorar la educación personalizada para todos, ofreciendo una plataforma donde estudiantes y profesores se beneficien mutuamente. Con nuestra visión de futuro, buscamos no solo conectar a estudiantes y profesores, sino también crear una comunidad de intercambio de habilidades accesible para todos.
 
-<p align="center">**¡Únete a nosotros y transforma tu manera de aprender y enseñar!**</p>
+**<p align="center">¡Únete a nosotros y transforma tu manera de aprender y enseñar!</p>**
