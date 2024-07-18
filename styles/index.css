@@ -1,0 +1,57 @@
+:root{
+    --secondary-blue: #094067;
+    --white: #FFFFFF;
+    --fredoka: "Fredoka", sans-serif;
+    --alata: "Alata", sans-serif;
+    --kumbh: "Kumbh Sans", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.body-index{
+    background-color: #A2C3DA;
+}
+
+.nav{
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo-index{
+        width: 200px;
+    }
+
+    .menu-index{
+        display: flex;
+        gap: 3rem;
+
+        li{
+            list-style: none;
+
+            a{
+                color: var(--secondary-blue);
+                text-decoration: none;
+                font-family: var(--kumbh);
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .btn-index button{
+        background-color: var(--secondary-blue);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        border: none;
+        color: var(--white);
+        font-family: var(--kumbh);
+        font-size: 1.25rem;
+    }
+}
