@@ -11,11 +11,10 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body class="body-index">
-    <header>
-        <nav class="nav">
-            <figure>
+    <header class="header-index">
+        <nav class="nav-index">
+            <figure class="logo-index">
                 <img 
-                class="logo-index"
                 src="./assets/teachme-logo-completo.png"
                 alt="Logo completo de TeachMe"
                 />
@@ -30,7 +29,179 @@
                 <button class="btn" id="btnSignin" >Iniciar Sesión</button>
             </div>
         </nav>
+        <section class="section-bienvenida">
+            <article class="texto-bienvenida">
+                <h1>El conocimiento está </br> a tu alcance</h1>
+                <p>Comienza tu viaje de aprendizaje hoy mismo</p>
+                <div class="buttons-header">
+                    <button type="button">Ver Categorias</button>
+                    <button type="button">Registrarse</button>
+                </div>
+            </article>
+            <article class="imagen-bienvenida">
+                <img src="./assets/mujer_estudiando_2.png" alt="Mujer estudiando">
+            </article>
+        </section>
     </header>
-    <!-- Probando mail -->
+    <main class="main-index">
+        <section class="cursos-solicitados">
+            <article>
+                <h2>Cursos más solicitados</h2>
+                <div class="cont-cursos-solicitados-index">
+                    <div class="curso-solicitado-index">
+                        <img src="./assets/chico-celular.png" alt="Joven estudiando desde su celular">
+                        <p>Instrumentos virtuales: <br> técnicas avanzadas</p>
+                        <button class="btn-solicitar-index" >Solicitar</button>
+                    </div>
+                    <div class="curso-solicitado-index">
+                        <img src="./assets/chico-casco-vr.png" alt="Joven asistiendo a clase con sus cascos de Realidad Virtual">
+                        <p>IA y aprendizaje automático</p>
+                        <button class="btn-solicitar-index" >Solicitar</button>
+                    </div>
+                    <div class="curso-solicitado-index">
+                        <img src="./assets/mujer-microscopio.png" alt="Mujer estudiando ciencias con su microscopio">
+                        <p>Ciencias químicas y biológicas</p>
+                        <button class="btn-solicitar-index" >Solicitar</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="testimonios-index">
+            <article class="estadistica-index">
+                <p>+440 profesores</p>
+                <p>+3500 alumnos</p>
+                <p>+50 cursos</p>
+            </article>
+            <article class="cont-testimonios-index"> 
+                <div class="testimonio">
+                    <img src="./assets/cabra.png" alt="Paulo Londra imagen de perfil">
+                    <div class="testi-estrellas">
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                    </div>
+                    <div class="testi-detalles">
+                        <p class="testi-nombre">Paulo Londra</p>
+                        <p class="testi-curso">Curso de idiomas</p>
+                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <img src="./assets/gato.png" alt="Paulo Londra imagen de perfil">
+                    <div class="testi-estrellas">
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                    </div>
+                    <div class="testi-detalles">
+                        <p class="testi-nombre">Bart Simpson</p>
+                        <p class="testi-curso">Curso de idiomas</p>
+                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <img src="./assets/vaca.png" alt="Paulo Londra imagen de perfil">
+                    <div class="testi-estrellas">
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                    </div>
+                    <div class="testi-detalles">
+                        <p class="testi-nombre">Frank Fabra</p>
+                        <p class="testi-curso">Curso de idiomas</p>
+                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <img src="./assets/pato.png" alt="Paulo Londra imagen de perfil">
+                    <div class="testi-estrellas">
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                        <p>&#9733;</p>
+                    </div>
+                    <div class="testi-detalles">
+                        <p class="testi-nombre">Joe Biden</p>
+                        <p class="testi-curso">Curso de idiomas</p>
+                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="frase-index">
+            <article>
+                <div class="circulo-index"></div>
+                <img src="./assets/hombre-tablet.png" alt="Hombre estudiando desde su computadora portátil">
+                <p>Creemos en el poder del conocimiento para transformar vidas. Te ofrecemos una amplia gama de tutores especializados para ayudarte a alcanzar tus metas educativas. ¡Únete a nosotros y transforma tu futuro!</p>
+            </article>
+        </section>
+        <section class="nosotros-index">
+            <article>
+                <h2>Equipo de TeachMe</h2>
+                <div class="cont-equipo-index">
+                    <div class="equipo-index"
+                        style="background-image: url(../assets/gean-emoji.png)">
+                        <p class="equipo-nombre">Gean Saravia</p>
+                        <p class="equipo-rol">Lider de Proyecto</p>
+                        <div class="equipo-contacto">
+                            <a href="#"><img src="./assets/github.svg" alt=""></a>
+                            <a href="#"><img src="./assets/linkedin.svg" alt=""></a>
+                            <a href="#"><img src="./assets/email.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="equipo-index"
+                        style="background-image: url(../assets/laura-emoji.png)">
+                        <p class="equipo-nombre">Gean Saravia</p>
+                        <p class="equipo-rol">Lider de Proyecto</p>
+                        <div class="equipo-contacto">
+                            <a href="#"><img src="./assets/github.svg" alt=""></a>
+                            <a href="#"><img src="./assets/linkedin.svg" alt=""></a>
+                            <a href="#"><img src="./assets/email.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="equipo-index"
+                        style="background-image: url(../assets/jazmin-emoji.png)">
+                        <p class="equipo-nombre">Gean Saravia</p>
+                        <p class="equipo-rol">Lider de Proyecto</p>
+                        <div class="equipo-contacto">
+                            <a href="#"><img src="./assets/github.svg" alt=""></a>
+                            <a href="#"><img src="./assets/linkedin.svg" alt=""></a>
+                            <a href="#"><img src="./assets/email.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="equipo-index"
+                        style="background-image: url(../assets/camila-emoji.png)">
+                        <p class="equipo-nombre">Gean Saravia</p>
+                        <p class="equipo-rol">Lider de Proyecto</p>
+                        <div class="equipo-contacto">
+                            <a href="#"><img src="./assets/github.svg" alt=""></a>
+                            <a href="#"><img src="./assets/linkedin.svg" alt=""></a>
+                            <a href="#"><img src="./assets/email.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="equipo-index"
+                        style="background-image: url(../assets/fabrizio-emoji.png)">
+                        <p class="equipo-nombre">Gean Saravia</p>
+                        <p class="equipo-rol">Lider de Proyecto</p>
+                        <div class="equipo-contacto">
+                            <a href="#"><img src="./assets/github.svg" alt=""></a>
+                            <a href="#"><img src="./assets/linkedin.svg" alt=""></a>
+                            <a href="#"><img src="./assets/email.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer-index">
+        <p>Esto es un footer</p>
+    </footer>
 </body>
 </html>
