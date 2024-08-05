@@ -28,8 +28,6 @@
     flex-direction: column;
 }
 
-
-
 .nav-index{
     display: flex;
     justify-content: space-around;
@@ -151,7 +149,6 @@
         flex-direction: column;
         align-items: center;
         height: 100vh;
-        border: 1px solid red;
 
         h2{
             font-family: var(--fredoka);
@@ -160,7 +157,6 @@
             font-size: 2.3rem;
             line-height: 10vh;
             text-align: center;
-            border: 2px solid red;
             text-align: center;
         }
 
@@ -219,7 +215,6 @@
         flex-direction: column;
         align-items: center;
         height: 100vh;
-        border: 1px solid red;
 
         .estadistica-index{
             display: flex;
@@ -304,7 +299,6 @@
         align-items: center;
         height: 100vh;
         gap: 2rem;
-        border: 1px solid red;
 
         .circulo-index{
             position: absolute;
@@ -336,7 +330,6 @@
         align-items: center;
         height: 100vh;
         gap: 3rem;
-        border: 1px solid red;
 
         h2{
             font-family: var(--fredoka);
@@ -359,28 +352,30 @@
                 flex-direction: column;
                 justify-content: end;
                 align-items: start;
-                /* background-image: url(../assets/gean-emoji.png); */
                 background-position: center;
                 background-size: cover;
                 border-radius: 2rem;
                 width: 12rem;
                 height: 16rem;
                 padding: 10px;
+                /* background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(24,24,24,0.4964110644257703) 44%, rgba(0,0,0,1) 100%); */
 
                 .equipo-nombre{
                     color: var(--white);
                     font-family: var(--alata);
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                     line-height: 1.5rem;
-                    -webkit-text-stroke-width: .8px;
-                    -webkit-text-stroke-color: #000;
+                    /* -webkit-text-stroke-width: .8px;
+                    -webkit-text-stroke-color: #000; */
+                    text-shadow: 4px 4px 8px #000000;
                 }
                 .equipo-rol{
                     color: var(--white);
                     font-family: var(--alata);
                     font-size: 1rem;
-                    -webkit-text-stroke-width: .8px;
-                    -webkit-text-stroke-color: #000;
+                    /* -webkit-text-stroke-width: .8px;
+                    -webkit-text-stroke-color: #000; */
+                    text-shadow: 4px 4px 8px #000000;
                 }
 
                 .equipo-contacto{
@@ -393,6 +388,116 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.footer-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fredoka);
+
+    .header-footer{
+        width: 90%;
+        border-bottom: 1px solid var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 1rem 0;
+
+        img{
+            width: 15rem;
+            cursor: pointer;
+        }
+
+        .redes-footer {
+            display: flex;
+            gap: 2rem;
+
+            img{
+                filter: invert(1);
+                width: 1.7rem;
+            }
+        }
+    }
+
+    .contenido-footer{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        width: 90%;
+
+        .columna-footer{
+            flex: 1;
+            margin: 0 15px;
+
+            h3{
+                color: var(--white);
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
+            ul{
+                list-style-type: none;
+                padding: 0;
+
+                li{
+                    margin-bottom: 8px;
+
+                    a{
+                        color: var(--soft-blue);
+                        text-decoration: none;
+                        font-size: .75rem;
+                    }
+                    a:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .suscribirse{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            input[type="email"]{
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                width: 100%;
+                max-width: 250px;
+                font-family: var(--fredoka);
+            }
+
+            button{
+                padding: 10px 20px;
+                background-color: var(--secondary-blue);
+                color: var(--white);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: var(--fredoka);
+                align-self: flex-end;
+            }
+
+            button:hover{
+                background-color: var(--soft-blue);
+            }
+        }
+    }
+
+    .copyright-footer{
+        width: 90%;
+        border-top: 1px solid var(--white);
+        padding: 1rem 0;
+        text-align: center;
+
+        p{
+            font-size: .7rem;
+            color: var(--white);
         }
     }
 }
