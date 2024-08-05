@@ -19,19 +19,11 @@
 
 .body-index{
     background-color: #A2C3DA;
-    /* display: grid;
-    grid:
-        "header" auto
-        "main" 1fr
-        "footer" auto
-        / 1fr;
-    gap: 8px */
     display: flex;
     flex-direction: column;
 }
 
 .header-index{
-    /* grid-area: header; */
     display: flex;
     flex-direction: column;
 }
@@ -39,12 +31,6 @@
 
 
 .nav-index{
-    /* display: grid;
-    grid: "logo-index navegacion iniciar-sesion" 1fr / 1fr 3fr 1fr;
-    gap: 8px;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -59,12 +45,6 @@
     }
 
     .menu-index{
-        /* grid-area: navegacion;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: auto auto auto auto;
-        gap: 1.5rem;
-        justify-self: end; */
         display: flex;
         gap: 1.3rem;
         align-items: center;
@@ -110,20 +90,12 @@
 }
 
 .section-bienvenida{
-    /* display: grid;
-    grid: "texto-bienvenida imagen-bienvenida" 90% / 40% 40%;
-    grid-auto-flow: row dense;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center; */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 85vh;
 
     .texto-bienvenida{
-        /* grid-area: texto-bienvenida; */
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -142,11 +114,6 @@
         }
         
         .buttons-header{
-            /* display: grid;
-            grid: "categorias-index registrarse-index" 1fr / 1fr 1fr ; 
-            gap: 1rem;
-            justify-content: space-between;
-            align-items: center; */
             display: flex;
             margin-top: 1rem;
             gap: 1rem;
