@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+body {
+  background-color: #A2C3DA;
+  font-family: "Alata";
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 5rem;
+}
+nav .logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+nav .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .search input {
+  border-radius: 20px;
+  color: grey;
+  border: none;
+  padding: 6px 10px;
+  font-family: "Alata";
+  margin-right: 5px;
+}
+nav .search button {
+  border-radius: 20px;
+  background-color: #5D9ECD;
+  border: none;
+  padding: 6px 10px;
+  font-family: "Alata";
+  cursor: pointer;
+  margin-right: 20px;
+}
+nav .search button:hover {
+  color: white;
+  background-color: darkblue;
+}
+nav .menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav .menu li {
+  display: inline-block;
+  padding-right: 50px;
+  transition: transform 0.3s ease;
+}
+nav .menu li:hover {
+  transform: scale(1.1); /* Aplica el efecto de zoom */
+}
+nav .menu a {
+  text-decoration: none;
+  color: #094067;
+}
+nav .menu a:hover {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+nav .profile {
+  display: flex;
+  align-items: center;
+}
+nav .profile #perfilFoto {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+nav .profile .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .profile .dropdown #flechitaAbajo {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+nav .profile .dropdown .dropdown-content {
+  right: 0;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+nav .profile .dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+nav .profile .dropdown .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+nav .profile .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container-profile {
+  background-color: #F8F3F3;
+  color: black;
+  border-radius: 8px;
+}
+
+.container-data {
+  background-color: red;
+  color: black;
+  border-radius: 8px;
+}
+
+.form-container {
+  background-color: pink;
+  color: black;
+  border-radius: 8px;
+}
+
+.container-form {
+  background-color: purple;
+  color: black;
+  border-radius: 8px;
+}/*# sourceMappingURL=styles.css.map */
