@@ -10,6 +10,8 @@ $hover-nav: white;
 body{
     background-color: $fondo;
     font-family: 'Alata';
+    padding-left: 100px;
+    padding-right: 100px;
 }
 nav{
     display: flex;
@@ -32,19 +34,6 @@ nav{
             padding: 6px 10px;
             font-family: 'Alata';
             margin-right: 5px;
-        }
-        button{
-            border-radius: 20px;
-            background-color: $boton-simple;
-            border: none;
-            padding: 6px 10px;
-            font-family: 'Alata';
-            cursor: pointer;
-            margin-right: 20px;
-            &:hover{
-                color: white;
-                background-color: $para-hover;
-            }
         }
     }
     .menu{
@@ -112,23 +101,82 @@ nav{
         }
     }
 }
-
-@mixin cuadritos($cuadritos: #F8F3F3){
-    background-color: $cuadritos;
-    color: black;
-    border-radius: 8px;
+.ubicacion{
+    a{
+        color: #616161;
+        text-decoration: none;
+        font-size: 15px;
+    }   
 }
 
+$grid-gap: 20px;
+$grid-item-padding: 20px;
+$grid-item-bg: #f0f0f0;
 
-.container-profile{
-    @include cuadritos;
-}    
-.container-data{
-    @include cuadritos($cuadritos: red);
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: $grid-gap;
+    margin: 20px 0;
 }
-.form-container{
-    @include cuadritos($cuadritos: pink);
+
+.grid-item{
+    background-color: white;
+    padding: $grid-item-padding;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    &:first-child{
+        img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        
+    }
+    h2{
+        font-weight: bold;
+        font-size: xx-large;
+    }
+    h3{
+        font-weight: lighter;
+        color: #616161;
+    }
+    }
+    &:nth-child(2n){
+        display: grid;
+        grid-template-rows: 1fr 2fr 2fr 2fr;
+        div:first-of-type{
+            color: red;
+        }
+    }
 }
-.container-form{
-    @include cuadritos($cuadritos: purple);
+
+.stats{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 250px;
+    span{
+        font-weight: bold;
+    }
+    p{
+        color: #616161;
+    }
 }
+
+button{
+    border-radius: 20px;
+    background-color: $boton-simple;
+    border: none;
+    padding: 6px 10px;
+    font-family: 'Alata';
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover{
+            color: white;
+            background-color: $para-hover;
+    }
+}
+
+
+
