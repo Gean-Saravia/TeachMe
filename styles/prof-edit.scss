@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+$fondo: #A2C3DA;
+$boton-simple: #5D9ECD;
+$color-input: grey;
+$para-hover: darkblue;
+$items-menu: #094067;
+$hover-nav: white;
+
+
+body{
+    background-color: $fondo;
+    font-family: 'Alata';
+    padding-left: 100px;
+    padding-right: 100px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 5rem;
+    .logo img{
+        height: 100px;
+        margin-right: 20px;
+    }
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input{
+            border-radius: 20px;
+            color: $color-input;
+            border: none;
+            padding: 6px 10px;
+            font-family: 'Alata';
+            margin-right: 5px;
+        }
+    }
+    .menu{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        li{
+            display: inline-block;
+            padding-right: 50px;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.1); /* Aplica el efecto de zoom */
+            }
+        }
+        a{
+            text-decoration: none;
+            color: $items-menu;
+            &:hover{
+                color: $hover-nav;
+                text-shadow: 1px 1px 2px black ;
+            }
+        }
+    }
+    .profile{
+        display: flex;
+        align-items: center;
+        #perfilFoto{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+            #flechitaAbajo{
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .dropdown-content{
+                right: 0;
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                border-radius: 20px;
+                a{
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+
+                    &:hover {
+                        background-color: #f1f1f1;
+                    }
+                }
+            }
+            &:hover .dropdown-content {
+                display: block;
+            }
+        }
+    }
+}
+.ubicacion{
+    a{
+        color: #616161;
+        text-decoration: none;
+        font-size: 15px;
+    }   
+}
+
+$grid-gap: 20px;
+$grid-item-padding: 20px;
+$grid-item-bg: #f0f0f0;
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: $grid-gap;
+    margin: 20px 0;
+}
+
+.grid-item{
+    background-color: white;
+    padding: $grid-item-padding;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    &:first-child{
+        img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        
+    }
+    h2{
+        font-weight: bold;
+        font-size: xx-large;
+    }
+    h3{
+        font-weight: lighter;
+        color: #616161;
+    }
+    }
+    &:nth-child(2n){
+        display: grid;
+        grid-template-rows: 1fr 2fr 2fr 2fr;
+        div:first-of-type{
+            color: red;
+        }
+    }
+}
+
+.stats{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 250px;
+    span{
+        font-weight: bold;
+    }
+    p{
+        color: #616161;
+    }
+}
+
+button{
+    border-radius: 20px;
+    background-color: $boton-simple;
+    border: none;
+    padding: 6px 10px;
+    font-family: 'Alata';
+    cursor: pointer;
+    margin-right: 20px;
+    &:hover{
+            color: white;
+            background-color: $para-hover;
+    }
+}
+
+
+

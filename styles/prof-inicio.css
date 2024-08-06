@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b8d8f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+}
+
+aside {
+    background-color: rgb(196, 224, 239, 1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calendar-placeholder {
+
+    height: 300px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.upcoming-meetings h3 {
+    margin-top: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.classes, .finished-classes {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.class-item {
+    background-color: #1a5f7a;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-class {
+    background-color: #e0e0e0;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.finished-classes .class-item {
+    background-color: #6c757d;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1a5f7a;
+}
+
+.classes-section, .finished-classes-section {
+    display: flex;
+    flex-direction: column;
+}

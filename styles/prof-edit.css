@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+body {
+  background-color: #A2C3DA;
+  font-family: "Alata";
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 5rem;
+}
+nav .logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+nav .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .search input {
+  border-radius: 20px;
+  color: grey;
+  border: none;
+  padding: 6px 10px;
+  font-family: "Alata";
+  margin-right: 5px;
+}
+nav .menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav .menu li {
+  display: inline-block;
+  padding-right: 50px;
+  transition: transform 0.3s ease;
+}
+nav .menu li:hover {
+  transform: scale(1.1); /* Aplica el efecto de zoom */
+}
+nav .menu a {
+  text-decoration: none;
+  color: #094067;
+}
+nav .menu a:hover {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+nav .profile {
+  display: flex;
+  align-items: center;
+}
+nav .profile #perfilFoto {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+nav .profile .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .profile .dropdown #flechitaAbajo {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+nav .profile .dropdown .dropdown-content {
+  right: 0;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+nav .profile .dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+nav .profile .dropdown .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+nav .profile .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.ubicacion a {
+  color: #616161;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.grid-item:first-child img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.grid-item:first-child h2 {
+  font-weight: bold;
+  font-size: xx-large;
+}
+.grid-item:first-child h3 {
+  font-weight: lighter;
+  color: #616161;
+}
+.grid-item:nth-child(2n) {
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+}
+.grid-item:nth-child(2n) div:first-of-type {
+  color: red;
+}
+
+.stats {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 250px;
+}
+.stats span {
+  font-weight: bold;
+}
+.stats p {
+  color: #616161;
+}
+
+button {
+  border-radius: 20px;
+  background-color: #5D9ECD;
+  border: none;
+  padding: 6px 10px;
+  font-family: "Alata";
+  cursor: pointer;
+  margin-right: 20px;
+}
+button:hover {
+  color: white;
+  background-color: darkblue;
+}/*# sourceMappingURL=stylesProf.css.map */
