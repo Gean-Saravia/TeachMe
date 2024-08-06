@@ -2,6 +2,8 @@
 body {
   background-color: #A2C3DA;
   font-family: "Alata";
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 nav {
@@ -27,19 +29,6 @@ nav .search input {
   padding: 6px 10px;
   font-family: "Alata";
   margin-right: 5px;
-}
-nav .search button {
-  border-radius: 20px;
-  background-color: #5D9ECD;
-  border: none;
-  padding: 6px 10px;
-  font-family: "Alata";
-  cursor: pointer;
-  margin-right: 20px;
-}
-nav .search button:hover {
-  color: white;
-  background-color: darkblue;
 }
 nav .menu {
   display: flex;
@@ -105,26 +94,70 @@ nav .profile .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.container-profile {
-  background-color: #F8F3F3;
-  color: black;
-  border-radius: 8px;
+.ubicacion a {
+  color: #616161;
+  text-decoration: none;
+  font-size: 15px;
 }
 
-.container-data {
-  background-color: red;
-  color: black;
-  border-radius: 8px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  margin: 20px 0;
 }
 
-.form-container {
-  background-color: pink;
-  color: black;
-  border-radius: 8px;
+.grid-item {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.grid-item:first-child img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.grid-item:first-child h2 {
+  font-weight: bold;
+  font-size: xx-large;
+}
+.grid-item:first-child h3 {
+  font-weight: lighter;
+  color: #616161;
+}
+.grid-item:nth-child(2n) {
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+}
+.grid-item:nth-child(2n) div:first-of-type {
+  color: red;
 }
 
-.container-form {
-  background-color: purple;
-  color: black;
-  border-radius: 8px;
-}/*# sourceMappingURL=styles.css.map */
+.stats {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 250px;
+}
+.stats span {
+  font-weight: bold;
+}
+.stats p {
+  color: #616161;
+}
+
+button {
+  border-radius: 20px;
+  background-color: #5D9ECD;
+  border: none;
+  padding: 6px 10px;
+  font-family: "Alata";
+  cursor: pointer;
+  margin-right: 20px;
+}
+button:hover {
+  color: white;
+  background-color: darkblue;
+}/*# sourceMappingURL=stylesProf.css.map */
