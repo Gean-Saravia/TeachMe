@@ -84,11 +84,18 @@ header {
 
 .dropbtn {
     background-color: #65A8E5;
-    color: white;
     padding: 10px;
+    width: auto;
     border: none;
-    border-radius: 100%;
+    border-radius: 50%;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);;
+}
+
+.dropbtn img{
+    padding-bottom: 4px;
 }
 
 .dropdown-content {
@@ -118,7 +125,8 @@ header {
 
 .location {
     padding-left: 120px;
-    padding-top: 5px;
+    padding-top: 50px;
+    padding-bottom: 10px;
 }
 
 .location a {
@@ -132,15 +140,15 @@ header {
     margin-right: 80px;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
-    gap: 20px;
+    gap: 10px;
     flex-grow: 1;
 }
 
 .profile-sidebar {
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 10px;
-    height: 800px;
+    border-radius: 5px;
+    height: 690px;
     text-align: center;
     background-color: #F8F3F3;
 }
@@ -148,9 +156,6 @@ header {
 .contact-info {
     border-radius: 10px;
     height: fit-content;
-}
-.contact-info .form-section .btn.update-btn{
-    margin-top: 80px;
 }
 
 .profile-info {
@@ -207,7 +212,8 @@ header {
     background-color: #65A8E5;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 200px;
+    margin-top: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .upload-btn:hover{
@@ -223,6 +229,7 @@ header {
     border: black;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .delete-btn:hover{
@@ -234,8 +241,7 @@ header {
 .profile-main {
     border-radius: 10px;
     display: grid;
-    gap: 10px;
-    height: fit-content;
+    gap: 40px;
 }
 
 .profile-main h2 {
@@ -276,13 +282,16 @@ input[type="checkbox"] {
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .btn.update-btn:hover{
     background-color: white;
     color: #003366;
     border: 0.5px solid black;
-    margin-bottom: auto;
+    margin-bottom: 15px;
     height: 39px;
+    
 }
 
 .form-section {
@@ -291,6 +300,7 @@ input[type="checkbox"] {
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 10px;
+    display: grid;
 }
 
 .form-section h2 {
@@ -301,7 +311,7 @@ input[type="checkbox"] {
 .birthdate {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 20px;
 }
 
 .form-section2 {
@@ -313,6 +323,6 @@ input[type="checkbox"] {
     margin-bottom: 10px;
 }
 
-.box {
-    width: 300px;
+.box1{
+    grid-row: 1/2;
 }
