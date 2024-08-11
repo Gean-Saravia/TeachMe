@@ -83,6 +83,26 @@ nav .nav-menu a:hover {
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.container a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3646b7; /* Azul oscuro para el subrayado */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.container a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .container button {
@@ -97,6 +117,12 @@ nav .nav-menu a:hover {
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.container button:hover {
+    background-color: #3646b7; /* Azul oscuro */
+    border-color: #3646b7;
 }
 
 .container button.hidden {
