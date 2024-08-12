@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles/chat-estilos.css">
+    <title>Chat TeachMe</title>
+</head>
+<body>
+
+<div class="hero">
+    <nav>
+        <img src="../assets/logoTM.png" class="logo">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="user-menu">
+            <img src="../assets/userpic.jpg" class="user-pic" onclick="toggleMenu()">
+            <i class="fa-solid fa-chevron-down" onclick="toggleMenu()"></i>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="../assets/userpic.jpg">
+                        <h3>Gabriel Torres</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="../assets/iconoperfil.png">
+                        <p>Editar Perfil</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="../assets/ajustes.png">
+                        <p>Ajustes y Privacidad</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="../assets/soporte.png">
+                        <p>Soporte</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="../assets/logout.png">
+                        <p>Cerrar Sesión</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script>
+    function toggleMenu(){
+        let subMenu = document.getElementById("subMenu");
+        subMenu.classList.toggle("open-menu");
+    }
+</script>
+
+</body>
+</html>
