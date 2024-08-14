@@ -109,6 +109,12 @@ header {
 .show{
     display: block;
 }
+
+.active {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
 .location {
     padding-left: 120px;
     padding-top: 50px;
