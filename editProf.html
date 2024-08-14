@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeachMe - Editar Perfil</title>
     <link rel="stylesheet" href="styles/prof-edit.css">
+    <script src="funcionEditProf.js"></script>
 </head>
 
 <body>
@@ -26,8 +27,8 @@
             <div class="profile-menu">
                 <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
                 <div class="dropdown">
-                    <button class="dropbtn"><img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; "></button>
-                    <div class="dropdown-content">
+                    <button class="dropbtn" onclick="toggleMenu()"><img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; "></button>
+                    <div class="dropdown-content" id="subMenu">
                         <a href="#">Mi Perfil</a>
                         <a href="#">Configuración</a>
                         <a href="#">Cerrar Sesión</a>
@@ -154,6 +155,7 @@
             </form>
         </aside>
     </div>
+
 </body>
 
 </html>
