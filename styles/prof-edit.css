@@ -25,7 +25,8 @@ header {
 }
 
 .logo img {
-    height: 90px;
+    margin-top: 10px;
+    height: 70px;
     padding-left: 60px;
 }
 
@@ -49,26 +50,12 @@ header {
 .nav-links li{
     display: inline-block;
     padding-right: 50px;
-    transition: transform 0.4s ease-in-out;
+    
 }
-.nav-links li:hover {
-    transform: scale(1.1);
-}
-
-.nav-links a{
-    text-decoration: none;
-    color: #003366;
-}
-.nav-links a:hover {
-    color: white;
-    text-shadow: 1px 1px 2px black;
-}
-
 
 .profile-menu {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: relative;
+    display: inline-block;
 }
 
 .profile-pic {
@@ -95,7 +82,7 @@ header {
 }
 
 .dropbtn img{
-    padding-bottom: 4px;
+    padding-bottom: 24px;
 }
 
 .dropdown-content {
@@ -106,6 +93,7 @@ header {
     right: 0;
     min-width: 160px;
     border-radius: 5px;
+    z-index: 1;
 }
 
 .dropdown-content a {
@@ -118,9 +106,13 @@ header {
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
-
-.dropdown:hover .dropdown-content {
+.show{
     display: block;
+}
+
+.active {
+    background-color: white;
+    border: 1px solid #ccc;
 }
 
 .location {
@@ -321,4 +313,29 @@ select {
 
 .box1{
     grid-row: 1/2;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
