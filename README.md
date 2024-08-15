@@ -79,5 +79,4 @@ Nuestro proyecto está diseñado para hacer que encontrar y contratar profesores
 ## Previsualización de la plataforma
 [![](https://markdown-videos.deta.dev/youtube/LdiGavjNllM)](https://youtu.be/LdiGavjNllM)
 
-
 **<p align="center">¡Únete a nosotros y transforma tu manera de aprender y enseñar!</p>**
