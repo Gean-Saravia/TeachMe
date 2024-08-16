@@ -25,63 +25,151 @@ button{
     flex-direction: column;
 }
 
-.nav-cursos{
-    display: flex;
-    justify-content: space-around;
+header {
+    background-color: #A2C3DA;
+    padding-left: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto auto 140px;
     align-items: center;
-    height: 15vh;
+}
 
-    .logo-cursos{
-        width: 20%;
+.logo img {
+    margin-top: 10px;
+    height: 70px;
+    padding-left: 60px;
+}
 
-        img{
-            width: 200px;
-        }
-    }
+.search-bar {
+    width: 400px;
+    border-radius: 20px;
+    padding-top: 15px;
+}
 
-    .menu-cursos{
-        display: flex;
-        gap: 1.3rem;
-        align-items: center;
+.search-bar input {
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-family: var(--alata);
+}
 
-        li{
-            list-style: none;
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
 
-            a{
-                color: var(--secondary-blue);
-                text-decoration: none;
-                font-family: var(--kumbh);
-                font-size: 1.25rem;
-                text-shadow: 0;
-                transition: 
-                    color .3s,
-                    text-shadow .3s,
-            }
+input[type="text"]{
+    width: calc(100% - 50px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: var(--alata);
+}
 
-            a:hover{
-                color: var(--white);
-                text-shadow: 3px 3px 5px rgba(0,0,0,0.38);
-            }
-        }
-    }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li{
+    display: inline-block;
+    padding-right: 50px;
+    
+}
 
-    .btn-cursos button{
-        background-color: var(--secondary-blue);
-        padding: 1rem 2rem;
-        border-radius: 50px;
-        border: none;
-        color: var(--white);
-        font-family: var(--kumbh);
-        font-size: 1.25rem;
-        transition: 
-            background-color .4s,
-            color .4s;
-    }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: var(--alata);
+}
 
-    .btn-cursos button:hover{
-        background-color: var(--sky-blue);
-        color: var(--secondary-blue);
-    }
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #65A8E5;
+    padding: 10px;
+    width: auto;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);;
+}
+
+.dropbtn img{
+    padding-bottom: 24px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    right: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--alata);
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.show{
+    display: block;
+}
+
+.active {
+    background-color: white;
+    border: 1px solid #ccc;
 }
 
 .main-cursos{
