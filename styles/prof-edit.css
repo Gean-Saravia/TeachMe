@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Alata';
 }
 body {
@@ -133,13 +136,12 @@ header {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     gap: 10px;
-    flex-grow: 1;
 }
 
 .profile-sidebar {
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     height: 690px;
     text-align: center;
     background-color: #F8F3F3;
@@ -147,7 +149,6 @@ header {
 
 .contact-info {
     border-radius: 10px;
-    height: fit-content;
 }
 
 .profile-info {
@@ -286,14 +287,15 @@ select {
     font-size: 15px;
     background-color: #F8F3F3;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
     display: grid;
 }
 
 .form-section h2 {
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
+    margin: 0;
 }
 
 .birthdate {
@@ -306,11 +308,13 @@ select {
     display: grid;
     grid-template-columns: auto auto;
     background-color: #F8F3F3;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 22px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
-
+.form-section:last-child{
+    height: 154px;
+}
 .box1{
     grid-row: 1/2;
 }
