@@ -254,9 +254,9 @@ input, textarea {
 }
 
 .btn-premium, .btn-consultar {
-    background-color: var(--accent-color);
+    background-color: #99BBDB;
     color: white;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border: none;
