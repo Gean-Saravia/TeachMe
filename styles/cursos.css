@@ -94,10 +94,10 @@ button{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 85%;
         margin: auto;
         flex-wrap: wrap;
-        gap: 1.5rem;
+        gap: 2rem;
 
         .article-cursos{
             display: flex;
@@ -105,7 +105,7 @@ button{
             justify-content: center;
             align-items: center;
             background-color: #fffffe88;
-            width: 24rem;
+            width: 28rem;
             height: 10rem;
             border-radius: 10px;
             padding: 10px 30px;
@@ -152,7 +152,7 @@ button{
                 text-align: center;
                 background-color: var(--background-color);
                 border-radius: 50%;
-                width: 30%;
+                width: 25%;
                 height: 70%;
                 display: flex;
                 justify-content: center;
