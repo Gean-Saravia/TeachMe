@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachMe</title>
+    <link rel="stylesheet" href="./styles/prof-inicio.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+            <div class="search-bar">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="cuadro-calendario">
+            <div class="calendario">
+                <h1>Agenda</h1>
+                <div class="agenda-personal">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=slimeblue01%40gmail.com&ctz=UTC&bgcolor=%23ffffff&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0color=%237986CB&color=%2333B679&color=%23137333&color=%233F51B5&color=%230B8043"width="320" height="320" frameborder="0" scrolling="no" border-style="none";></iframe>
+                </div>
+                <p>Dia 8 de Julio - SQL Server</p>
+                <p>El 15 de Julio - Analisis de datos con Python.</p>
+                <p>Dia 29 de Julio - JavaScript Avanzado</p>
+                <p>Día 30 de Julio - MongoDB</p>
+            </div>
+        </aside>
+        <section class="clases">
+            <div class="title">Mis clases</div>
+            <div class="container-misclases">
+                <div class="class-grid">
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                </div>
+                <div class="add-class">
+                    <a href=""><img src="/assets/mas.svg" class="aniadir-clase"></a>
+                </div>
+
+            </div>
+            <div class="title">Clases terminadas o pausadas</div>
+            <div class="container-clasespausadas">
+                <div class="class-grid">
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                    <div class="class-item">Programación</div>
+                </div>
+                <div class="add-class">
+                    <a href=""><img src="/assets/mas.svg" class="aniadir-clase"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="funcionEditProf.js"></script>
+</html>
