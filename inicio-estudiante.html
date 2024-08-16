@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachMe Dashboard</title>
+    <link rel="stylesheet" href="styles/stylesHomeStudent.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar en mis clases...">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <img src="" alt="Foto de perfil" class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Mis Clases</h2>
+            <ul id="class-list">
+                <li class="item" onclick="highlightItem(this)">Profesores</li>
+                <li class="item" onclick="highlightItem(this)">C++</li>
+                <li class="item" onclick="highlightItem(this)">.NET</li>
+                <li class="item" onclick="highlightItem(this)">Java</li>
+                <li class="item" onclick="highlightItem(this)">JavaScript</li>
+                <li class="item" onclick="highlightItem(this)">Python</li>
+                <li class="item" onclick="highlightItem(this)">SQL</li>
+                <li class="item" onclick="highlightItem(this)">Ruby</li>
+                <li class="item" onclick="highlightItem(this)">HTML</li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="welcome">
+                <h1>Bienvenido de regreso, Iván!</h1>
+            </div>
+
+            <section class="subjects">
+                <div class="subject">
+                    <h3>Física</h3>
+                    <p>Docente: Felipe Argento</p>
+                </div>
+                <div class="subject">
+                    <h3>Física</h3>
+                    <p>Docente: Felipe Argento</p>
+                </div>
+                <div class="subject">
+                    <h3>Física</h3>
+                    <p>Docente: Felipe Argento</p>
+                </div>
+            </section>
+
+            <section class="class-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Profesor/a</th>
+                            <th>Estudiantes</th>
+                            <th>Inicio</th>
+                            <th>Termina</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nº1</td>
+                            <td>José Suárez</td>
+                            <td>
+                                <img src="student1.jpg" alt="Estudiante">
+                                <img src="student2.jpg" alt="Estudiante">
+                            </td>
+                            <td>09/04/24</td>
+                            <td>18/04/24</td>
+                        </tr>
+                        <tr>
+                            <td>Nº1</td>
+                            <td>Lina Pérez</td>
+                            <td>
+                                <img src="student3.jpg" alt="Estudiante">
+                                <img src="student4.jpg" alt="Estudiante">
+                            </td>
+                            <td>09/04/24</td>
+                            <td>15/04/24</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <aside class="profile-section">
+            <div class="profile-info">
+                <img src="profile.jpg" alt="Iván Gómez">
+                <h2>Iván Gómez</h2>
+                <span>Estudiante</span>
+            </div>
+            <div class="calendar">
+                <h3>Septiembre</h3>
+                <div class="calendar-grid">
+                    <!-- Aquí puedes añadir los días del mes -->
+                    <span>1</span>
+                    <!-- Otros días... -->
+                </div>
+            </div>
+            <div class="reminders">
+                <h3>Recordatorios</h3>
+                <p>Clase Física - 16/09 20:00</p>
+                <p>Clase Inglés - 17/09 20:00</p>
+            </div>
+        </aside>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('subMenu');
+            const button = document.getElementById('dropdownButton');
+            menu.classList.toggle('show');
+            button.classList.toggle('active');
+        }
+
+        function highlightItem(selectedItem) {
+            // Elimina la clase 'selected' de todos los ítems
+            var items = document.querySelectorAll('#class-list .item');
+            items.forEach(function (item) {
+                item.classList.remove('selected');
+            });
+
+            // Añade la clase 'selected' al ítem que se ha hecho clic
+            selectedItem.classList.add('selected');
+        }
+    </script>
+</body>
+
+</html>

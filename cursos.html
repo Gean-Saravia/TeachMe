@@ -7,25 +7,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/cursos.css">
+    <script src="funcionEditProf.js"></script>
     <title>TeachMe | Cursos</title>
 </head>
 <body class="body-cursos">
-    <nav class="nav-cursos">
-        <figure class="logo-cursos">
-            <img 
-            src="./assets/teachme-logo-completo.png"
-            alt="Logo completo de TeachMe"
-            />
-        </figure>
-        <menu class="menu-cursos">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-        </menu>
-        <div class="btn-cursos">
-            <button class="btn" id="btnSignin" >Iniciar Sesión</button>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar en mis clases...">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+    </header>
     </nav>
     <main class="main-cursos">
         <section>
