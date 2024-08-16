@@ -229,7 +229,7 @@ input, textarea {
 }
 
 .top-1, .help-section {
-    background-color: rgb(34, 97, 180);
+    background: linear-gradient(156deg, #125F97, #91C7DF);
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
