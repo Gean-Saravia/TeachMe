@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Alata';
 }
 
 body {
@@ -18,7 +19,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Alata';
 }
 
 header {
@@ -229,7 +229,7 @@ input, textarea {
 }
 
 .top-1, .help-section {
-    background-color: rgb(34, 97, 180);
+    background: linear-gradient(156deg, #125F97, #91C7DF);
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -254,9 +254,9 @@ input, textarea {
 }
 
 .btn-premium, .btn-consultar {
-    background-color: var(--accent-color);
+    background-color: #99BBDB;
     color: white;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border: none;
@@ -271,7 +271,7 @@ input, textarea {
 }
 
 .help-section button:hover{
-    background-color: rgb(31, 24, 129);
+    background-color: #1a3b5d;
 }
 
 
@@ -282,7 +282,6 @@ input, textarea {
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    font-family: 'Fredoka', sans-serif;
 }
 
 .btn-volver:hover{
@@ -303,6 +302,7 @@ footer {
 .my-classes-container h2 {
     margin-top: 0;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .my-classes-container ul {
