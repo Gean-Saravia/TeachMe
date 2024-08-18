@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeachMe</title>
     <link rel="stylesheet" href="./styles/prof-inicio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 <body>
@@ -41,7 +43,27 @@
             <div class="calendario">
                 <h1>Agenda</h1>
                 <div class="agenda-personal">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=slimeblue01%40gmail.com&ctz=UTC&bgcolor=%23ffffff&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0color=%237986CB&color=%2333B679&color=%23137333&color=%233F51B5&color=%230B8043"width="320" height="320" frameborder="0" scrolling="no" border-style="none";></iframe>
+                    <div class="wrapper">
+                        <header class="header-calendario">
+                            <p class="current-date"></p>
+                            <div class="icons">
+                                <span id="prev" class="material-symbols-rounded"> chevron_left</span>
+                                <span id="next" class="material-symbols-rounded">chevron_right</span>
+                            </div>
+                        </header>
+                        <div class="calendar">
+                            <ul class="weeks">
+                                <li>Lun</li>
+                                <li>Mar</li>
+                                <li>Mie</li>
+                                <li>Jue</li>
+                                <li>Vie</li>
+                                <li>Sab</li>
+                                <li>Dom</li>
+                            </ul>
+                            <ul class="days"></ul>
+                        </div>
+                    </div>
                 </div>
                 <p>Dia 8 de Julio - SQL Server</p>
                 <p>El 15 de Julio - Analisis de datos con Python.</p>
@@ -82,5 +104,6 @@
     </main>
 </body>
 <script src="funcionEditProf.js"></script>
+<script src="calendario.js"></script>
 </html>
 <!-- Probando un cambio -->
