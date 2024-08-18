@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teach me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/tarjetas-grandes.css">
-    <title>Profesores por categorías</title>
+    <script src="tarjetas-grandes.js"></script>
 </head>
-<body>
-    
+<body class="Body">
+    <div class="content">
+        <header class="Header">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>Teach Me</h1>
+                </div>
+                <div class="Buscador">
+                    <input type="text" placeholder="Busca tu profesor">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="tarjetasGrandes.html">Inicio</a></li>
+                    <li><a href="tarjetasGrandes.html">Cursos</a></li>
+                    <li><a href="tarjetasGrandes.html">Nosotros</a></li>
+                    <li><a href="tarjetasGrandes.html">Contacto</a></li>
+                </ul>
+                <div class="user-icon">
+                    <img src="usuario.png" alt="Icono de usuario">
+                </div>
+            </nav>        
+        </header>
+
+        <main class="Main">
+            <aside class="Aside">
+                <section class="catalogo">
+                    <h2>Programación</h2>
+                    <ul>
+                        <li>Curso de HTML y CSS</li>
+                        <li>Curso de JavaScript</li>
+                        <li>Curso de Python</li>
+                        <li>Curso de Java</li>
+                        <li>Curso de C++</li>
+                        <li>Curso de Ruby</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <section class="profesores-grid">
+                <h2>Un camino de aprendizaje te espera</h2>
+                <div class="cards-container">
+                    <!-- Las tarjetas de profesores se generarán dinámicamente con JavaScript -->
+                </div>
+            </section>
+        </main>
+        
+        <footer class="Footer"></footer>
+    </div>
 </body>
 </html>
