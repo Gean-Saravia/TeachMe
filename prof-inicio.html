@@ -53,34 +53,39 @@
                         </header>
                         <div class="calendar">
                             <ul class="weeks">
+                                <li>Dom</li>
                                 <li>Lun</li>
                                 <li>Mar</li>
                                 <li>Mie</li>
                                 <li>Jue</li>
                                 <li>Vie</li>
                                 <li>Sab</li>
-                                <li>Dom</li>
                             </ul>
                             <ul class="days"></ul>
                         </div>
                     </div>
                 </div>
-                <p>Dia 8 de Julio - SQL Server</p>
-                <p>El 15 de Julio - Analisis de datos con Python.</p>
-                <p>Dia 29 de Julio - JavaScript Avanzado</p>
-                <p>Día 30 de Julio - MongoDB</p>
+                <div class="reuniones">
+                    <p>Dia 8 de Julio - SQL Server</p>
+                    <p>El 15 de Julio - Analisis de datos con Python.</p>
+                    <p>Dia 29 de Julio - JavaScript Avanzado</p>
+                    <p>Día 30 de Julio - MongoDB</p>
+                </div>
+                <div class="calendario-imagen">
+                    <img src="/assets/Calendario.png" alt="">
+                </div>
             </div>
         </aside>
         <section class="clases">
             <div class="title">Mis clases</div>
             <div class="container-misclases">
                 <div class="class-grid">
-                    <div class="class-item">Programación</div>
-                    <div class="class-item">Programación</div>
-                    <div class="class-item">Programación</div>
-                    <div class="class-item">Programación</div>
-                    <div class="class-item">Programación</div>
-                    <div class="class-item">Programación</div>
+                    <div class="class-item-misclases" draggable="true">Programación</div>
+                    <div class="class-item-misclases" draggable="true">Programación</div>
+                    <div class="class-item-misclases" draggable="true">Programación</div>
+                    <div class="class-item-misclases" draggable="true">Programación</div>
+                    <div class="class-item-misclases" draggable="true">Programación</div>
+                    <div class="class-item-misclases" draggable="true">Programación</div>
                 </div>
                 <div class="add-class">
                     <a href=""><img src="/assets/mas.svg" class="aniadir-clase"></a>
@@ -88,8 +93,8 @@
 
             </div>
             <div class="title">Clases terminadas o pausadas</div>
-            <div class="container-clasespausadas">
-                <div class="class-grid">
+            <div class="container-clasespausadas" >
+                <div class="class-grid" id="contenedor-clases">
                     <div class="class-item">Programación</div>
                     <div class="class-item">Programación</div>
                     <div class="class-item">Programación</div>
@@ -105,5 +110,6 @@
 </body>
 <script src="funcionEditProf.js"></script>
 <script src="calendario.js"></script>
+<script src="dragandrop.js"></script>
 </html>
-<!-- Probando un cambio -->
+
