@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Kumbh+Sans:wght@900&display=swap');
+
+
+body {
+    font-family: 'Alata', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #90B4CE;
+}
+/*Empieza el nav*/
+header {
+    /*Si no gusta la fuenta, borrar este font family*/
+    font-family: 'Alata', sans-serif;
+    background-color: #A2C3DA;
+    padding-left: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    font-family: 'Alata', sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto 180px;
+    align-items: center;
+}
+
+.logo img {
+    margin-top: 10px;
+    height: 70px;
+    padding-left: 60px;
+}
+
+.search-bar {
+    width: 400px;
+    border-radius: 20px;
+    padding-top: 15px;
+}
+
+.search-bar input {
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li{
+    display: inline-block;
+    padding-right: 50px;
+    
+}
+
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #65A8E5;
+    padding: 10px;
+    width: auto;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);;
+}
+
+.dropbtn img{
+    padding-bottom: 24px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    right: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.show{
+    display: block;
+}
+
+.active {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+nav ul li a {
+    color: #094067;
+    font-weight: 800;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover{
+    color: white;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*Empezamos con la edicion del main*/
+.contenedor{
+    display: flex;
+    height: 90vh;
+    background-color: red;
+    padding: 5px;
+    margin-top: 20px;
+    gap: 2vw;
+    justify-content: center;
+}
+/*Empieza la edicion del cuadro perfil*/
+.perfil{
+    background-color: #C4E0EF;
+    height: 100%;
+    width: 17.969vw;
+    border-radius: 50px;
+}
+
+.title{
+    background-color: violet;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #000000;
+    margin-top: 30%;
+}
+
+.imagen-usuario{
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-usuario img{
+    height: 25vh;
+    width: 12vw;
+    border-radius: 50%;
+}
+.datos{
+    color: #616161;
+    word-wrap: break-word; /* Permite que las palabras largas se rompan en varias líneas */
+    text-align: center; /* Centra el texto */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Ajusta el tamaño de la fuente de manera responsiva */
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+}
+.datos h1{
+    font-weight: bold;
+    color: #000000;
+}
+
+.datos p{
+    color: #616161;
+}
+.datos-tecnicos{
+    background-color: chocolate;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Espacio equitativo entre los elementos */
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.idiomas{
+    padding: 5px;
+    display: flex;
+    background-color: blue;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    width: 33.33%; /* Ocupa un tercio del contenedor */
+    box-sizing: border-box;
+    word-break: break-word;
+}
+.idiomas p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.clases{
+    padding: 5px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    width: 33.33%; /* Ocupa un tercio del contenedor */
+    box-sizing: border-box;
+    word-break: break-word;
+}
+.clases p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.alumnos{
+    padding: 5px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    width: 33.33%; /* Ocupa un tercio del contenedor */
+    box-sizing: border-box;
+    word-break: break-word;
+}
+.alumnos p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 1rem;
+    color: #333333;
+}
+.title-tecnico{
+    font-weight: bold;
+    color: blue;
+}
+
+.boton{
+    margin-top: 10%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.boton button{
+    height: 50%;
+    width: 50%;
+    background-color: #65A8E5;
+    border-radius: 20px;
+    color: white;
+    border: none;
+}
+/*Edicion de cuadro profesor*/
+.contenido-profesor{
+    height: 100%;
+    width: 55.99vw;
+    background-color: yellow;
+    border-radius: 50px;
+
+}
+
+.comentarios{
+    height: 100%;
+    width: 17.969vw;
+    background-color: green;
+    border-radius: 50px;
+}

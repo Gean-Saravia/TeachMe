@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratar Profesor</title>
+    <link rel="stylesheet" href="/styles/prof-contratar.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+            <div class="search-bar">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedor">
+
+        <aside class="perfil">
+            <!-- Recordar que hay que resaltar con articulos, imagen sería un articulo o seccion, datos personales seria otro articulo, etc -->
+            <div class="title">
+                <h1>Perfil</h1>
+            </div>
+            <div class="imagen-usuario">
+                <img src="/assets/keanu.jpg" alt="Foto de perfil del usuario">
+            </div>
+            <div class="datos">
+                <h1>Felipe Argento</h1>
+                <p>Programación</p>
+            </div>
+            <div class="datos-tecnicos">
+                <div class="idiomas">
+                    <p class="title-tecnico">4</p>
+                    <p>Idiomas</p>
+                </div>
+                <div class="clases">
+                    <p class="title-tecnico">100</p>
+                    <p>Clases</p>
+                </div>
+                <div class="alumnos">
+                    <p class="title-tecnico">2.0K</p>
+                    <p>Alumnos</p>
+                </div>
+            </div>
+            <div class="boton">
+                <button>Ver más</button>
+            </div>
+        </aside>
+        <section class="contenido-profesor">
+
+        </section>
+        <aside class="comentarios">
+
+        </aside>
+    </main>
+</body>
+<script src="funcionEditProf.js"></script>
+</html>
