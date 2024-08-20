@@ -43,8 +43,13 @@ header {
 
 .search-input {
     padding: 10px;
-    padding-left: 40px; /* Espacio para el ícono */
+    padding-left: 40px;
     box-sizing: border-box;
+}
+
+#search-bar{
+    background-color: white;
+    border: none;
 }
 
 .search-icon {
@@ -142,10 +147,16 @@ header {
     padding-left: 120px;
     padding-top: 40px;
     padding-bottom: 10px;
+    transition: color 0.3s ease;
 }
+
 
 .location a {
     text-decoration: none;
+    color: grey;
+}
+
+#actual-location{
     color: white;
 }
 
@@ -276,7 +287,23 @@ select {
     border-radius: 20px;
     font-size: 14px;
     color: grey;
+    appearance: none;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"]{
+    background-color: #ccc;
+    border: #003366 solid 0.5px;
+}
+
+select:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+    color: rgb(34, 34, 34);
+}
+
 
 .password-container {
     position: relative;
@@ -284,10 +311,13 @@ select {
     align-items: center;
     flex: 1;
 }
+
 .password-container input {
     flex: 1;
-    padding-right: 40px; /* Espacio para el ícono */
+    padding-right: 40px;
+    /* Espacio para el ícono */
 }
+
 .toggle-password {
     position: absolute;
     right: 45px;
@@ -399,7 +429,7 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-.contact-info .form-section:last-child{
+.contact-info .form-section:last-child {
     padding-bottom: 0;
     background-color: #f8f3f3a1;
     padding-top: 0;
@@ -417,14 +447,14 @@ nav ul li a:hover {
     color: white;
     border: none;
     cursor: pointer;
-    box-shadow: 0  2px 4px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
 #addRowButton:hover {
     background-color: #004e9c;
 }
 
-.deleteRowButton{
+.deleteRowButton {
     padding: auto;
     font-size: 12px;
     width: 25px;
@@ -434,10 +464,10 @@ nav ul li a:hover {
     color: white;
     border: none;
     cursor: pointer;
-    box-shadow: 0  2px 4px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
-.deleteRowButton:hover{
+.deleteRowButton:hover {
     background-color: rgb(151, 0, 0, 1);
 }
 
@@ -448,7 +478,7 @@ nav ul li a:hover {
     background-color: #f9f9f9;
 }
 
-.box select{
+.box select {
     width: calc(100% - 20px);
 }
 
@@ -456,14 +486,17 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
 }
+
 label {
     margin-right: 10px;
     width: 250px;
 }
+
 input {
     flex: 1;
     padding: 5px;
 }
+
 .edit-icon {
     cursor: pointer;
     margin-left: 10px;
@@ -473,6 +506,7 @@ input {
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
+
 .edit-mode input {
     border: 1px solid #007BFF;
 }
