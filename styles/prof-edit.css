@@ -404,6 +404,8 @@ nav ul li a:hover {
     background-color: #f8f3f3a1;
     padding-top: 0;
     margin-bottom: 0;
+    padding-left: 45px;
+    padding-right: 20px;
 }
 
 #addRowButton {
@@ -419,7 +421,7 @@ nav ul li a:hover {
 }
 
 #addRowButton:hover {
-    background-color: #003366;
+    background-color: #004e9c;
 }
 
 .deleteRowButton{
