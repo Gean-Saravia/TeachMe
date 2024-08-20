@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/prof-edit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="funcionEditProf.js"></script>
 </head>
 
 <body>
@@ -18,7 +17,7 @@
                 <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Buscar en mis clases..." class="search-input">
+                <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
                 <button class="search-icon">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
@@ -51,7 +50,7 @@
         </nav>
     </header>
     <div class="location">
-        <a href="">Mi Perfil</a><a href=""> > Editar Perfil</a>
+        <a href="">Mi Perfil</a><a href="" id="actual-location"> > Editar Perfil</a>
     </div>
     <div class="container">
         <aside class="profile-info">
@@ -75,13 +74,13 @@
                 <div class="form-section">
                     <label for="name">Nombre:</label>
                     <div class="form-group" id="name-group">
-                        <input type="text" id="name" value="Juan Pérez" readonly>
+                        <input type="text" id="name" value="Felipe Argento" readonly>
                         <span class="edit-icon" onclick="editField('name')">✏️</span>
                     </div>
                 
                     <label for="email">Email:</label>
                     <div class="form-group" id="email-group">
-                        <input type="email" id="email" value="juan@example.com" readonly>
+                        <input type="email" id="email" value="argentofelipe@example.com" readonly>
                         <span class="edit-icon" onclick="editField('email')">✏️</span>
                     </div>
                 
@@ -97,15 +96,15 @@
                 <div class="form-section">
                     <label for="birthdate">Fecha de nacimiento</label>
                     <div class="birthdate">
-                        <input type="number" placeholder="Día">
-                        <input type="number" placeholder="Mes">
-                        <input type="number" placeholder="Año">
+                        <input type="number" id="day" placeholder="Día" min="1" max="31" value="12"  required>
+                        <input type="number" id="month" placeholder="Mes" min="1" max="12" value="10"  required>
+                        <input type="number" id="year" placeholder="Año" min="1900" max="2024" value="1994" required>
                     </div>
                 </div>
                 <div class="form-section">
                     <div class="box">
                         <label for="gender">Género</label>
-                        <select id="gender">
+                        <select id="gender" >
                             <option>Seleccionar</option>
                             <option>Femenino</option>
                             <option>Masculino</option>
@@ -205,115 +204,7 @@
     <div>
         <button class="btn update-btn">Guardar cambios</button>
     </div>
-    <script>
-        document.getElementById("addRowButton").addEventListener("click", function () {
-            
-            var table = document.getElementById("myTable");
-            var tbody = table.getElementsByTagName("tbody")[0];
-
-            
-            var newRow = document.createElement("tr");
-
-            var languageCell = document.createElement("td");
-            var levelCell = document.createElement("td");
-            var deleteButtonCell = document.createElement("td");
-
-            
-            var languageSelect = document.createElement("select");
-            languageSelect.className = "language";
-            languageSelect.innerHTML = `
-                <option value="language">Seleccionar</option>
-                <option value="Inglés">Inglés</option>
-                <option value="Alemán">Alemán</option>
-                <option value="Coreano">Coreano</option>
-                <option value="Italiano">Italiano</option>
-            `;
-
-            var levelSelect = document.createElement("select");
-            levelSelect.className = "level";
-            levelSelect.innerHTML = `
-                <option value="level">Seleccionar</option>
-                <option value="Básico">Básico</option>
-                <option value="Intermedio">Intermedio</option>
-                <option value="Avanzado">Avanzado</option>
-            `;
-
-            
-            var deleteButton = document.createElement("button");
-            deleteButton.type = "button";
-            deleteButton.className = "deleteRowButton";
-            deleteButton.textContent = "➖";
-
-            
-            deleteButton.addEventListener("click", function () {
-                tbody.removeChild(newRow);
-            });
-
-            
-            languageCell.appendChild(languageSelect);
-            levelCell.appendChild(levelSelect);
-            deleteButtonCell.appendChild(deleteButton);
-
-            
-            newRow.appendChild(languageCell);
-            newRow.appendChild(levelCell);
-            newRow.appendChild(deleteButtonCell);
-
-            
-            tbody.appendChild(newRow);
-        });
-
-        <!-- Añadir evvent listener a los botones de eliminar existentes -->
-        document.querySelectorAll(".deleteRowButton").forEach(function(button) {
-            button.addEventListener("click", function() {
-                var row = button.parentNode.parentNode;
-                row.parentNode.removeChild(row);
-            });
-        });
-        
-        function editField(fieldId) {
-        var input = document.getElementById(fieldId);
-        var isReadOnly = input.hasAttribute('readonly');
-
-        if (isReadOnly) {
-            input.removeAttribute('readonly');
-            input.focus();
-            input.parentElement.classList.add('edit-mode');
-        } else {
-            input.setAttribute('readonly', true);
-            input.parentElement.classList.remove('edit-mode');
-        }
-    }
-
-    function editField(fieldId) {
-        var input = document.getElementById(fieldId);
-        var isReadOnly = input.hasAttribute('readonly');
-
-        if (isReadOnly) {
-            input.removeAttribute('readonly');
-            input.focus();
-            input.parentElement.classList.add('edit-mode');
-        } else {
-            input.setAttribute('readonly', true);
-            input.parentElement.classList.remove('edit-mode');
-        }
-    }
-
-    function togglePassword() {
-        var passwordInput = document.getElementById('password');
-        var eyeIcon = document.getElementById('eye-icon');
-
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            eyeIcon.classList.remove('fa-eye-slash');
-            eyeIcon.classList.add('fa-eye');
-        } else {
-            passwordInput.type = 'password';
-            eyeIcon.classList.remove('fa-eye');
-            eyeIcon.classList.add('fa-eye-slash');
-        }
-    }
-    </script>
+    <script src="funcionEditProf.js"></script>
 </body>
 
 </html>
