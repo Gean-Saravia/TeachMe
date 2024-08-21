@@ -79,11 +79,17 @@
         transition: 
             background-color .4s,
             color .4s;
+        a{
+            color: var(--white);
+            text-decoration: none;
+        }
     }
 
     .btn-index button:hover{
         background-color: var(--sky-blue);
-        color: var(--secondary-blue);
+        a{
+            color: var(--secondary-blue);
+        }
     }
 }
 
@@ -130,6 +136,10 @@
             -webkit-box-shadow: 6px 7px 4px -4px rgba(0,0,0,0.53);
             -moz-box-shadow: 6px 7px 4px -4px rgba(0,0,0,0.53);
             transition: transform .2s ease-in;
+            a{
+                color: var(--white);
+                text-decoration: none;
+            }
         }
         button:nth-child(1){
             background-color: #3DA9FC;
@@ -339,55 +349,61 @@
             line-height: 10vh;
             text-align: center;
         }
+        
+        .cont-carrusel-equipo{
+            width: 100%;
+            overflow: hidden;
+        }
 
         .cont-equipo-index{
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            animation: moverCarrusel 30s linear infinite;
             gap: 2rem;
+        }
 
-            .equipo-index{
+        .equipo-index{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+            background-position: center;
+            background-size: cover;
+            border-radius: 2rem;
+            width: 12rem;
+            height: 16rem;
+            padding: 10px;
+            flex: 0 0 auto;
+
+            .equipo-nombre,
+            .equipo-rol{
+                color: var(--white);
+                font-family: var(--alata);
+                text-shadow: 4px 4px 8px #000000;
+            }
+            .equipo-nombre{
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+            }
+            .equipo-rol{
+                font-size: 1rem;
+            }
+
+            .equipo-contacto{
                 display: flex;
-                flex-direction: column;
-                justify-content: end;
-                align-items: start;
-                background-position: center;
-                background-size: cover;
-                border-radius: 2rem;
-                width: 12rem;
-                height: 16rem;
-                padding: 10px;
-                /* background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(24,24,24,0.4964110644257703) 44%, rgba(0,0,0,1) 100%); */
-
-                .equipo-nombre{
-                    color: var(--white);
-                    font-family: var(--alata);
-                    font-size: 1.3rem;
-                    line-height: 1.5rem;
-                    /* -webkit-text-stroke-width: .8px;
-                    -webkit-text-stroke-color: #000; */
-                    text-shadow: 4px 4px 8px #000000;
+                padding-top: 10px;
+                gap: 1rem;
+                img{
+                    width: 1.2rem;
+                    filter: invert(1);
                 }
-                .equipo-rol{
-                    color: var(--white);
-                    font-family: var(--alata);
-                    font-size: 1rem;
-                    /* -webkit-text-stroke-width: .8px;
-                    -webkit-text-stroke-color: #000; */
-                    text-shadow: 4px 4px 8px #000000;
-                }
-
-                .equipo-contacto{
-                    display: flex;
-                    padding-top: 10px;
-                    gap: 1rem;
-                    img{
-                        width: 1.2rem;
-                        filter: invert(1);
-                    }
+                img:hover{
+                    transform: scale(120%);
                 }
             }
+        }
+        .equipo-index:hover{
+            background-color: #00000088;
+            background-blend-mode: multiply;
         }
     }
 }
@@ -499,5 +515,14 @@
             font-size: .7rem;
             color: var(--white);
         }
+    }
+}
+
+@keyframes moverCarrusel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
