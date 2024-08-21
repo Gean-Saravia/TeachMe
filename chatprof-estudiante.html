@@ -8,58 +8,32 @@
     <title>Chat TeachMe</title>
 </head>
 <body>
-
-<div class="hero">
-    <nav>
-        <img src="../assets/logoTM.png" class="logo">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-        <div class="user-menu">
-            <img src="../assets/userpic.jpg" class="user-pic" onclick="toggleMenu()">
-            <i class="fa-solid fa-chevron-down" onclick="toggleMenu()"></i>
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <div class="user-info">
-                        <img src="../assets/userpic.jpg">
-                        <h3>Gabriel Torres</h3>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><img src="../assets/logoTM.png" alt="TeachMe Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <img src="../assets/userpic.jpg" alt="Foto de perfil" class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px;">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar Sesión</a>
                     </div>
-                    <hr>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/iconoperfil.png">
-                        <p>Editar Perfil</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/ajustes.png">
-                        <p>Ajustes y Privacidad</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/soporte.png">
-                        <p>Soporte</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/logout.png">
-                        <p>Cerrar Sesión</p>
-                        <span>></span>
-                    </a>
                 </div>
             </div>
-        </div>
-    </nav>
-</div>
-
-<script>
-    function toggleMenu(){
-        let subMenu = document.getElementById("subMenu");
-        subMenu.classList.toggle("open-menu");
-    }
-</script>
-
+        </nav>
+    </header>
 </body>
+<script src="funcionChat.js"></script>
 </html>
