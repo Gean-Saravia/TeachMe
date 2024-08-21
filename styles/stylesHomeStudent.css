@@ -14,17 +14,16 @@ body {
 
 header {
     background-color: #A2C3DA;
-    padding-left: 10px;
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
 .navbar {
     display: grid;
-    grid-template-columns: auto auto auto 180px;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
 }
-
 
 .logo img {
     margin-top: 10px;
@@ -32,8 +31,8 @@ header {
     padding-left: 60px;
 }
 
-.search-bar {
-    width: 350px;
+.search-bar{
+    padding-top: 15px;
 }
 
 .search-input {
@@ -46,6 +45,8 @@ header {
 }
 
 #search-bar{
+    width: 300px;
+    position: relative;
     background-color: white;
     border: none;
 }
@@ -61,10 +62,22 @@ header {
     padding: 0;
 }
 
+input[type="text"]{
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 14.4px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    color: grey;
+    appearance: none;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 50px;
+    margin: 0;
 }
 
 nav ul li a {
@@ -99,7 +112,13 @@ nav ul li a:hover {
 
 .profile-menu {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-menu p{
+    color: whitesmoke;
 }
 
 .profile-pic {
@@ -111,7 +130,6 @@ nav ul li a:hover {
 
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropbtn {
@@ -128,7 +146,7 @@ nav ul li a:hover {
 }
 
 .dropbtn img {
-    padding-bottom: 24px;
+    padding-bottom: 10px;
 }
 
 .dropdown-content {

@@ -19,13 +19,13 @@ body {
 
 header {
     background-color: #A2C3DA;
-    padding-left: 10px;
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: grid;
-    grid-template-columns: auto auto auto 180px;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
 }
 
@@ -35,52 +35,53 @@ header {
     padding-left: 60px;
 }
 
-.search-bar {
-    width: 300px;
+.search-bar{
     padding-top: 15px;
-    position: relative;
 }
 
 .search-input {
     padding: 10px;
-    padding-left: 40px;
     box-sizing: border-box;
+    position: relative;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 15px;
 }
 
 #search-bar{
+    width: 300px;
+    position: relative;
     background-color: white;
     border: none;
 }
 
 .search-icon {
-    position: absolute;
-    right: 30px;
-    top: 50%;
+    position: relative;
+    top: 20px;
+    right: 35px;
     transform: translateY(-50%);
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 
-.nav-links li {
-    display: inline-block;
-    padding-right: 50px;
-
-}
 
 .profile-menu {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-menu p{
+    color: whitesmoke;
 }
 
 .profile-pic {
@@ -105,11 +106,10 @@ header {
     width: 30px;
     height: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    ;
 }
 
 .dropbtn img {
-    padding-bottom: 24px;
+    padding-bottom: 5px;
 }
 
 .dropdown-content {
@@ -432,13 +432,14 @@ nav ul li a:hover {
     grid-template-columns: auto auto;
     background-color: #f8f3f3a1;
     border-radius: 10px;
+    padding-bottom: 19px;
 }
 
 .contact-info .form-section:last-child {
-    padding-bottom: 0;
+    margin: 0;
     background-color: #f8f3f3a1;
-    padding-top: 0;
-    margin-bottom: 0;
+    padding-top: 7px;
+    padding-bottom: 3px;
     padding-left: 45px;
     padding-right: 20px;
 }
