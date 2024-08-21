@@ -15,3 +15,40 @@ function highlightItem(selectedItem) {
     // Añade la clase 'selected' al ítem que se ha hecho clic
     selectedItem.classList.add('selected');
 }
+
+
+// Funciones del calendario
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        locale: 'es', // Configurar el idioma español
+        initialView: 'dayGridMonth',
+        editable: true,
+        selectable: true,
+        eventColor: '#00bfff', // Color celeste para los eventos
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        dateClick: function(info) {
+            var title = prompt('Introduce el nombre de la clase:');
+            if (title) {
+                calendar.addEvent({
+                    title: title,
+                    start: info.dateStr,
+                    allDay: true
+                });
+            }
+        },
+        eventClick: function(info) {
+            if (confirm("¿Quieres eliminar esta clase?")) {
+                info.event.remove();
+            }
+        }
+    });
+
+    calendar.render();
+});

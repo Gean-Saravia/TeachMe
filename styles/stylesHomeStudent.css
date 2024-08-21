@@ -1,8 +1,10 @@
 /* General */
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-*{
+
+* {
     font-family: 'Alata';
 }
+
 body {
     font-family: 'Alata', sans-serif;
     background-color: #90B4CE;
@@ -31,7 +33,7 @@ header {
     padding-left: 60px;
 }
 
-.search-bar{
+.search-bar {
     padding-top: 15px;
 }
 
@@ -44,7 +46,7 @@ header {
     font-size: 15px;
 }
 
-#search-bar{
+#search-bar {
     width: 300px;
     position: relative;
     background-color: white;
@@ -62,7 +64,7 @@ header {
     padding: 0;
 }
 
-input[type="text"]{
+input[type="text"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 14.4px;
@@ -107,7 +109,7 @@ nav ul li a:hover::after {
 }
 
 nav ul li a:hover {
-    color: #fff;    
+    color: #fff;
 }
 
 .profile-menu {
@@ -117,7 +119,7 @@ nav ul li a:hover {
     gap: 10px;
 }
 
-.profile-menu p{
+.profile-menu p {
     color: whitesmoke;
 }
 
@@ -172,7 +174,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.dropbtn:hover{
+.dropbtn:hover {
     background-color: #f1f1f1;
 }
 
@@ -187,7 +189,7 @@ nav ul li a:hover {
 
 .container {
     display: flex;
-    padding: 20px 100px ;
+    padding: 20px 100px;
     gap: 30px;
 }
 
@@ -199,9 +201,10 @@ nav ul li a:hover {
     padding-right: 20px;
     padding-bottom: 20px;
     font-size: 11px;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.my-classes h2{
+.my-classes h2 {
     color: black;
     font-size: 30px;
     padding-left: 20px;
@@ -216,34 +219,39 @@ ul#class-list {
     width: auto;
     color: #5686E1;
     text-align: center;
-    padding-left: 50px;
 }
 
 ul#class-list li {
-    border-left: 18px solid #177cda; /* Borde gris por defecto, prueba para ver cambios */
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
-    border-top: 2px solid white;
+    border-left: 10px solid #12A4E3;
+    /* Borde gris por defecto, prueba para ver cambios */
+    border-radius: 10px;
+    background-color: white;
     padding: 8px;
     margin-bottom: 10px;
     cursor: pointer;
-    border-radius: 20px;
     transition: all 0.3s ease;
-    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.274);
 }
 
 ul#class-list li.selected {
-    border-color: rgb(5, 22, 44); /* Borde rojo para el seleccionado, prueba para ver cambios */
+    border-color: #085272;
+    /* Borde rojo para el seleccionado, prueba para ver cambios */
     padding-left: 30px;
     margin-left: -30px;
 }
 
 .item {
-    transition: transform 0.3s ease; /* Transición suave para el zoom */
+    transition: transform 0.3s ease;
+    /* Transición suave para el zoom */
+}
+
+ul#class-list li.selected:hover {
+    transform: scale(1.0);
 }
 
 .item:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    transform: scale(1.1);
+    /* Aumenta el tamaño al pasar el mouse */
 }
 
 main {
@@ -251,15 +259,30 @@ main {
 }
 
 .profile-section {
-    width: 30%;
-    height: 600px;
+    width: 600px;
     background-color: #f5f1f18c;
     border-radius: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-section img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 10px 10px;
+    margin-bottom: 0;
+}
+
+.profile-section h2 {
+    margin: 0;
 }
 
 .welcome {
     display: flex;
-    background-color: #0099ff;
+    background-color: #12A4E3;
     padding: 20px;
     border-radius: 20px;
     color: white;
@@ -269,15 +292,18 @@ main {
     align-items: center;
     font-size: 20px;
     width: auto;
-    height:190px;
+    height: 190px;
     text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .section {
     display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Alinea verticalmente los elementos al centro */
-    padding: 5px; /* Opcional: Añade un poco de padding alrededor del contenedor */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    /* Alinea verticalmente los elementos al centro */
+    padding: 5px;
+    /* Opcional: Añade un poco de padding alrededor del contenedor */
 }
 
 .section h2 {
@@ -287,14 +313,16 @@ main {
 }
 
 .section button {
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
     border-radius: 20px;
     box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
     border: none;
     padding: 10px;
     transition: transform 0.3s ease;
 }
-.section button:hover{
+
+.section button:hover {
     background-color: #e9f6ff;
     transform: scale(1.1)
 }
@@ -319,20 +347,23 @@ main {
     font-size: 16px;
 }
 
-.subject:hover{
+.subject:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
 .subject p {
-    margin-right: 10px; /* Espacio entre el texto y el ícono */
+    margin-right: 10px;
+    /* Espacio entre el texto y el ícono */
 }
 
 .profile-icon {
     display: inline-block;
-    width: 40px; /* Ajusta según el tamaño deseado */
+    width: 40px;
+    /* Ajusta según el tamaño deseado */
     height: 40px;
-    border-radius: 50%; /* Hace el borde redondo */
+    border-radius: 50%;
+    /* Hace el borde redondo */
 }
 
 .class-table table {
@@ -341,40 +372,134 @@ main {
     margin-top: 20px;
 }
 
-.class-table th, .class-table td {
+.class-table th,
+.class-table td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
 }
 
-.profile-section {
-    text-align: center;
-    width: 30%;
-    padding-right: 0;
+/* Estilos calendario */
+
+#calendar-container {
+    margin: 5px;
+    /* Reducir el espacio superior e inferior */
+    background-color: #ffffff;
+    /* Blanco */
+    border: 2px solid #00416d;
+    /* Celeste */
+    border-radius: 8px;
+    /* Reducir el radio del borde */
+    padding: 0px;
+    /* Reducir el padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Reducir la sombra */
+    font-size: 10px;
 }
 
-.profile-section .profile-info img {
-    margin-top: 20px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 350px;
+    /* Altura fija de 350px */
 }
 
-.calendar {
-    text-align: center;
-    margin-top: 20px;
+.fc-toolbar {
+    font-size: 0.85em;
+    /* Reducir el tamaño de la barra de herramientas */
 }
 
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+.fc-toolbar-title {
+    font-size: 1.2em;
+    /* Ajustar el tamaño del título */
+    color: #00bfff;
+    /* Título celeste */
+}
+
+.fc .fc-button {
+    padding: 5px 10px;
+    /* Reducir el padding de los botones */
+    font-size: 0.85em;
+    /* Reducir el tamaño del texto en los botones */
+    background-color: #006688;
+    border: 1px #00416d solid;
+    color: white;
+    /* Texto celeste */
+    border-radius: 4px;
+    /* Reducir el radio de los bordes de los botones */
+}
+
+.fc .fc-button:hover {
+    background-color: #006688c9;
+    /* Fondo celeste al pasar el mouse */
+    color: #ffffff;
+    /* Texto blanco al pasar el mouse */
+}
+
+.fc-daygrid-event {
+    background-color: #00bfff;
+    /* Eventos celestes */
+    border-color: #00bfff;
+    font-size: 0.85em;
+    /* Reducir el tamaño del texto en los eventos */
+}
+
+.fc-day-today {
+    background-color: #e6f7ff;
+    /* Día actual en un celeste suave */
 }
 
 .reminders {
-    margin-top: 20px;
-    padding: 10px;
+    height: 80px;
+    margin: 0px 20px;
     background-color: #f5f5f5;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.class-table {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    /* Asegúrate de que los bordes estén colapsados */
+}
+
+.class-table,
+.class-table th,
+.class-table td {
+    border: none;
+    /* Elimina todos los bordes */
+    padding: 10px;
+    /* Ajusta el relleno según sea necesario */
+}
+
+.class-table th {
+    background-color: #12A4E3;
+    color: #ffffff;
+    text-align: center;
+}
+
+.class-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.class-table tbody tr:hover {
+    background-color: #e0f7ff;
+    /* Celeste claro */
+    transform: scale(1.02);
+}
+
+.class-table td {
+    color: #333;
+    font-size: 15px;
+}
+
+.class-table th {
+    font-size: 20px;
+}
+
+.class-table tr:hover td {
+    color: #007acc;
+    /* Cambia el color del texto al pasar el mouse */
 }
