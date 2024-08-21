@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeachMe Dashboard</title>
+    <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/stylesHomeStudent.css">
 </head>
 
@@ -15,7 +16,15 @@
                 <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Buscar en mis clases...">
+                <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
+                <button class="search-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
+                        <!-- Gris claro -->
+                        <path
+                            d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+
+                </button>
             </div>
             <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
@@ -24,15 +33,16 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <img src="" alt="Foto de perfil" class="profile-pic">
+                <img src="assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="Foto de perfil" class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                     </button>
                     <div class="dropdown-content" id="subMenu">
-                        <a href="#">Mi Perfil</a>
+                        <a href="#">Mi perfil</a>
+                        <a href="#">Editar perfil</a>
                         <a href="#">Configuración</a>
-                        <a href="#">Cerrar Sesión</a>
+                        <a href="#">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
@@ -40,10 +50,9 @@
     </header>
 
     <div class="container">
-        <aside>
+        <aside class="my-classes">
             <h2>Mis Clases</h2>
             <ul id="class-list">
-                <li class="item" onclick="highlightItem(this)">Profesores</li>
                 <li class="item" onclick="highlightItem(this)">C++</li>
                 <li class="item" onclick="highlightItem(this)">.NET</li>
                 <li class="item" onclick="highlightItem(this)">Java</li>
@@ -52,25 +61,35 @@
                 <li class="item" onclick="highlightItem(this)">SQL</li>
                 <li class="item" onclick="highlightItem(this)">Ruby</li>
                 <li class="item" onclick="highlightItem(this)">HTML</li>
+                <li class="item" onclick="highlightItem(this)">Física</li>
+                <li class="item" onclick="highlightItem(this)">Introducción a la Programación</li>
+                <li class="item" onclick="highlightItem(this)">Matemática</li>
             </ul>
         </aside>
 
         <main>
             <div class="welcome">
-                <h1>Bienvenido de regreso, Iván!</h1>
+                <h1>Bienvenido de regreso, Lucia!</h1>
             </div>
-
+            <div class="section">
+                <h2>Materias</h2>
+                <button type="button">Ver más ></button>
+            </div>
+            
             <section class="subjects">
                 <div class="subject">
                     <h3>Física</h3>
+                    <span class="profile-icon">👨‍💼</span>
                     <p>Docente: Felipe Argento</p>
                 </div>
                 <div class="subject">
-                    <h3>Física</h3>
+                    <h3>Introducción a la programación</h3>
+                    <span class="profile-icon">👨‍💼</span>
                     <p>Docente: Felipe Argento</p>
                 </div>
                 <div class="subject">
-                    <h3>Física</h3>
+                    <h3>Matemática</h3>
+                    <span class="profile-icon">👨‍💼</span>
                     <p>Docente: Felipe Argento</p>
                 </div>
             </section>
@@ -81,7 +100,6 @@
                         <tr>
                             <th>Clase</th>
                             <th>Profesor/a</th>
-                            <th>Estudiantes</th>
                             <th>Inicio</th>
                             <th>Termina</th>
                         </tr>
@@ -90,20 +108,12 @@
                         <tr>
                             <td>Nº1</td>
                             <td>José Suárez</td>
-                            <td>
-                                <img src="student1.jpg" alt="Estudiante">
-                                <img src="student2.jpg" alt="Estudiante">
-                            </td>
                             <td>09/04/24</td>
                             <td>18/04/24</td>
                         </tr>
                         <tr>
                             <td>Nº1</td>
                             <td>Lina Pérez</td>
-                            <td>
-                                <img src="student3.jpg" alt="Estudiante">
-                                <img src="student4.jpg" alt="Estudiante">
-                            </td>
                             <td>09/04/24</td>
                             <td>15/04/24</td>
                         </tr>
@@ -114,8 +124,8 @@
 
         <aside class="profile-section">
             <div class="profile-info">
-                <img src="profile.jpg" alt="Iván Gómez">
-                <h2>Iván Gómez</h2>
+                <img src="assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="foto-perfil">
+                <h2>Lucia Acosta</h2>
                 <span>Estudiante</span>
             </div>
             <div class="calendar">
@@ -133,25 +143,7 @@
             </div>
         </aside>
     </div>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('subMenu');
-            const button = document.getElementById('dropdownButton');
-            menu.classList.toggle('show');
-            button.classList.toggle('active');
-        }
-
-        function highlightItem(selectedItem) {
-            // Elimina la clase 'selected' de todos los ítems
-            var items = document.querySelectorAll('#class-list .item');
-            items.forEach(function (item) {
-                item.classList.remove('selected');
-            });
-
-            // Añade la clase 'selected' al ítem que se ha hecho clic
-            selectedItem.classList.add('selected');
-        }
-    </script>
+    <script src="funcionInicioEstudiante.js"></script>
 </body>
 
 </html>
