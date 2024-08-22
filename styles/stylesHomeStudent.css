@@ -34,6 +34,7 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra suave para mejorar la visibilidad */
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
     align-items: center;
+    padding-right: 100px;
     }
 
 .my-classes, main, .profile-section{
