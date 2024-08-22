@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachMe Dashboard</title>
+    <title>TeachMe Estudiante</title>
     <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="styles/stylesHomeStudent.css">
 </head>
 
@@ -34,7 +35,8 @@
             </ul>
             <div class="profile-menu">
                 <p>Lucia Acosta</p>
-                <img src="assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="Foto de perfil" class="profile-pic">
+                <img src="assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="Foto de perfil"
+                    class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
@@ -76,7 +78,7 @@
                 <h2>Materias</h2>
                 <button type="button">Ver más ></button>
             </div>
-            
+
             <section class="subjects">
                 <div class="subject">
                     <h3>Física</h3>
@@ -95,32 +97,43 @@
                 </div>
             </section>
 
-            <section class="class-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Clase</th>
-                            <th>Profesor/a</th>
-                            <th>Inicio</th>
-                            <th>Termina</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nº1</td>
-                            <td>José Suárez</td>
-                            <td>09/04/24</td>
-                            <td>18/04/24</td>
-                        </tr>
-                        <tr>
-                            <td>Nº1</td>
-                            <td>Lina Pérez</td>
-                            <td>09/04/24</td>
-                            <td>15/04/24</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+            <table class="class-table">
+
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Profesor/a</th>
+                        <th>Materia</th>
+                        <th>Inicio</th>
+                        <th>Termina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nº1</td>
+                        <td>Felipe Argento</td>
+                        <td>Física</td>
+                        <td>09/04/24</td>
+                        <td>18/04/24</td>
+                    </tr>
+                    <tr>
+                        <td>Nº1</td>
+                        <td>Felipe Argento</td>
+                        <td>Introducción a la Programación</td>
+                        <td>09/04/24</td>
+                        <td>15/04/24</td>
+                    </tr>
+                    <tr>
+                        <td>Nº1</td>
+                        <td>Felipe Argento</td>
+                        <td>Matemática</td>
+                        <td>09/04/24</td>
+                        <td>18/04/24</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
         </main>
 
         <aside class="profile-section">
@@ -129,13 +142,9 @@
                 <h2>Lucia Acosta</h2>
                 <span>Estudiante</span>
             </div>
-            <div class="calendar">
-                <h3>Septiembre</h3>
-                <div class="calendar-grid">
-                    <!-- Aquí puedes añadir los días del mes -->
-                    <span>1</span>
-                    <!-- Otros días... -->
-                </div>
+            <div id="calendar-container">
+                <h2>Tus clases</h2>
+                <div id='calendar'></div>
             </div>
             <div class="reminders">
                 <h3>Recordatorios</h3>
@@ -145,6 +154,9 @@
         </aside>
     </div>
     <script src="funcionInicioEstudiante.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/es.js'></script>
+
 </body>
 
 </html>
