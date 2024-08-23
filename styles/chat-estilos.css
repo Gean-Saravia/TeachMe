@@ -27,14 +27,16 @@ header {
 }
 
 .logo img {
-    height: 70px;
+    height: 5rem;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
-    margin-right: -100px; /* Ajustado para que los enlaces no estén tan a la derecha */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -45,7 +47,7 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-right: 40px; /* Añadido para separar el perfil del borde derecho */
+    margin-right: 40px;
 }
 
 .profile-pic {
@@ -98,10 +100,14 @@ header {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #094067;
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: #fff;
 }
 
 nav ul li a::after {
@@ -120,4 +126,280 @@ nav ul li a::after {
 nav ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 10px;
+    background-color: #90B4CE;
+    font-family: 'Alata', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: calc(100vh - 100px);
+    background-color: #F8F3F3;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: calc(100vh - 80px); /* se ajusta según sea necesario para dispositivos móviles */
+    }
+    .sidebar {
+        width: 100%;
+        max-width: none;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .chat-section {
+        width: 100%;
+    }
+}
+
+.sidebar {
+    width: 100%;
+    max-width: 20rem;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input {
+    padding: 1rem;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 1.5rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.divider {
+    width: 90%;
+    height: 0.1rem;
+    background-color: #ddd;
+    margin: 1rem auto;
+}
+
+.conversations {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.conversation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: #fffcfc;
+}
+
+.conversation:hover {
+    background-color: #f1f1f1;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.conversation-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #61abdb;
+}
+
+.last-message {
+    color: #777;
+}
+
+.message-count {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background-color: #2492ec;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50%;
+}
+
+.chat-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background: white;
+    margin: 10px 20px 10px 20px;
+}
+
+.chat-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.status {
+    color: #777;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #F8F3F3;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    max-width: 80%;
+}
+
+.student-message {
+    align-self: flex-start;
+    background-color: #fcfcfc;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    max-width: 40%;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+.teacher-message {
+    align-self: flex-end;
+    background-color: #5d97c7;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    max-width: 40%;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+}
+
+.teacher-message p {
+    color: #f0f0f0;
+}
+
+.teacher-message .timestamp {
+    align-self: flex-end;
+    color: #fdfdfd;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.timestamp {
+    align-self: flex-end;
+    color: #769add;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input .input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 1.5rem;
+    margin-right: 0.5rem;
+    font-family: 'Alata';
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    
+    .sidebar {
+        width: 30%;
+    }
+    
+    .chat-section {
+        width: 70%;
+    }
+}
+
+
+.linea {
+    width: 95%;
+    height: 0.1rem;
+    background-color: #ddd;
+    margin: 1rem auto;
+}
+
+
+.final{
+    padding: 1rem 0;
+    text-align: center;
+
+    p{
+        font-size: .7rem;
+        color: white;
+    }
 }
