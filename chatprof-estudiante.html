@@ -3,63 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../styles/chat-estilos.css">
-    <title>Chat TeachMe</title>
-</head>
+    <title>Chat Profesor-Estudiante</title>
+    <link rel="stylesheet" href="/styles/chat-estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <body>
-
-<div class="hero">
-    <nav>
-        <img src="../assets/logoTM.png" class="logo">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-        <div class="user-menu">
-            <img src="../assets/userpic.jpg" class="user-pic" onclick="toggleMenu()">
-            <i class="fa-solid fa-chevron-down" onclick="toggleMenu()"></i>
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <div class="user-info">
-                        <img src="../assets/userpic.jpg">
-                        <h3>Gabriel Torres</h3>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><img src="/assets/logoTM.png" alt="TeachMe Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <img src="/assets/userpic.jpg" alt="Foto de perfil" class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px;">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar Sesión</a>
                     </div>
-                    <hr>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/iconoperfil.png">
-                        <p>Editar Perfil</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/ajustes.png">
-                        <p>Ajustes y Privacidad</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/soporte.png">
-                        <p>Soporte</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="../assets/logout.png">
-                        <p>Cerrar Sesión</p>
-                        <span>></span>
-                    </a>
                 </div>
             </div>
+        </nav>
+    </header>
+    <main>
+    <div class="container">
+        <!-- .... -->
+        <div class="sidebar">
+            <div class="search-input">
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar estudiante…" class="input" id="searchInput">
+                    <button type="submit" class="btn">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="divider"></div>
+            <div class="conversations" id="conversations">
+                <!-- .... -->
+            </div>
         </div>
-    </nav>
-</div>
+        <div class="chat-section" id="chatArea">
+            <div class="chat-header" id="chatHeader">
+                <div class="avatar">
+                    <img src="/assets/comunidad.png" alt="Avatar del usuario" id="chatAvatar">
+                </div>
+                <div class="chat-details">
+                    <p class="user-name" id="chatUserName">Selecciona un estudiante</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Espacio para continuar agregando -->
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Escribe un mensaje..." class="input" id="messageInput">
+                <button class="btn" id="sendMessageBtn">
+                    <i class="fa fa-paper-plane"></i> <!-- Usando Font Awesome para un icono de avión de papel -->
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
 
-<script>
-    function toggleMenu(){
-        let subMenu = document.getElementById("subMenu");
-        subMenu.classList.toggle("open-menu");
-    }
-</script>
+<footer>
+    <div class="linea">
+    </div>
+    <div class="final">
+        <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
+    </div>
+</footer>
 
+    <script src="funcionChat.js"></script>
 </body>
 </html>
