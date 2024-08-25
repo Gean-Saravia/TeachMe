@@ -6,54 +6,198 @@
 }
 
 body {
-    background-color: #c9d6ff;
+    background-color: #90B4CE;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 110vh;
+    min-height: 100vh;
     margin: 0;
 }
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 50px;
-    border-bottom: none;
+/*Estilos para el fondo animado*/
+.area {
+    background: #90B4CE;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
-    position: fixed;
+    height: 100vh;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: -1; /* Envía el área de fondo detrás del contenido */
 }
-
-/* Estilo para el logo */
-nav .logo img {
-    height: 80px;
-}
-
-/* Estilo para el menú de navegación */
-nav .nav-menu {
+/* Estilos para las figuras en movimiento */
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
     list-style: none;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(36, 59, 190, 0.514);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    border-radius: 50%;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+/*Inicio del navbar*/
+header {
+    background-color: #A2C3DA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
-nav .nav-menu li {
-    margin-left: 40px; /* Espacio entre los elementos del menú */
-}
-
-nav .nav-menu a {
-    text-decoration: none;
+.nav-links a {
     color: #094067;
-    font-size: 16px;
-    transition: color 0.3s;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 500;
 }
 
-nav .nav-menu a:hover {
-    color: white;
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: #fff;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*Inicio de estilos para el login */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
 }
 
 .container {
@@ -63,8 +207,9 @@ nav .nav-menu a:hover {
     position: relative;
     overflow: hidden;
     width: 768px;
-    max-width: 100%;
+    max-width: 90%;
     min-height: 480px;
+    border: none;
 }
 
 .container p {
@@ -95,7 +240,7 @@ nav .nav-menu a:hover {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #3646b7; /* Azul oscuro para el subrayado */
+    background-color: #4253d8; /* Azul oscuro para el subrayado */
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -136,7 +281,7 @@ nav .nav-menu a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 50px;
     height: 100%;
 }
 
@@ -189,6 +334,16 @@ nav .nav-menu a:hover {
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+}
+
+/* Estilos para el icono de password*/
+.form-group i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #094067;
 }
 
 .sign-in {
