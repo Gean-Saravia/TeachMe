@@ -9,22 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body class="body-index">
     <header class="header-index">
-        <nav class="nav-index">
-            <figure class="logo-index">
-                <img 
-                src="./assets/teachme-logo-completo.png"
-                alt="Logo completo de TeachMe"
-                />
-            </figure>
-            <menu class="menu-index">
+        <nav class="navbar-index">
+            <div class="logo-index">
+                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+            <div class="search-bar">
+            </div>
+            <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Cursos</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
-            </menu>
+            </ul>
             <div class="btn-index">
                 <button class="btn" id="btnSignin" >
                     <a href="./login.html">Iniciar Sesión</a>
@@ -48,7 +49,7 @@
     <main class="main-index">
         <section class="cursos-solicitados">
             <article>
-                <h2>Cursos más solicitados</h2>
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">Cursos más solicitados</h2>
                 <div class="cont-cursos-solicitados-index">
                     <div class="curso-solicitado-index">
                         <img src="./assets/chico-celular.png" alt="Joven estudiando desde su celular">
@@ -68,89 +69,32 @@
                 </div>
             </article>
         </section>
-        <section class="testimonios-index">
-            <article class="estadistica-index">
-                <p>+440 profesores</p>
-                <p>+3500 alumnos</p>
-                <p>+50 cursos</p>
-            </article>
-            <article class="cont-testimonios-index"> 
-                <div class="testimonio">
-                    <img src="./assets/cabra-icon.png" alt="Paulo Londra imagen de perfil">
-                    <div class="testi-estrellas">
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                    </div>
-                    <div class="testi-detalles">
-                        <p class="testi-nombre">Paulo Londra</p>
-                        <p class="testi-curso">Curso de idiomas</p>
-                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
-                    </div>
-                </div>
-                <div class="testimonio">
-                    <img src="./assets/vaca-icon.png" alt="Paulo Londra imagen de perfil">
-                    <div class="testi-estrellas">
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                    </div>
-                    <div class="testi-detalles">
-                        <p class="testi-nombre">Bart Simpson</p>
-                        <p class="testi-curso">Curso de idiomas</p>
-                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
-                    </div>
-                </div>
-                <div class="testimonio">
-                    <img src="./assets/pez-icon.png" alt="Paulo Londra imagen de perfil">
-                    <div class="testi-estrellas">
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                    </div>
-                    <div class="testi-detalles">
-                        <p class="testi-nombre">Frank Fabra</p>
-                        <p class="testi-curso">Curso de idiomas</p>
-                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
-                    </div>
-                </div>
-                <div class="testimonio">
-                    <img src="./assets/pato-icon.png" alt="Paulo Londra imagen de perfil">
-                    <div class="testi-estrellas">
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                        <p>&#9733;</p>
-                    </div>
-                    <div class="testi-detalles">
-                        <p class="testi-nombre">Joe Biden</p>
-                        <p class="testi-curso">Curso de idiomas</p>
-                        <p class="testi-resena">Realizar este curso me permitió mejorar mi comunicación y comprensión</p>
-                    </div>
+        <section class="nosotros-index">
+            <article>
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">Equipo de TeachMe</h2>
+                <div class="cont-equipo-index">
+                    <!-- Se insertan las cards de cada integrante mediante JS -->
                 </div>
             </article>
         </section>
         <section class="frase-index">
             <article>
-                <div class="circulo-index"></div>
-                <img src="./assets/hombre-tablet.png" alt="Hombre estudiando desde su computadora portátil">
-                <p>Creemos en el poder del conocimiento para transformar vidas. Te ofrecemos una amplia gama de tutores especializados para ayudarte a alcanzar tus metas educativas. ¡Únete a nosotros y transforma tu futuro!</p>
+                <div class="cont-imagen-frase">
+                    <div class="circulo-index"></div>
+                    <img src="./assets/hombre-tablet.png" alt="Hombre estudiando desde su computadora portátil">
+                </div>
+                <p data-aos="fade-left" data-aos-easing="linear" data-aos-duration="700">Creemos en el poder del conocimiento para transformar vidas. Te ofrecemos una amplia gama de tutores especializados para ayudarte a alcanzar tus metas educativas. ¡Únete a nosotros y transforma tu futuro!</p>
             </article>
         </section>
-        <section class="nosotros-index">
-            <article>
-                <h2>Equipo de TeachMe</h2>
-                <div class="cont-carrusel-equipo">
-                    <div class="cont-equipo-index">
-                        <!-- Se insertan las cards de cada integrante mediante JS -->
-                    </div>
+        <section class="testimonios-index">
+            <article class="estadistica-index">
+                <p data-aos="zoom-in">+440 profesores</p>
+                <p data-aos="zoom-in">+3500 alumnos</p>
+                <p data-aos="zoom-in">+50 cursos</p>
+            </article>
+            <article class="cont-testimonios-index">
+                <div class="carrusel-tracker">
+                    <!-- Acá se imprimen de forma dinamica los testimonios -->
                 </div>
             </article>
         </section>
@@ -206,6 +150,10 @@
             <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
         </div>
     </footer>
+    <script>
+        AOS.init()
+    </script>
     <script src="./carrusel-index.js"></script>
+    <script src="./carrusel-testimonios.js"></script>
 </body>
 </html>
