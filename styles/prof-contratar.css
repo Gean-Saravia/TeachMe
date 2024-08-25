@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Kumbh+Sans:wght@900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+
 
 body {
     font-family: 'Alata', sans-serif;
@@ -147,38 +150,43 @@ nav ul li a:hover::after {
 .contenedor{
     display: flex;
     height: 90vh;
-    background-color: red;
+    background-color: #90B4CE;
     padding: 5px;
     margin-top: 20px;
-    gap: 2vw;
+    align-items: center;
+    gap: 1vw;
     justify-content: center;
 }
 /*Empieza la edicion del cuadro perfil*/
 .perfil{
+    display: flex;
+    flex-direction: column;
     background-color: #C4E0EF;
-    height: 100%;
+    height: 80%;
     width: 17.969vw;
     border-radius: 50px;
+    gap: 2vh;
 }
 
 .title{
-    background-color: violet;
+
+    margin-top: 4VH;
     width: 100%;
     height: auto;
     text-align: center;
     color: #000000;
-    margin-top: 30%;
+
 }
 
 .imagen-usuario{
     display: flex;
-    background-color: blue;
+
     align-items: center;
     justify-content: center;
 }
 .imagen-usuario img{
-    height: 25vh;
-    width: 12vw;
+    height: 16vh;
+    width: 8vw;
     border-radius: 50%;
 }
 .datos{
@@ -196,10 +204,11 @@ nav ul li a:hover::after {
 }
 
 .datos p{
+    font-family: 'Alegreya Sans SC';
     color: #616161;
 }
 .datos-tecnicos{
-    background-color: chocolate;
+
     height: auto;
     width: 100%;
     display: flex;
@@ -207,12 +216,18 @@ nav ul li a:hover::after {
     align-items: center;
     padding: 5px;
     box-sizing: border-box;
+    font-family: "Alegreya Sans SC", sans-serif;
+
+}
+.datos-tecnicos p{
+    font-weight: 600;
+    font-style: normal;
 }
 
 .idiomas{
     padding: 5px;
     display: flex;
-    background-color: blue;
+
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -227,13 +242,13 @@ nav ul li a:hover::after {
     font-size: clamp(1rem, 2vw, 1.5rem);
     word-wrap: break-word;
     white-space: normal;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #333333;
 }
 
 .clases{
     padding: 5px;
-    background-color: yellow;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,13 +264,12 @@ nav ul li a:hover::after {
     font-size: clamp(1rem, 2vw, 1.5rem);
     word-wrap: break-word;
     white-space: normal;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #333333;
 }
 
 .alumnos{
     padding: 5px;
-    background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,7 +285,7 @@ nav ul li a:hover::after {
     font-size: clamp(1rem, 2vw, 1.5rem);
     word-wrap: break-word;
     white-space: normal;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #333333;
 }
 .title-tecnico{
@@ -288,26 +302,267 @@ nav ul li a:hover::after {
     justify-content: center;
 }
 
-.boton button{
-    height: 50%;
-    width: 50%;
+
+.ver-mas{
     background-color: #65A8E5;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vh;
+    width: 8vw;
+    padding: 10px;
     color: white;
     border: none;
+    font-family: 'alata';
+    font-size: 1.5rem;
+    border-radius: 30px;
 }
 /*Edicion de cuadro profesor*/
 .contenido-profesor{
-    height: 100%;
-    width: 55.99vw;
-    background-color: yellow;
+    height: 70%;
+    width: 52.99vw;
+    background-color: #90B4CE;
     border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+
+/*Empieza el armado del contenido de profesor*/
+.article-datos{
+    height: 90%;
+    width: 18vw;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 26px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+/*Editando imagen de datos*/
+.foto{
+    height: 56%;
+    width: 17vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto img{
+    height: 100%;
+    width: 90%;
+}
+
+.conocimientos{
+    background-color: blue;
+    height: 29%;
+    width: 75%;
+}
+
+
+/*Se edita descripcion*/
+.descripcion{
+    height: 80%;
+    width: 55%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.titulo-nombre{
+    height: 15%;
+    width: 100%;
+
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.titulo-nombre h1{
+    font-family: 'Alata';
+    font-size: 2rem;
+    padding: 20px;
+    font-weight: bold;
+}
+.descripcion-rol{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.descripcion-rol p{
+    font-family: 'Alata';
+    font-size: 1.5rem;
+    padding: 20px;
+}
+.resumen-perfil{
+
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(0, 0, 0, .7);
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 26px;
+
+}
+.resumen-perfil p{
+    font-family: 'alata';
+    font-size: 1.2rem;
+    padding: 26px;
+}
+
+.precio{
+    margin-top: 2%;
+    height: 12%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 26px;
+}
+.precio p{
+    font-family: 'alata';
+    font-size: 1.5rem;
+    padding: 26px;
+}
+
+.botones{
+    height: 15%;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.botones a{
+    height: 2vh;
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #094067;
+    padding: 15px;
+    color: white;
+    list-style: none;
+    font-family: 'alata';
+    font-size: 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+}
+/*Pasamos a la parte de comentarios*/
+.comentarios{
+    height: 80%;
+    width: 17.969vw;
+    background-color: #C4E0EF;
+    border-radius: 50px;
+    gap: .7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-pregunta{
+    height: 7%;
+    width: 90%;
+    color: #000000;
+    background-color: #8FBFC9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo-pregunta p{
+    font-size: 1.5rem;
 
 }
 
-.comentarios{
+.personas-comentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 50%;
+    width: 100%;
+    gap: 2vh;
+}
+
+.persona-foto{
+
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+}
+
+.img-persona{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    width: 20%;
     height: 100%;
-    width: 17.969vw;
-    background-color: green;
-    border-radius: 50px;
+}
+
+.persona-comentario{
+
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nombre-persona{
+    height: 40%;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nombre-persona p{
+    padding: 20px;
+    font-family: 'Alata';
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .7);
+}
+
+.comentario-persona{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60%;
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    margin-left: 10px;
+
+}
+.comentario-persona p{
+    font-size: 1.5rem;
+}
+
+.foto-monigote{
+    height: 35%;
+
 }
