@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const createButton = document.querySelector('.btn-crear');
     const popup = document.getElementById("popup");
@@ -14,6 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function closePopup() {
         popup.classList.remove("open-popup");
         overlay.style.display = "none";
+    }
+
+    function highlightItem(element) {
+        const items = document.querySelectorAll("#class-list .item");
+        items.forEach(item => item.classList.remove("highlight"));
+        element.classList.add("highlight");
     }
 
     // Animación del botón al pasar el cursor
