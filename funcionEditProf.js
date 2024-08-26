@@ -43,7 +43,9 @@ document.getElementById("addRowButton").addEventListener("click", function () {
     var deleteButton = document.createElement("button");
     deleteButton.type = "button";
     deleteButton.className = "deleteRowButton";
-    deleteButton.textContent = "➖";
+    var icon = document.createElement("i");
+    icon.className = "fas fa-times"
+    deleteButton.appendChild(icon);
 
     
     deleteButton.addEventListener("click", function () {
