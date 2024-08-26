@@ -29,39 +29,106 @@
     flex-direction: column;
 }
 
-.navbar-index{
-    font-family: 'Alata', sans-serif;
-    display: grid;
-    grid-template-columns: auto auto auto 150px;
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #A2C3DA; /* Ajusta el color de fondo según tu diseño */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    display: flex; /* Alinea los elementos dentro del nav */
+    justify-content: space-between; /* Ajusta la alineación horizontal */
+    padding: 10px 20px; /* Añade un poco de espacio alrededor del contenido */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra suave para mejorar la visibilidad */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
     align-items: center;
+    padding-right: 100px;
+    font-family: var(--alata);
 
-    .logo-index img{
+    .logo img{
         margin-top: 10px;
         height: 70px;
         padding-left: 60px;
     }
 
     .search-bar {
-        width: 400px;
-        border-radius: 20px;
         padding-top: 15px;
+    }
+
+    #search-bar{
+        width: 300px;
+        position: relative;
+        background-color: white;
+        border: none;
     }
     
     .search-bar input {
-        width: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
         border-radius: 20px;
-        border: 1px solid #ccc;
+        width: 300px;
+        font-size: 15px;
     }
 
+    .search-icon {
+        position: relative;
+        top: 20px;
+        right: 35px;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 14.4px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 14px;
+        color: grey;
+        appearance: none;
+    }
+    
     .nav-links {
         list-style: none;
         display: flex;
-        gap: 20px;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
     }
-    .nav-links li{
+    
+    ul li a {
+        color: #094067;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease;
         display: inline-block;
-        padding-right: 50px;
-        
+    }
+    
+    ul li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+    
+    ul li a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    
+    ul li a:hover {
+        color: #fff;
     }
 
     .btn-index button{
@@ -93,34 +160,6 @@
     background-color: white;
     border: 1px solid #ccc;
 }
-nav ul li a {
-    color: #094067;
-    font-weight: 800;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-}
-nav ul li a:hover{
-    color: white;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
 
 .section-bienvenida{
     display: flex;
@@ -129,6 +168,7 @@ nav ul li a:hover::after {
     height: 90vh;
     width: 90%;
     margin: auto;
+    padding-top: 10vh;
 
     .texto-bienvenida{
         display: flex;
@@ -194,15 +234,16 @@ nav ul li a:hover::after {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: 90vh;
-        /* border: 2px solid red; */
+        gap: 1.5rem;
 
         h2{
             font-family: var(--fredoka);
             color: var(--white);
             text-shadow: 0 1px 2px #2a2a2a;
             font-size: 2.3rem;
-            line-height: 10vh;
+            line-height: 3vh;
             text-align: center;
             text-align: center;
         }
@@ -212,7 +253,8 @@ nav ul li a:hover::after {
             justify-content: center;
             align-items: center;
             gap: 5rem;
-            height: 90vh;
+            min-height: 70vh;
+            max-height: 80vh;
 
             .curso-solicitado-index{
                 display: flex;
