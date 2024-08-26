@@ -1,6 +1,5 @@
 :root{
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
     /*colores*/
     --blanco: #FFFFFF;
     --celesteFondo: #A2C3DA;
@@ -11,12 +10,6 @@
     --fredoka: "Fredoka", sans-serif;
     --alata: "Alata", sans-serif;
     --kumbh: "Kumbh Sans", sans-serif;
-}
-
-/*Debug*/
-*{
-    margin: 0;
-    padding: 0;
 }
 
 body{
@@ -215,7 +208,7 @@ nav ul li a:hover {
 
 main{
     flex: 1;
-    padding: 50px;
+    padding: 40px;
     gap: 10px;
     margin-top: 90px;
 }
@@ -228,7 +221,7 @@ main{
 }
 
 .catalogo {
-    width: 25%;
+    width: 35%;
     height: fit-content;
     background-color: #f5f1f18c;
     border-radius: 10px;
@@ -270,7 +263,7 @@ ul#class-list li {
 ul#class-list li.selected {
     border-color: #085272;
     /* Borde rojo para el seleccionado, prueba para ver cambios */
-    padding-left: 30px;
+    padding-left: 40px;
     margin-left: -30px;
 }
 
@@ -316,24 +309,22 @@ ul#class-list li.selected:hover {
 
 .cards-conteiner{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
-    margin: .8rem;
-    gap: 1rem;
+    margin: 10px;
+    gap: 20px;
 }
 
 /* Card Styles */
 .card{
-    flex: 1;
+    flex: 1 1 calc(33.333% - 20px); /* Tres tarjetas por fila menos el espacio del gap */
+    box-sizing: border-box;
     background-color: var(--blanco);
-    width: 10rem;
-    height: 13rem;
+    width: 5rem;
+    height: 15rem;
     border-radius: 20px;
     padding: 10px;
-    padding-right: 15px;
+    padding-right: 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -345,38 +336,52 @@ ul#class-list li.selected:hover {
 }
 
 .image-card img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .card-content{
-    padding: 15px;
+    padding: 0;
     text-align: center;
 }
 
 .card-content h3{
-    margin: 0 0 10px 0;
+    color: #232020;
+    margin: 0 0 5px 0;
 }
 
 .rating{
-    color: var(--azul);
+    color: #1D4F74;
     margin: 5px 0;
 }
 
-.card-content button{
-    background-color: var(--azul);
-    color: var(--blanco);
+.card-content .btn-c{
+    background-color: var(--blanco);
+    color: #4573CE;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
 }
 
-.card-content button:hover{
-    background-color: var(--celesteClaro);
+.card-content .btn-py{
+    background-color:#4573CE;
+    color: var(--blanco);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.card-content .btn-c:hover{
+    background-color: #4573CE;
+    color: var(--blanco);
 }
 
 .right-section{
