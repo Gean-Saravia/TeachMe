@@ -527,3 +527,22 @@ main {
     font-size: 18px; /* Tamaño */
     cursor: pointer; /* Cambiar cursor al pasar sobre el ícono */
 }
+
+.linea {
+    width: 95%;
+    height: 0.1rem;
+    background-color: #ddd;
+    margin: .5rem auto;
+    margin-top: 30px;
+}
+
+
+.final{
+    padding: 10px 10px;
+    text-align: center;
+    padding-top: 0;
+    p{
+        font-size: .7rem;
+        color: white;
+    }
+}
