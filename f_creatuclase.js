@@ -1,9 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
     const createButton = document.querySelector('.btn-crear');
-    const tagContainers = document.querySelectorAll('.tag-container');
+    const popup = document.getElementById("popup");
+    const overlay = document.getElementById("overlay");
 
-    // Toggle dropdown menu
+    // Función para abrir el popup
+    function openPopup(event) {
+        event.preventDefault(); // Previene el envío del formulario
+        popup.classList.add("open-popup");
+        overlay.style.display = "block";
+    }
+
+    // Función para cerrar el popup
+    function closePopup() {
+        popup.classList.remove("open-popup");
+        overlay.style.display = "none";
+    }
+
+    // Animación del botón al pasar el cursor
+    createButton.addEventListener('mouseenter', () => {
+        createButton.style.transition = 'transform 0.3s ease';
+        createButton.style.transform = 'scale(1.05)';
+    });
+
+    createButton.addEventListener('mouseleave', () => {
+        createButton.style.transform = 'scale(1)';
+    });
+
+    // Evento para abrir el popup al hacer clic en el botón
+    createButton.addEventListener('click', openPopup);
+
+    // Evento para cerrar el popup si se hace clic en el overlay
+    overlay.addEventListener('click', closePopup);
+
+    // Evento para cerrar el popup si se hace clic en el botón "OK"
+    const okButton = document.querySelector('.popup button');
+    if (okButton) {
+        okButton.addEventListener('click', closePopup);
+    }
+
+    // Función para toggle del menú
     window.toggleMenu = () => {
         const menu = document.getElementById('subMenu');
         const button = document.getElementById('dropdownButton');
@@ -11,13 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         button.classList.toggle('active');
     };
 
-    // Manejo del envío de la clase
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Clase creada exitosamente!');
-    });
-
     // Funcionalidad de configuración de etiquetas para Conocimientos y Redes sociales
+    const tagContainers = document.querySelectorAll('.tag-container');
+
     tagContainers.forEach(container => {
         const addTagBtn = container.querySelector('.add-tag');
         const input = container.querySelector('input') || document.createElement('input');
@@ -65,15 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             input.focus(); // Mantiene enfocada la entrada para agregar más etiquetas
         }
     }
-
-    // Animación del botón al pasar el cursor
-    createButton.addEventListener('mouseenter', () => {
-        createButton.style.transition = 'transform 0.3s ease';
-        createButton.style.transform = 'scale(1.05)';
-    });
-    createButton.addEventListener('mouseleave', () => {
-        createButton.style.transform = 'scale(1)';
-    });
 
     // Toggle ativo en la barra lateral
     const sidebarLinks = document.querySelectorAll('.my-classes-container li a');
