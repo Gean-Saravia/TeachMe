@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripción de la clase</label>
-                    <textarea id="descripcion" name="descripcion" placeholder="¿Qué temas/módulos se van a ver en tu clase? ¿Qué duración tendrá? ¿A qué tipo de alumnos va dirigido?"></textarea>
+                    <textarea maxlength="1000" id="descripcion" name="descripcion" placeholder="¿Qué temas/módulos se van a ver en tu clase? ¿Qué duración tendrá? ¿A qué tipo de alumnos va dirigido?"></textarea>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn-crear">Crear</button>
+                <button type="submit" class="btn-crear" onclick="openPopup(event)">Crear</button>
             </form>
         </section>
         <aside class="right-sidebar">
@@ -111,6 +111,13 @@
                 <button class="btn-consultar">Consultar</button>
             </div>
         </aside>
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <img src="/assets/tilde-celeste.png" alt="tilde celeste">
+            <h2>¡Perfecto!</h2>
+            <p>Tu clase ha sido creada correctamente</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
     </main>
     <footer>
         <button class="btn-volver">← Volver</button>
