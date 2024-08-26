@@ -23,7 +23,6 @@ body {
 
 header {
     background-color: #A2C3DA;
-    padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -31,6 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 40px;
 }
 
 .logo img {
@@ -53,7 +53,7 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-right: 40px; /* Añadido para separar el perfil del borde derecho */
+    margin-right: 10px; /* Añadido para separar el perfil del borde derecho */
 }
 
 .profile-pic {
@@ -107,10 +107,14 @@ header {
 
 
 nav ul li a {
-    color: #fff;
+    color: #094067;
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: #fff;
 }
 
 nav ul li a::after {
@@ -182,6 +186,10 @@ input, textarea {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 45px;
+}
+
+textarea{
+    resize: none;
 }
 
 .tag-container {
@@ -293,8 +301,6 @@ input, textarea {
     background-color: #1a3b5d;
 }
 
-
-
 .btn-volver {
     background-color: transparent;
     color: var(--primary-color);
@@ -353,4 +359,76 @@ footer {
 .my-classes-container li.active a {
     color: var(--accent-color);
     font-weight: bold;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none;
+    z-index: 999;
+}
+
+/* Estilos para el popup */
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 1000;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: rgb(24, 23, 23);
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #2196F3;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup button:hover {
+    background: rgb(58, 58, 180);
 }
