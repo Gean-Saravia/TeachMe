@@ -79,7 +79,8 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    font-weight: bold;
 }
 
 
@@ -107,7 +108,7 @@ header {
 }
 
 .dropbtn {
-    background-color: #003366ad;
+    background-color: #65A8E5;
     padding: 10px;
     width: auto;
     border: none;
@@ -195,6 +196,7 @@ header {
     text-align: center;
     background-color: #f8f3f3a1;
     height: 690px;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .profile-info img {
@@ -257,7 +259,7 @@ header {
 }
 
 .delete-btn {
-    background-color: red;
+    background-color: rgb(196, 0, 0);
     color: white;
     border: black;
     margin-left: auto;
@@ -346,7 +348,7 @@ select:hover{
     background-color: #003366;
     color: #fff;
     padding: 10px 20px;
-    margin-top: 15px;
+    margin-top: 30px;
     border: none;
     border-radius: 20px;
     margin-left: auto;
@@ -368,6 +370,7 @@ select:hover{
     padding: 15px;
     border-radius: 10px;
     display: grid;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .form-section h2 {
@@ -455,7 +458,7 @@ nav ul li a:hover {
 }
 
 #addRowButton {
-    font-size: 10px;
+    font-size: 14px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -471,21 +474,14 @@ nav ul li a:hover {
 }
 
 .deleteRowButton {
-    padding: auto;
     font-size: 12px;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
-    background-color: red;
-    color: white;
+    background: none;
     border: none;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
-.deleteRowButton:hover {
-    background-color: rgb(151, 0, 0, 1);
-}
 
 .option-div {
     margin-top: 10px;
@@ -515,14 +511,19 @@ input {
 
 .edit-icon {
     cursor: pointer;
-    margin-left: 10px;
-    border: #003366 solid;
-    border-radius: 50%;
-    background-color: #003366;
+    margin-left: 5px;
+    background: none;
     margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    color: #003366;
 }
 
 .edit-mode input {
     border: 1px solid #007BFF;
+}
+
+
+.fa-times {
+    color: #333; /* Color gris oscuro */
+    font-size: 20px; /* Tamaño */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el ícono */
 }
