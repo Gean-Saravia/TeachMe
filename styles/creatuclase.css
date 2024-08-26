@@ -317,50 +317,79 @@ footer {
     padding: 1rem 2rem;
 }
 
-.my-classes-container {
-    background-color: rgba(250, 250, 250, 0.596);
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container{
+    display: flex;
+    padding: 50px 100px;
+    gap: 30px;
 }
 
-.my-classes-container h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
+
+.my-classes {
+    width: 50%;
+    height: fit-content;
+    background-color: #f5f1f18c;
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-size: 11px;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.my-classes h2 {
+    color: black;
+    font-size: 30px;
+    padding-left: 33px;
+    width: fit-content;
+    font-weight: normal;
+    text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.7);
+    padding-bottom: 20px;
+
+}
+
+ul#class-list {
+    list-style-type: none;
+    width: auto;
+    color: #5686E1;
     text-align: center;
 }
 
-.my-classes-container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 20px;
+ul#class-list li {
+    border-left: 10px solid #12A4E3;
+    /* Borde gris por defecto, prueba para ver cambios */
+    border-radius: 10px;
+    background-color: white;
+    padding: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.274);
 }
 
-.my-classes-container li {
-    padding: 0.5rem 0;
+ul#class-list li.highlight {
+    border-color: #085272;
+    padding-left: 30px;
+    margin-left: -30px;
 }
 
-.my-classes-container li a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
+ul#class-list li.highlight:hover {
+    transform: scale(1.0);
 }
 
-.my-classes-container li a i {
-    margin-right: 15px; /* Espacio entre el ícono y el texto */
-    font-size: 1.2em;
+.item {
+    transition: transform 0.3s ease;
+    /* Transición suave para el zoom */
 }
 
-.my-classes-container li a:hover {
-    color: #3498db;
+ul#class-list li.selected:hover {
+    transform: scale(1.0);
 }
 
-.my-classes-container li.active a {
-    color: var(--accent-color);
-    font-weight: bold;
+.item:hover {
+    transform: scale(1.1);
+    /* Aumenta el tamaño al pasar el mouse */
 }
-
 .overlay{
     position: fixed;
     top: 0;
