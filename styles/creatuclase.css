@@ -340,12 +340,12 @@ footer {
 }
 
 .my-classes h2 {
-    color: black;
+    color: #094067;
     font-size: 30px;
     padding-left: 33px;
     width: fit-content;
     font-weight: normal;
-    text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
     padding-bottom: 20px;
 
 }
