@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-/*Estilos para el fondo animado*/
+
 .area {
     background: #90B4CE;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
@@ -23,7 +23,7 @@ body {
     left: 0;
     z-index: -1; /* Envía el área de fondo detrás del contenido */
 }
-/* Estilos para las figuras en movimiento */
+
 .circles {
     position: absolute;
     top: 0;
@@ -135,7 +135,6 @@ body {
     }
 }
 
-/*Inicio del navbar*/
 header {
     background-color: #A2C3DA;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -191,7 +190,7 @@ header {
     transform-origin: left;
 }
 
-/*Inicio de estilos para el login */
+
 main {
     flex: 1;
     display: flex;
@@ -336,7 +335,6 @@ main {
     transition: all 0.6s ease-in-out;
 }
 
-/* Estilos para el icono de password*/
 .form-group i {
     position: absolute;
     right: 10px;
@@ -478,4 +476,26 @@ main {
 .toggle-panel img {
     max-width: 80%;
     height: auto;
+}
+
+#toast-container {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    background-color: #ff3860;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.toast.show {
+    opacity: 1;
 }

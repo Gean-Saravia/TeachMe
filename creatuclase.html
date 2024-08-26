@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/creatuclase.css">
+    <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/creatuclase.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>TeachMe Crea tu clase</title>
 </head>
@@ -11,7 +12,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#"><img src="../assets/logoTM.png" alt="TeachMe Logo"></a>
+                <a href="#"><img src="/assets/logoTM.png" alt="TeachMe Logo"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
@@ -20,10 +21,10 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <img src="../assets/userpic.jpg" alt="Foto de perfil" class="profile-pic">
+                <img src="/assets/userpic.jpg" alt="Foto de perfil" class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
-                        <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px;">
+                        <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px;">
                     </button>
                     <div class="dropdown-content" id="subMenu">
                         <a href="#">Mi Perfil</a>
@@ -35,22 +36,23 @@
         </nav>
     </header>
     <main>
-        <aside>
-            <div class="my-classes-container">
+        <div class="container">
+            <aside class="my-classes">
                 <h2>Mis Clases</h2>
-                <ul>
-                    <li class="active"><a href="#"><i class="fas fa-users"></i> Profesores</a></li>
-                    <li><a href="#"><i class="fab fa-cuttlefish"></i> C++</a></li>
-                    <li><a href="#"><i class="fab fa-microsoft"></i> .NET</a></li>
-                    <li><a href="#"><i class="fab fa-java"></i> Java</a></li>
-                    <li><a href="#"><i class="fab fa-js-square"></i> JAVASCRIPT</a></li>
-                    <li><a href="#"><i class="fab fa-python"></i> PYTHON</a></li>
-                    <li><a href="#"><i class="fas fa-database"></i> SQL</a></li>
-                    <li><a href="#"><i class="fas fa-gem"></i> RUBY</a></li>
-                    <li><a href="#"><i class="fab fa-html5"></i> HTML</a></li>
+                <ul id="class-list">
+                    <li class="item" onclick="highlightItem(this)">C++</li>
+                    <li class="item" onclick="highlightItem(this)">.NET</li>
+                    <li class="item" onclick="highlightItem(this)">Java</li>
+                    <li class="item" onclick="highlightItem(this)">JavaScript</li>
+                    <li class="item" onclick="highlightItem(this)">Python</li>
+                    <li class="item" onclick="highlightItem(this)">SQL</li>
+                    <li class="item" onclick="highlightItem(this)">Ruby</li>
+                    <li class="item" onclick="highlightItem(this)">HTML</li>
+                    <li class="item" onclick="highlightItem(this)">Física</li>
+                    <li class="item" onclick="highlightItem(this)">Introducción a la Programación</li>
+                    <li class="item" onclick="highlightItem(this)">Matemática</li>
                 </ul>
-            </div>
-        </aside>
+            </aside>
         <section class="main-content">
             <h1>Crea tu clase</h1>
             <form>
@@ -107,7 +109,7 @@
             </div>
             <div class="help-section">
                 <h3>¿Tenés alguna duda?</h3>
-                <img src="../assets/question.png" alt="">
+                <img src="/assets/question.png" alt="">
                 <button class="btn-consultar">Consultar</button>
             </div>
         </aside>
