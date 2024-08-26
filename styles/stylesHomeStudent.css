@@ -95,7 +95,6 @@ input[type="text"] {
     gap: 30px;
     margin: 0;
     padding: 0;
-    font-weight: bold;
 }
 
 nav ul li a {
@@ -406,7 +405,6 @@ main {
     /* Reducir el espacio superior e inferior */
     background-color: #ffffff;
     /* Blanco */
-    border: 2px solid #00416d;
     /* Celeste */
     border-radius: 8px;
     /* Reducir el radio del borde */
