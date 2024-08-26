@@ -45,7 +45,6 @@ const integrantes = [
 const cont_equipo_index = document.querySelector('.cont-equipo-index');
 
 function generarCards(){
-    for(let i = 0; i < 3; i++){
         integrantes.forEach(integrante => {
             const card = document.createElement('div');
             card.className = 'equipo-index';
@@ -63,15 +62,6 @@ function generarCards(){
     
             cont_equipo_index.appendChild(card);
         });
-    }
 }
-
-cont_equipo_index.addEventListener('mouseover', () => {
-    cont_equipo_index.style.animationPlayState = 'paused';
-});
-
-cont_equipo_index.addEventListener('mouseout', () => {
-    cont_equipo_index.style.animationPlayState = 'running';
-});
 
 generarCards();
