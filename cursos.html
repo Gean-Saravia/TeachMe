@@ -14,96 +14,54 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
+                <a href="./index.html"><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Buscar en mis clases...">
+                <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
+                <button class="search-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
+                        <path
+                            d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+
+                </button>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="./index.html">Inicio</a></li>
                 <li><a href="#">Cursos</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
+                <p>Lucia Acosta</p>
+                <img src="assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="Foto de perfil"
+                    class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                     </button>
                     <div class="dropdown-content" id="subMenu">
-                        <a href="#">Mi Perfil</a>
+                        <a href="#">Mi perfil</a>
+                        <a href="#">Editar perfil</a>
                         <a href="#">Configuración</a>
-                        <a href="#">Cerrar Sesión</a>
+                        <a href="#">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
+        </nav>
     </header>
-    </nav>
     <main class="main-cursos">
         <section>
-            <article class="article-cursos">
-                <div class="texto-article-cursos">
-                    <h2>Programación</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita a voluptatibus laborum, tempore deserunt?</p>
-                    <button>Ver profes</button>
-                </div>
-                <div class="imagen-article-cursos">
-                    <img src="/assets/hombre-computadora-estudia.png" alt="Hombre estudiando programacion">
-                </div>
-            </article>
-            <article class="article-cursos">
-                <div class="texto-article-cursos">
-                    <h2>Idiomas</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita a voluptatibus laborum, tempore deserunt?</p>
-                    <button>Ver profes</button>
-                </div>
-                <div class="imagen-article-cursos">
-                    <img src="/assets/idiomas-cursos.png" alt="Curso de idiomas">
-                </div>
-            </article>
-            <article class="article-cursos">
-                <div class="texto-article-cursos">
-                    <h2>Geografía</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita a voluptatibus laborum, tempore deserunt?</p>
-                    <button>Ver profes</button>
-                </div>
-                <div class="imagen-article-cursos">
-                    <img src="/assets/geografia-cursos.png" alt="Clases de geografía">
-                </div>
-            </article>
-            <article class="article-cursos">
-                <div class="texto-article-cursos">
-                    <h2>Álgebra</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita a voluptatibus laborum, tempore deserunt?</p>
-                    <button>Ver profes</button>
-                </div>
-                <div class="imagen-article-cursos">
-                    <img src="/assets/algebra-cursos.png" alt="Clases de algebra">
-                </div>
-            </article>
-            <article class="article-cursos">
-                <div class="texto-article-cursos">
-                    <h2>Electrónica</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita a voluptatibus laborum, tempore deserunt?</p>
-                    <button>Ver profes</button>
-                </div>
-                <div class="imagen-article-cursos">
-                    <img src="/assets/electronica-cursos.png" alt="Clases de electronica">
-                </div>
-            </article>
-            <article class="article-cursos">
-                <div class="texto-article-cursos">
-                    <h2>Inteligencia Artificial</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita a voluptatibus laborum, tempore deserunt?</p>
-                    <button>Ver profes</button>
-                </div>
-                <div class="imagen-article-cursos">
-                    <img src="/assets/ia-cursos.png" alt="Clases de IA">
-                </div>
-            </article>
+            <!-- Acá se imprimen de forma dinámica las cards de cursos -->
+            <!-- También se filtran con la barra de busqueda del navBar -->
         </section>
         <span class="volver-cursos"> <i id="flecha-volver-cursos">&#10229;</i> Volver</span>
     </main>
+    <footer class="footer-index">
+        <div class="copyright-footer">
+            <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
+        </div>
+    </footer>
+    <script src="./cursos.js"></script>
 </body>
 </html>
