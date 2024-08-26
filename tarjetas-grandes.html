@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teach me</title>
+    <title>Teach Me | Catalogo</title>
+    <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/tarjetas-grandes.css">
     <script src="tarjetas-grandes.js"></script>
 </head>
-<body class="Body">
+
+<body>
     <div class="content">
-        <header class="Header">
+        <header>
             <nav class="navbar">
                 <div class="logo">
                     <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
                 </div>
                 <div class="search-bar">
-                    <input type="text" placeholder="Busca tu profesor">
+                    <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
+                    <button class="search-icon">
+    
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
+                            <!-- Gris claro -->
+                            <path
+                                d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+    
+                    </button>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#">Inicio</a></li>
@@ -27,44 +37,48 @@
                     <li><a href="#">Contacto</a></li>
                 </ul>
                 <div class="profile-menu">
-                    <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
+                    <p>Lucia Acosta</p>
+                    <img src="assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="Foto de perfil"
+                        class="profile-pic">
                     <div class="dropdown">
                         <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                             <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                         </button>
                         <div class="dropdown-content" id="subMenu">
-                            <a href="#">Mi Perfil</a>
+                            <a href="#">Mi perfil</a>
+                            <a href="#">Editar perfil</a>
                             <a href="#">Configuración</a>
-                            <a href="#">Cerrar Sesión</a>
+                            <a href="#">Cerrar sesión</a>
                         </div>
                     </div>
                 </div>
-            </nav>       
+            </nav>
         </header>
 
-        <main class="Main">
+        <main>
             <div class="container">
-                <aside class="Aside">
-                    <div class="catalogo">
-                        <h2>Mis Clases</h2>
-                        <ul>
-                            <li class="active"><a href="#"><i class="fas fa-users"></i> Profesores</a></li>
-                            <li><a href="#"><i class="fab fa-cuttlefish"></i>C++</a></li>
-                            <li><a href="#"><i class="fab fa-microsoft"></i>.NET</a></li>
-                            <li><a href="#"><i class="fab fa-java"></i>Java</a></li>
-                            <li><a href="#"><i class="fab fa-js-square"></i>JavaScript</a></li>
-                            <li><a href="#"><i class="fab fa-python"></i>Python</a></li>
-                            <li><a href="#"><i class="fas fa-database"></i>MySQL</a></li>
-                            <li><a href="#"><i class="fas fa-gem"></i>Ruby</a></li>
-                            <li><a href="#"><i class="fab fa-html5"></i>HTML</a></li>
-                        </ul>
-                    </div>
+                <aside class="catalogo">
+                    <h2>Mis Clases</h2>
+                    <ul id="class-list">
+                        <li class="item" onclick="highlightItem(this)">C++</li>
+                        <li class="item" onclick="highlightItem(this)">.NET</li>
+                        <li class="item" onclick="highlightItem(this)">Java</li>
+                        <li class="item" onclick="highlightItem(this)">JavaScript</li>
+                        <li class="item" onclick="highlightItem(this)">Python</li>
+                        <li class="item" onclick="highlightItem(this)">SQL</li>
+                        <li class="item" onclick="highlightItem(this)">Ruby</li>
+                        <li class="item" onclick="highlightItem(this)">HTML</li>
+                        <li class="item" onclick="highlightItem(this)">Física</li>
+                        <li class="item" onclick="highlightItem(this)">Introducción a la Programación</li>
+                        <li class="item" onclick="highlightItem(this)">Matemática</li>
+                    </ul>
                 </aside>
                 
-                <section class="banner">
-                    <h1>Un camino de aprendizaje te espera</h1>
-                </section>
-
+                <section>
+                    <div class="banner">
+                        <h1>Un camino de aprendizaje te espera</h1>
+                    </div>
+                    
                     <div class="cards-conteiner">
                         <article class="card">
                             <div class="image-card">
@@ -132,19 +146,20 @@
                                 <button>Contratar</button>
                             </div>
                         </article>
-                    </div>
-            </main>
 
-            <aside class="right-section">
-                <div class="video">
-                    
-                </div>
-                <div class="tenes-alguna-duda">
-                    <h3>¿Tenés alguna duda?</h3>
-                    <img src="../assets/question.png" alt="">
-                    <button class="btn-consultar">Consultar</button>
-                </div>
-            </aside>
+                    </div>
+                </section>
+                <aside class="right-section">
+                    <div class="video">
+                        
+                    </div>
+                    <div class="tenes-alguna-duda">
+                        <h3>¿Tenés alguna duda?</h3>
+                        <img src="../assets/question.png" alt="">
+                        <button class="btn-consultar">Consultar</button>
+                    </div>
+                </aside>
+        </main>
         <footer class="Footer"></footer>
     </div>
 </body>
