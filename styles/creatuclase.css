@@ -188,6 +188,10 @@ input, textarea {
     border-radius: 45px;
 }
 
+textarea{
+    resize: none;
+}
+
 .tag-container {
     display: flex;
     flex-wrap: wrap;
