@@ -136,9 +136,11 @@ nav ul li a:hover::after {
 }
 
 main {
+    flex: 1;
     display: flex;
-    padding: 2rem;
-    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 aside {
@@ -319,7 +321,7 @@ footer {
 
 .container{
     display: flex;
-    padding: 50px 100px;
+    padding: 50px 50px;
     gap: 30px;
 }
 
