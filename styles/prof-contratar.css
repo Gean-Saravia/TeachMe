@@ -526,7 +526,6 @@ nav ul li a:hover::after {
     color: #000000;
     background-color: #8FBFC9;
     border-radius: 20px;
-    margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
