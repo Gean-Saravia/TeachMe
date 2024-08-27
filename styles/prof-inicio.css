@@ -1,62 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 body {
-    font-family: "Kumbh Sans", sans-serif;
-    font-style: bold;
+    font-family: 'Alata', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #90B4CE;
 
 }
-/*Empieza el nav*/
-header {
-    /*Si no gusta la fuenta, borrar este font family*/
-    font-family: 'Alata', sans-serif;
 
+header {
     background-color: #A2C3DA;
-    padding-left: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
 }
 
 .navbar {
-    font-family: 'Alata', sans-serif;
-    display: grid;
-    grid-template-columns: auto auto auto 180px;
+    position: fixed;
+    height: 9%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #A2C3DA;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     align-items: center;
 }
 
 .logo img {
-    margin-top: 10px;
     height: 70px;
-    padding-left: 60px;
-}
-
-.search-bar {
-    width: 400px;
-    border-radius: 20px;
-    padding-top: 15px;
-}
-
-.search-bar input {
-    width: 200px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
+    padding-left: 20px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
-.nav-links li{
+
+.nav-links li {
     display: inline-block;
-    padding-right: 50px;
-    
 }
 
 .profile-menu {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 40px;
+}
+
+.profile-menu p{
+    color: white;
 }
 
 .profile-pic {
@@ -67,23 +67,19 @@ header {
 
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropbtn {
     background-color: #65A8E5;
-    padding: 10px;
-    width: auto;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     width: 30px;
     height: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);;
-}
-
-.dropbtn img{
-    padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .dropdown-content {
@@ -107,19 +103,20 @@ header {
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
-.show{
+
+.show {
     display: block;
 }
 
-.active {
-    background-color: white;
-    border: 1px solid #ccc;
-}
 nav ul li a {
-    color: #fff;
+    color: #094067;
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: #fff;
 }
 
 nav ul li a::after {
@@ -143,33 +140,36 @@ nav ul li a:hover::after {
 
 main{
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
-}
-
-.cuadro-calendario{
     height: 90vh;
-    width: 30vw;
+    margin-top: 4%;
+}
+.cuadro-calendario{
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
-.calendario{
-    height: 85vh;
-    width: 23.594vw;
-    background-color: #C4E0EF;
+.calendario-reuniones{
+    height: 80vh;
+    gap: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, .6);
     border-radius: 20px;
-}
-.calendario h1{
-    color:  #094067;
-    font-weight: bold;
+    text-align: left;
+    padding: 20px;
 }
 
-.calendario p{
-    margin-left: 5%;
-    text-align: start;
+.calendario-reuniones h2{
     color: #094067;
 }
+
 
 
 .clases {
@@ -261,6 +261,12 @@ main{
     height: 25%;
     padding: 5px;
 }
+
+.reuniones p{
+    font-family: 'Alata';
+    color: #094067;
+    font-weight: bold;
+}
 .calendario-imagen{
     text-align: end;
 }
@@ -269,126 +275,6 @@ main{
     width: 12vh;
 }
 /*------------------Editando calendario------------------*/
-
-.wrapper {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Asegura que el contenido se ajuste adecuadamente */
-}
-
-.header-calendario {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-}
-
-.header-calendario .current-date {
-    font-size: 1.2vw;
-    font-weight: 500;
-}
-
-.header-calendario .icons {
-    display: flex;
-}
-
-.header-calendario .icons span {
-    height: 2vw;
-    width: 2vw;
-    margin: 0 2px;
-    cursor: pointer;
-    color: #878787;
-    text-align: center;
-    line-height: 2vw;
-    font-size: 1.2vw;
-    user-select: none;
-    border-radius: 50%;
-}
-
-.header-calendario .icons span:hover {
-    background: #f2f2f2;
-}
-
-.calendar {
-    flex: 1; /* Permite que el calendario crezca y se ajuste dentro de su contenedor */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ajusta el espacio entre los elementos */
-    padding: 0 5px;
-    box-sizing: border-box;
-}
-
-.calendar ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.calendar .weeks li {
-    font-weight: 500;
-    cursor: default;
-    width: calc(100% / 7);
-    font-size: 0.9vw;
-    margin-bottom: 5px;
-}
-
-.calendar .days {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start; /* Ajusta el alineamiento para evitar espacios vacíos */
-    padding: 0;
-    margin: 0;
-}
-
-.calendar li {
-    color: #333;
-    width: calc(100% / 7);
-    font-size: 0.9vw;
-    position: relative;
-    padding: 0.5vw 0;
-    box-sizing: border-box;
-}
-
-.days li.inactive {
-    color: #aaa;
-}
-
-.days li.active {
-    color: #fff;
-    background-color: #1A5F7A;
-    border-radius: 10px;
-}
-
-.days li::before {
-    position: absolute;
-    content: "";
-    left: 50%;
-    top: 50%;
-    height: 1.8vw;
-    width: 1.8vw;
-    z-index: -1;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.days li.active::before {
-    background: #3cafcf;
-}
-
-.days li:not(.active):hover::before {
-    background: #f2f2f2;
-}
-
 /*iconos*/
 .icons {
     font-family: 'Material Icons', sans-serif;
@@ -401,5 +287,153 @@ main{
 /*Efecto de transparencia cuando el elemento se está arrastrando*/
 .class-item-misclases.dragging {
     opacity: 0.5;
-    border: 2px dashed #1a5f7a;
+    border: 2px dashed #8FABC0;
+}
+
+.linea {
+    width: 95%;
+    height: 0.1rem;
+    background-color: #ddd;
+    margin: .5rem auto;
+    margin-top: 10px;
+}
+
+
+.final{
+    padding: 10px 10px;
+    text-align: center;
+    padding-top: 0;
+    p{
+        font-size: .7rem;
+        color: white;
+    }
+}
+
+/*Calendario*/
+#calendar-container {
+    margin: 5px;
+    /* Reducir el espacio superior e inferior */
+    background-color: #ffffff;
+    /* Blanco */
+    /* Celeste */
+    border-radius: 8px;
+    /* Reducir el radio del borde */
+    padding-top: 2px;
+    /* Reducir el padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Reducir la sombra */
+    font-size: 10px;
+}
+
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 350px;
+    /* Altura fija de 350px */
+}
+
+.fc-toolbar {
+    font-size: 0.85em;
+    /* Reducir el tamaño de la barra de herramientas */
+}
+
+.fc-toolbar-title {
+    font-size: 1.2em;
+    /* Ajustar el tamaño del título */
+    color: #00bfff;
+    /* Título celeste */
+}
+
+.fc .fc-button {
+    padding: 5px 10px;
+    /* Reducir el padding de los botones */
+    font-size: 0.85em;
+    /* Reducir el tamaño del texto en los botones */
+    background-color: #006688;
+    border: 1px #00416d solid;
+    color: white;
+    /* Texto celeste */
+    border-radius: 4px;
+    /* Reducir el radio de los bordes de los botones */
+}
+
+.fc .fc-button:hover {
+    background-color: #006688c9;
+    /* Fondo celeste al pasar el mouse */
+    color: #ffffff;
+    /* Texto blanco al pasar el mouse */
+}
+
+.fc-daygrid-event {
+    background-color: #00bfff;
+    /* Eventos celestes */
+    border-color: #00bfff;
+    font-size: 0.85em;
+    /* Reducir el tamaño del texto en los eventos */
+}
+
+.fc-day-today {
+    background-color: #e6f7ff;
+    /* Día actual en un celeste suave */
+}
+
+.reminders {
+    height: 100px;
+    margin: 0px 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.class-table {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    /* Asegúrate de que los bordes estén colapsados */
+}
+
+.class-table,
+.class-table th,
+.class-table td {
+    border: none;
+    /* Elimina todos los bordes */
+    padding: 10px;
+    /* Ajusta el relleno según sea necesario */
+}
+
+.class-table th {
+    background-color: #12A4E3;
+    color: #ffffff;
+    text-align: center;
+}
+
+.class-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.class-table tbody tr:hover {
+    background-color: #e0f7ff;
+    /* Celeste claro */
+    transform: scale(1.02);
+}
+
+.class-table td {
+    color: #333;
+    font-size: 15px;
+}
+
+.class-table th {
+    font-size: 20px;
+}
+
+.class-table tr:hover td {
+    color: #007acc;
+    /* Cambia el color del texto al pasar el mouse */
+}
+
+.fa-bell {
+    color: #007BFF; /* Color azul */
+    font-size: 18px; /* Tamaño */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el ícono */
 }

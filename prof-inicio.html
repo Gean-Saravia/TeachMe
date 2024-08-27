@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachMe</title>
+    <title>TeachMe | Inicio Profesor</title>
     <link rel="stylesheet" href="./styles/prof-inicio.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
-            </div>
-            <div class="search-bar">
+                <a href="#"><img src="/assets/logoTM.png" alt="TeachMe Logo"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cursos</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
+                <p>Keanu</p>
+                <img src="assets/perfil-keanu.png" alt="Foto de perfil"
+                    class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                     </button>
                     <div class="dropdown-content" id="subMenu">
-                        <a href="#">Mi Perfil</a>
-                        <a href="#">Configuración</a>
-                        <a href="#">Cerrar Sesión</a>
+                        <a href="./inicio-estudiante.html">Mi perfil</a>
+                        <a href="./editarPerfilEstudiante.html">Editar perfil</a>
+                        <a href="#">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
@@ -40,39 +41,16 @@
     </header>
     <main>
         <aside class="cuadro-calendario">
-            <div class="calendario">
-                <h1>Agenda</h1>
-                <div class="agenda-personal">
-                    <div class="wrapper">
-                        <header class="header-calendario">
-                            <p class="current-date"></p>
-                            <div class="icons">
-                                <span id="prev" class="material-symbols-rounded"> chevron_left</span>
-                                <span id="next" class="material-symbols-rounded">chevron_right</span>
-                            </div>
-                        </header>
-                        <div class="calendar">
-                            <ul class="weeks">
-                                <li>Dom</li>
-                                <li>Lun</li>
-                                <li>Mar</li>
-                                <li>Mie</li>
-                                <li>Jue</li>
-                                <li>Vie</li>
-                                <li>Sab</li>
-                            </ul>
-                            <ul class="days"></ul>
-                        </div>
-                    </div>
+            <div class="calendario-reuniones">
+                <h2>Agenda</h2>
+                <div id="calendar-container">
+                    <div id='calendar'></div>
                 </div>
                 <div class="reuniones">
                     <p>Dia 8 de Julio - SQL Server</p>
                     <p>El 15 de Julio - Analisis de datos con Python.</p>
                     <p>Dia 29 de Julio - JavaScript Avanzado</p>
                     <p>Día 30 de Julio - MongoDB</p>
-                </div>
-                <div class="calendario-imagen">
-                    <img src="/assets/Calendario.png" alt="">
                 </div>
             </div>
         </aside>
@@ -88,7 +66,7 @@
                     <div class="class-item-misclases" draggable="true">Idiomas</div>
                 </div>
                 <div class="add-class">
-                    <a href=""><img src="/assets/mas.svg" class="aniadir-clase"></a>
+                    <a href="creatuclase.html"><img src="/assets/mas.svg" class="aniadir-clase"></a>
                 </div>
 
             </div>
@@ -107,9 +85,19 @@
             </div>
         </section>
     </main>
+        <footer>
+        <div class="linea">
+        </div>
+        <div class="final">
+            <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
+        </div>
+    </footer>
+    <script src="funcionEditProf.js"></script>
+    <script src="dragandrop-movimiento_clases.js"></script>
+    <script src="funcionInicioEstudiante.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/es.js'></script>
+
 </body>
-<script src="funcionEditProf.js"></script>
-<script src="calendario.js"></script>
-<script src="dragandrop-movimiento_clases.js"></script>
 </html>
 

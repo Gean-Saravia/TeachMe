@@ -22,53 +22,55 @@ body {
     background-color: #90B4CE;
 }
 /*Empieza el nav*/
+
 header {
-    /*Si no gusta la fuenta, borrar este font family*/
-    font-family: 'Alata', sans-serif;
     background-color: #A2C3DA;
-    padding-left: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
-    font-family: 'Alata', sans-serif;
-    display: grid;
-    grid-template-columns: auto auto auto 180px;
+    position: fixed;
+    height: 9%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #A2C3DA;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     align-items: center;
 }
 
 .logo img {
-    margin-top: 10px;
     height: 70px;
-    padding-left: 60px;
-}
-
-.search-bar {
-    width: 400px;
-    border-radius: 20px;
-    padding-top: 15px;
-}
-
-.search-bar input {
-    width: 200px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
+    padding-left: 20px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
-.nav-links li{
+
+.nav-links li {
     display: inline-block;
-    padding-right: 50px;
-    
 }
 
 .profile-menu {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 40px;
+}
+
+.profile-menu p{
+    color: white;
 }
 
 .profile-pic {
@@ -79,23 +81,19 @@ header {
 
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropbtn {
     background-color: #65A8E5;
-    padding: 10px;
-    width: auto;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     width: 30px;
     height: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);;
-}
-
-.dropbtn img{
-    padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .dropdown-content {
@@ -119,23 +117,20 @@ header {
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
-.show{
+
+.show {
     display: block;
 }
 
-.active {
-    background-color: white;
-    border: 1px solid #ccc;
-}
 nav ul li a {
     color: #094067;
-    font-weight: 800;
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
 }
+
 nav ul li a:hover{
-    color: white;
+    color: #fff;
 }
 
 nav ul li a::after {
@@ -162,7 +157,7 @@ nav ul li a:hover::after {
     height: 90vh;
     background-color: #90B4CE;
     padding: 5px;
-    margin-top: 20px;
+    margin-top: 3%;
     align-items: center;
     gap: 1vw;
     justify-content: center;
@@ -176,6 +171,8 @@ nav ul li a:hover::after {
     width: 17.969vw;
     border-radius: 50px;
     gap: 2vh;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
 }
 
 .title{
@@ -518,6 +515,9 @@ nav ul li a:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+    
 }
 
 .titulo-pregunta{
@@ -526,6 +526,7 @@ nav ul li a:hover::after {
     color: #000000;
     background-color: #8FBFC9;
     border-radius: 20px;
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -862,21 +863,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-.logo {
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.logo i {
-    color: white;
-    font-size: 40px;
-}
 
 h2 {
     color: var(--primary-color);
@@ -976,4 +962,23 @@ h2 {
 
 #modalOverlay.show ~ #pageOverlay {
     display: block; 
+}
+
+.linea {
+    width: 95%;
+    height: 0.1rem;
+    background-color: #ddd;
+    margin: .5rem auto;
+    margin-top: 10px;
+}
+
+
+.final{
+    padding: 10px 10px;
+    text-align: center;
+    padding-top: 0;
+    p{
+        font-size: .7rem;
+        color: white;
+    }
 }
