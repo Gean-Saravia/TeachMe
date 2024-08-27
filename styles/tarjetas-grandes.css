@@ -228,7 +228,7 @@ main{
     border-radius: 10px;
     padding-top: 10px;
     padding-right: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 60px;
     font-size: 11px;
     box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
 }
@@ -256,7 +256,7 @@ ul#class-list li {
     border-radius: 10px;
     background-color: white;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.274);
@@ -324,8 +324,8 @@ ul#class-list li.selected:hover {
 .cards-conteiner{
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    margin-left: 65px;
+    width: 91%;
+    margin-left: 45px;
     gap: 30px;
 }
 
@@ -335,7 +335,7 @@ ul#class-list li.selected:hover {
     box-sizing: border-box;
     background-color: var(--blanco);
     border-radius: 20px;
-    padding: 10px;
+    padding: 25px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -411,8 +411,9 @@ iframe{
 }
 
 .tenes-alguna-duda{
+    height: 310px;
     background: linear-gradient(to bottom, #1A7196 0%, #1A7196 4%, #578CCA 50%, #578CCA 100%);
-    padding: 1rem;
+    padding: 2.4rem;
     border-radius: 8px;
     margin-bottom: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -420,12 +421,15 @@ iframe{
 }
 
 .tenes-alguna-duda h3{
+    font-family: var(--alata);
+    font-size: 24px;
     color: var(--blanco);
 }
 
 .tenes-alguna-duda img{
     width: 150px;
     height: auto;
+    padding-bottom: 1rem;
 }
 
 .btn-consultar{
