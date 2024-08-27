@@ -161,6 +161,9 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         if (validateForm(this)) {
             showToast('Registro exitoso!');
+            setTimeout(() => {
+                location.href = "./inicio-estudiante.html"
+            }, 1000);
             // enviar el formulario o realizar otras acciones
         }
     });
@@ -169,6 +172,9 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         if (validateForm(this)) {
             showToast('Inicio de sesión exitoso!');
+            setTimeout(() => {
+                location.href = "./prof-inicio.html"
+            }, 1000);
             // enviar el formulario o realizar otras acciones
         }
     });

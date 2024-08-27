@@ -339,6 +339,11 @@ ul#class-list li.selected:hover {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    button a{
+        text-decoration: none;
+        color: var(--celesteClaro);
+    }
 }
 
 .card:hover{

@@ -6,6 +6,10 @@ function toggleMenu() {
     button.classList.toggle('active');
 }
 
+document.querySelector('.chat-button').addEventListener('click', function() {
+    window.location.href = "./chatprof-estudiante.html";
+});
+
 //Función para agregar o quitar idiomas y nivel
 document.getElementById("addRowButton").addEventListener("click", function () {
             
@@ -107,4 +111,3 @@ if (passwordInput.type === 'password') {
     eyeIcon.classList.add('fa-eye-slash');
 }
 }
-
