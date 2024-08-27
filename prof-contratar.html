@@ -11,26 +11,25 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href=""><img src="assets/logo-lau.png" alt="TeachMe Logo"></a>
-            </div>
-            <div class="search-bar">
+                <a href="#"><img src="/assets/logoTM.png" alt="TeachMe Logo"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cursos</a></li>
+                <li><a href="prof-inicio.html">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <img src="assets/keanu.jpg" alt="Foto de perfil" class="profile-pic">
+                <p>Keanu</p>
+                <img src="assets/perfil-keanu.png" alt="Foto de perfil"
+                    class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                     </button>
                     <div class="dropdown-content" id="subMenu">
-                        <a href="#">Mi Perfil</a>
-                        <a href="#">Configuración</a>
-                        <a href="#">Cerrar Sesión</a>
+                        <a href="./inicio-estudiante.html">Mi perfil</a>
+                        <a href="">Editar perfil</a>
+                        <a href="#">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
@@ -44,7 +43,7 @@
                 <h1>Perfil</h1>
             </div>
             <div class="imagen-usuario">
-                <img src="/assets/keanu.jpg" alt="Foto de perfil del usuario">
+                <img src="/assets/perfil-keanu.png" alt="Foto de perfil del usuario">
             </div>
             <div class="datos">
                 <h1>Felipe Argento</h1>
@@ -229,7 +228,15 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="linea">
+        </div>
+        <div class="final">
+            <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
+        </div>
+    </footer>
 </body>
 <script src="modal.js"></script>
+<script src="funcionInicioEstudiante.js"></script>
 <script src=""></script>
 </html>
