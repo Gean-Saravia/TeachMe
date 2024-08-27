@@ -17,6 +17,14 @@ function highlightItem(selectedItem) {
     selectedItem.classList.add('selected');
 }
 
+// Marca "Python" como seleccionado por defecto al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    var pythonItem = document.getElementById('python-item');
+    if (pythonItem) {
+        highlightItem(pythonItem);
+    }
+});
+
 // Función para filtrar tarjetas según el texto del buscador
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-bar');
