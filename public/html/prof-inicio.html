@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachMe | Inicio Profesor</title>
+    <link rel="stylesheet" href="../styles/prof-inicio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html"><img src="/assets/logoTM.png" alt="TeachMe Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="./faqs.html">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <p>Felipe Argento</p>
+                <img src="/assets/perfil-keanu.png" alt="Foto de perfil"
+                    class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="./inicio-estudiante.html">Mi perfil</a>
+                        <a href="./editProf.html">Editar perfil</a>
+                        <a href="#">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="cuadro-calendario">
+            <div class="calendario-reuniones">
+                <h2>Agenda</h2>
+                <div id="calendar-container">
+                    <div id='calendar'></div>
+                </div>
+                <div class="reuniones">
+                    <p>Dia 8 de Julio - SQL Server</p>
+                    <p>El 15 de Julio - Analisis de datos con Python.</p>
+                    <p>Dia 29 de Julio - JavaScript Avanzado</p>
+                    <p>Día 30 de Julio - MongoDB</p>
+                </div>
+            </div>
+        </aside>
+        <section class="clases">
+            <div class="title">Mis clases</div>
+            <div class="container-misclases">
+                <div class="class-grid">
+                    <div class="class-item-misclases" draggable="true">Programación</div>
+                    <div class="class-item-misclases" draggable="true">Geografia</div>
+                    <div class="class-item-misclases" draggable="true">Matematica</div>
+                    <div class="class-item-misclases" draggable="true">Física</div>
+                    <div class="class-item-misclases" draggable="true">IA</div>
+                    <div class="class-item-misclases" draggable="true">Ingles</div>
+                    <div class="class-item-misclases" draggable="true">Algebra</div>
+                    <div class="class-item-misclases" draggable="true">Italiano</div>
+                    <div class="class-item-misclases" draggable="true">C ++</div>
+                    <div class="class-item-misclases" draggable="true">C#</div>
+                </div>
+                <div class="add-class">
+                    <a href="./creatuclase.html"><img src="/assets/mas.svg" class="aniadir-clase"></a>
+                </div>
+
+            </div>
+            <div class="title">Clases terminadas o pausadas</div>
+            <div class="container-clasespausadas" >
+                <div class="class-grid" id="contenedor-clases">
+                    <div class="class-item">Python</div>
+                    <div class="class-item">Sql Server</div>
+                    <div class="class-item">MongoDB</div>
+                    <div class="class-item">.NET</div>
+                    <div class="class-item">Node JS</div>
+                    <div class="class-item">JavaScript</div>
+                    <div class="class-item">Frances</div>
+                    <div class="class-item">Alemán</div>
+                </div>
+                <div class="add-class">
+                    <a href=""><img src="/assets/mas.svg" class="aniadir-clase"></a>
+                </div>
+            </div>
+        </section>
+        <div class="chat-button">
+            <svg class="chat-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+            <div class="notification">1</div>
+        </div>
+    </main>
+        <footer>
+        <div class="linea">
+        </div>
+        <div class="final">
+            <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
+        </div>
+    </footer>
+    <script src="../js/dragandrop-movimiento_clases.js"></script>
+    <script src="../js/funcionInicioEstudiante.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/es.js'></script>
+    <script src="../js/funcionEditProf.js"></script>
+
+</body>
+</html>
+

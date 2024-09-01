@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+body {
+    font-family: 'Alata', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #90B4CE;
+
+}
+
+header {
+    background-color: #A2C3DA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.navbar {
+    position: fixed;
+    height: 9%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #A2C3DA;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    padding-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 40px;
+}
+
+.profile-menu p{
+    color: white;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #65A8E5;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    right: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+nav ul li a {
+    color: #094067;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: #fff;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/*ACA EMPIEZA EL BODY*/
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 90vh;
+    margin-top: 4%;
+}
+.cuadro-calendario{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendario-reuniones{
+    height: 70vh;
+    gap: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-reuniones h2{
+    color: #094067;
+}
+
+
+
+.clases {
+    height: 90vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del eje principal a columna */
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    
+}
+
+.clases .container-misclases {
+    width: 58.229vw;
+    height: 35vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.clases .container-clasespausadas {
+    width: 58.229vw;
+    height: 35vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    display: flex;
+    align-items: center;  /* Centra verticalmente */
+    justify-content: flex-start;
+    color: #094067;
+    width: 56.5vw;
+    height: 3vh;
+    font-size: 2rem;
+    padding: 10px;
+}
+/***/
+.container-clasespausadas .class-grid .class-item{
+    background-color: rgba(9, 64, 103, 0.3);
+    color: black;
+}
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.class-item-misclases {
+    background-color: #1a5f7a;
+    color: white;
+
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.class-item{
+    background-color: #1a5f7a;
+    color: white;
+
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+.add-class {
+    color: #1D4F74;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+}
+.aniadir-clase{
+    height: 4vh;
+    width: 4vw;
+}
+.reuniones{
+    height: 25%;
+    padding: 5px;
+}
+
+.reuniones p{
+    font-family: 'Alata';
+    color: #094067;
+    font-weight: bold;
+}
+.calendario-imagen{
+    text-align: end;
+}
+.calendario-imagen img{
+    height: auto;
+    width: 12vh;
+}
+/*------------------Editando calendario------------------*/
+/*iconos*/
+.icons {
+    font-family: 'Material Icons', sans-serif;
+    font-size: 40px; /* Tamaño más grande para mejor visibilidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Efecto de transparencia cuando el elemento se está arrastrando*/
+.class-item-misclases.dragging {
+    opacity: 0.5;
+    border: 2px dashed #8FABC0;
+}
+
+.linea {
+    width: 95%;
+    height: 0.1rem;
+    background-color: #ddd;
+    margin: .5rem auto;
+    margin-top: 10px;
+}
+
+
+.final{
+    padding: 10px 10px;
+    text-align: center;
+    padding-top: 0;
+    p{
+        font-size: .7rem;
+        color: white;
+    }
+}
+
+/*Calendario*/
+#calendar-container {
+    margin: 5px;
+    /* Reducir el espacio superior e inferior */
+    background-color: #ffffff;
+    /* Blanco */
+    /* Celeste */
+    border-radius: 8px;
+    /* Reducir el radio del borde */
+    padding-top: 2px;
+    /* Reducir el padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Reducir la sombra */
+    font-size: 10px;
+}
+
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 350px;
+    /* Altura fija de 350px */
+}
+
+.fc-toolbar {
+    font-size: 0.85em;
+    /* Reducir el tamaño de la barra de herramientas */
+}
+
+.fc-toolbar-title {
+    font-size: 1.2em;
+    /* Ajustar el tamaño del título */
+    color: #00bfff;
+    /* Título celeste */
+}
+
+.fc .fc-button {
+    padding: 5px 10px;
+    /* Reducir el padding de los botones */
+    font-size: 0.85em;
+    /* Reducir el tamaño del texto en los botones */
+    background-color: #006688;
+    border: 1px #00416d solid;
+    color: white;
+    /* Texto celeste */
+    border-radius: 4px;
+    /* Reducir el radio de los bordes de los botones */
+}
+
+.fc .fc-button:hover {
+    background-color: #006688c9;
+    /* Fondo celeste al pasar el mouse */
+    color: #ffffff;
+    /* Texto blanco al pasar el mouse */
+}
+
+.fc-daygrid-event {
+    background-color: #00bfff;
+    /* Eventos celestes */
+    border-color: #00bfff;
+    font-size: 0.85em;
+    /* Reducir el tamaño del texto en los eventos */
+}
+
+.fc-day-today {
+    background-color: #e6f7ff;
+    /* Día actual en un celeste suave */
+}
+
+.reminders {
+    height: 100px;
+    margin: 0px 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.class-table {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    /* Asegúrate de que los bordes estén colapsados */
+}
+
+.class-table,
+.class-table th,
+.class-table td {
+    border: none;
+    /* Elimina todos los bordes */
+    padding: 10px;
+    /* Ajusta el relleno según sea necesario */
+}
+
+.class-table th {
+    background-color: #12A4E3;
+    color: #ffffff;
+    text-align: center;
+}
+
+.class-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.class-table tbody tr:hover {
+    background-color: #e0f7ff;
+    /* Celeste claro */
+    transform: scale(1.02);
+}
+
+.class-table td {
+    color: #333;
+    font-size: 15px;
+}
+
+.class-table th {
+    font-size: 20px;
+}
+
+.class-table tr:hover td {
+    color: #007acc;
+    /* Cambia el color del texto al pasar el mouse */
+}
+
+.fa-bell {
+    color: #007BFF; /* Color azul */
+    font-size: 18px; /* Tamaño */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el ícono */
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .chat-button:hover {
+    transform: scale(1.1);
+  }
+
+  .chat-icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+
+  .notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background-color: lightblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+  }
