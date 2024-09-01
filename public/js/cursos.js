@@ -5,42 +5,42 @@ const cursos = [
     {
         nombre: "Programación",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/hombre-computadora-estudia.png"
+        imagen: "/assets/hombre-computadora-estudia.png"
     },
     {
         nombre: "Idiomas",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/idiomas-cursos.png"
+        imagen: "/assets/idiomas-cursos.png"
     },
     {
         nombre: "Geografía",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/geografia-cursos.png"
+        imagen: "/assets/geografia-cursos.png"
     },
     {
         nombre: "Álgebra",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/algebra-cursos.png"
+        imagen: "/assets/algebra-cursos.png"
     },
     {
         nombre: "Electrónica",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/electronica-cursos.png"
+        imagen: "/assets/electronica-cursos.png"
     },
     {
         nombre: "Inteligencia Artificial",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/ia-cursos.png"
+        imagen: "/assets/ia-cursos.png"
     },
     {
         nombre: "Literatura",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/literatura-cursos.png"
+        imagen: "/assets/literatura-cursos.png"
     },
     {
         nombre: "Guitarra",
         descripcion: `${lorem_ipsum}`,
-        imagen: "./assets/guitarra-cursos.png"
+        imagen: "/assets/guitarra-cursos.png"
     },
 ]
 

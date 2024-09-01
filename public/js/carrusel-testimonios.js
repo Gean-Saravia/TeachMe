@@ -3,37 +3,37 @@ const testimonios = [
         nombre: 'Paulo Londra',
         curso: 'idiomas',
         resenia: 'Realizar este curso me permitió mejorar mi comunicación y comprensión',
-        foto: './assets/cabra-icon.png'
+        foto: '/assets/cabra-icon.png'
     },
     {
         nombre: 'Frank Fabra',
         curso: 'idiomas',
         resenia: 'Realizar este curso me permitió mejorar mi comunicación y comprensión',
-        foto: './assets/vaca-icon.png'
+        foto: '/assets/vaca-icon.png'
     },
     {
         nombre: 'Mauro Lombardo',
         curso: 'idiomas',
         resenia: 'Realizar este curso me permitió mejorar mi comunicación y comprensión',
-        foto: './assets/pato-icon.png'
+        foto: '/assets/pato-icon.png'
     },
     {
         nombre: 'Migue Granados',
         curso: 'idiomas',
         resenia: 'Realizar este curso me permitió mejorar mi comunicación y comprensión',
-        foto: './assets/pez-icon.png'
+        foto: '/assets/pez-icon.png'
     },
     {
         nombre: 'Floricienta',
         curso: 'idiomas',
         resenia: 'Realizar este curso me permitió mejorar mi comunicación y comprensión',
-        foto: './assets/vaca-icon.png'
+        foto: '/assets/vaca-icon.png'
     },
     {
         nombre: 'Equi Fernandez',
         curso: 'idiomas',
         resenia: 'Realizar este curso me permitió mejorar mi comunicación y comprensión',
-        foto: './assets/pato-icon.png'
+        foto: '/assets/pato-icon.png'
     }
 ]
 
