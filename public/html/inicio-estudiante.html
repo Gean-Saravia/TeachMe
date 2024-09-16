@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachMe Estudiante</title>
+    <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/stylesHomeStudent.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html"><img src="/assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
+                <button class="search-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
+                        <!-- Gris claro -->
+                        <path
+                            d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./cursos.html">Cursos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="./faqs.html">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <p>Lucia Acosta</p>
+                <img src="/assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="Foto de perfil"
+                    class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="./inicio-estudiante.html">Mi perfil</a>
+                        <a href="./editarPerfilEstudiante.html">Editar perfil</a>
+                        <a href="#">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="my-classes">
+            <h2>Mis Clases</h2>
+            <ul id="class-list">
+                <li class="item" onclick="highlightItem(this)">C++</li>
+                <li class="item" onclick="highlightItem(this)">.NET</li>
+                <li class="item" onclick="highlightItem(this)">Java</li>
+                <li class="item" onclick="highlightItem(this)">JavaScript</li>
+                <li class="item" onclick="highlightItem(this)">Python</li>
+                <li class="item" onclick="highlightItem(this)">SQL</li>
+                <li class="item" onclick="highlightItem(this)">Ruby</li>
+                <li class="item" onclick="highlightItem(this)">HTML</li>
+                <li class="item" onclick="highlightItem(this)">Física</li>
+                <li class="item" onclick="highlightItem(this)">Introducción a la Programación</li>
+                <li class="item" onclick="highlightItem(this)">Matemática</li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="welcome">
+                <h1>Bienvenida de regreso, Lucia!</h1>
+            </div>
+            <div class="section">
+                <h2>Materias</h2>
+                <button type="button">Ver más ></button>
+            </div>
+
+            <section class="subjects">
+                <div class="subject">
+                    <h3>Física</h3>
+                    <span class="profile-icon">👨‍💼</span>
+                    <p>Docente: Felipe Argento</p>
+                </div>
+                <div class="subject">
+                    <h3>Introducción a la programación</h3>
+                    <span class="profile-icon">👨‍💼</span>
+                    <p>Docente: Felipe Argento</p>
+                </div>
+                <div class="subject">
+                    <h3>Matemática</h3>
+                    <span class="profile-icon">👨‍💼</span>
+                    <p>Docente: Felipe Argento</p>
+                </div>
+            </section>
+
+            <table class="class-table">
+
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Profesor/a</th>
+                        <th>Materia</th>
+                        <th>Inicio</th>
+                        <th>Termina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nº1</td>
+                        <td>Felipe Argento</td>
+                        <td>Física</td>
+                        <td>09/04/24</td>
+                        <td>18/04/24</td>
+                    </tr>
+                    <tr>
+                        <td>Nº1</td>
+                        <td>Felipe Argento</td>
+                        <td>Introducción a la Programación</td>
+                        <td>09/04/24</td>
+                        <td>15/04/24</td>
+                    </tr>
+                    <tr>
+                        <td>Nº1</td>
+                        <td>Felipe Argento</td>
+                        <td>Matemática</td>
+                        <td>09/04/24</td>
+                        <td>18/04/24</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </main>
+
+        <aside class="profile-section">
+            <div class="profile-info">
+                <img src="/assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="foto-perfil">
+                <h2>Lucia Acosta</h2>
+                <span>Estudiante</span>
+            </div>
+            <div id="calendar-container">
+                <h2>Tus clases</h2>
+                <div id='calendar'></div>
+            </div>
+            <div class="reminders">
+                <h3>Recordatorios</h3>
+                <p><i class="far fa-bell"></i> Clase Física - 16/09 20:00</p>
+                <p><i class="far fa-bell"></i> Clase Matemática - 17/09 20:00</p>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <div class="linea">
+        </div>
+        <div class="final">
+            <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
+        </div>
+    </footer>
+    <script src="../js/funcionInicioEstudiante.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/es.js'></script>
+
+</body>
+
+</html>

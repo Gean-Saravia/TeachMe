@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teach Me | Catalogo</title>
+    <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/tarjetas-grandes.css">
+    <script src="../js/tarjetas-grandes.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href=""><img src="/assets/logo-lau.png" alt="TeachMe Logo"></a>
+                </div>
+                <div class="search-bar">
+                    <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
+                    <button class="search-icon">
+    
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
+                            <!-- Gris claro -->
+                            <path
+                                d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+    
+                    </button>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./cursos.html">Cursos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="./faqs.html">Contacto</a></li>
+                </ul>
+                <div class="profile-menu">
+                    <p>Lucia Acosta</p>
+                    <img src="/assets/fb5636_8b1412ac176547298d75b6620dda0945~mv2.jpg" alt="Foto de perfil"
+                        class="profile-pic">
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                            <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                        </button>
+                        <div class="dropdown-content" id="subMenu">
+                            <a href="#">Mi perfil</a>
+                            <a href="#">Editar perfil</a>
+                            <a href="#">Configuración</a>
+                            <a href="#">Cerrar sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <aside class="catalogo">
+                    <h2>Mis Clases</h2>
+                    <ul id="class-list">
+                        <li class="item" onclick="highlightItem(this)">C++</li>
+                        <li class="item" onclick="highlightItem(this)">.NET</li>
+                        <li class="item" onclick="highlightItem(this)">Java</li>
+                        <li class="item" onclick="highlightItem(this)">JavaScript</li>
+                        <li class="item" onclick="highlightItem(this)" id="python-item">Python</li>
+                        <li class="item" onclick="highlightItem(this)">SQL</li>
+                        <li class="item" onclick="highlightItem(this)">Ruby</li>
+                        <li class="item" onclick="highlightItem(this)">HTML</li>
+                        <li class="item" onclick="highlightItem(this)">Física</li>
+                        <li class="item" onclick="highlightItem(this)">Introducción a la Programación</li>
+                        <li class="item" onclick="highlightItem(this)">Matemática</li>
+                    </ul>
+                </aside>
+                
+                <section>
+                    <div class="banner">
+                        <h1>Un camino de aprendizaje te espera</h1>
+                        <img src="/assets/imagen-banner.png.png" alt="">
+                    </div>
+                    
+                    <div class="cards-conteiner">
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/lionel-messi.jpg" alt="Imagen de Lionel Messi">
+                            </div>
+                            <div class="card-content">
+                                <h3>Lionel Messi</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★★★</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/henry-cavil.jpg" alt="Imagen de Henry Cavil">
+                            </div>
+                            <div class="card-content">
+                                <h3>Henry Cavil</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★★☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/adele-adkins.jpg" alt="Imagen de Adele Adkins">
+                            </div>
+                            <div class="card-content">
+                                <h3>Adele Adkins</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/paulo-dybala.jpg" alt="Imagen de Paulo Dybala">
+                            </div>
+                            <div class="card-content">
+                                <h3>Paulo Dybala</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/pedro-martin.jpg" alt="Imagen de Pedro Martin">
+                            </div>
+                            <div class="card-content">
+                                <h3>Pedro Martin</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/mirtha-legrand.jpg" alt="Imagen de Mirtha Legrand">
+                            </div>
+                            <div class="card-content">
+                                <h3>Mirtha L.</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/keanu.jpg" alt="Imagen de Mirtha Legrand">
+                            </div>
+                            <div class="card-content">
+                                <h3>Felipe Argento</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/tom-cruise.jpg" alt="Imagen de Tom Cruise">
+                            </div>
+                            <div class="card-content">
+                                <h3>Tom Cruise</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/emilia-mernes.jpg" alt="Imagen de Emilia Mernes">
+                            </div>
+                            <div class="card-content">
+                                <h3>Emilia Mernes</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image-card">
+                                <img src="/assets/ricky-fort.jpg" alt="Imagen de Ricky Fort">
+                            </div>
+                            <div class="card-content">
+                                <h3>Ricky Fort</h3>
+                                <button class="btn-py">Python</button>
+                                <div class="rating">★★★☆☆</div>
+                                <button class="btn-c">Contratar</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <aside class="right-section">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/_ovuX--_LSg?si=WEOhsFxztyYxTJaBautoplay=0showinfo=0" 
+                        frameborder="0" 
+                        allow="encrypted-media; referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                    <div class="tenes-alguna-duda">
+                        <h3>¿Tenés alguna duda?</h3>
+                        <img src="/assets/question.png" alt="">
+                        <button class="btn-consultar">Consultar</button>
+                    </div>
+                </aside>
+        </main>
+        <footer class="Footer"></footer>
+    </div>
+</body>
+</html>
