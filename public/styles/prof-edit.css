@@ -12,20 +12,20 @@ body {
     background-color: #90B4CE;
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .area {
-    background: #90B4CE;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    background: #90B4CE;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
-    height: 990px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Envía el área de fondo detrás del contenido */
+    z-index: -1;
+    /* Envía el área de fondo detrás del contenido */
 }
 
 .circles {
@@ -132,6 +132,7 @@ body {
         opacity: 1;
         border-radius: 0;
     }
+
     100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
@@ -151,16 +152,23 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #A2C3DA; /* Ajusta el color de fondo según tu diseño */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    display: flex; /* Alinea los elementos dentro del nav */
-    justify-content: space-between; /* Ajusta la alineación horizontal */
-    padding: 10px 20px; /* Añade un poco de espacio alrededor del contenido */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra suave para mejorar la visibilidad */
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    background-color: #A2C3DA;
+    /* Ajusta el color de fondo según tu diseño */
+    z-index: 1000;
+    /* Asegúrate de que esté por encima de otros elementos */
+    display: flex;
+    /* Alinea los elementos dentro del nav */
+    justify-content: space-between;
+    /* Ajusta la alineación horizontal */
+    padding: 10px 20px;
+    /* Añade un poco de espacio alrededor del contenido */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Añade una sombra suave para mejorar la visibilidad */
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho total */
     align-items: center;
     padding-right: 90px;
-    }
+}
 
 .logo img {
     margin-top: 10px;
@@ -168,7 +176,7 @@ header {
     padding-left: 60px;
 }
 
-.search-bar{
+.search-bar {
     padding-top: 15px;
 }
 
@@ -181,7 +189,7 @@ header {
     font-size: 15px;
 }
 
-#search-bar{
+#search-bar {
     width: 300px;
     position: relative;
     background-color: white;
@@ -211,10 +219,10 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-}
 
-.profile-menu p{
-    color: whitesmoke;
+    p {
+        color: whitesmoke;
+    }
 }
 
 .profile-pic {
@@ -239,11 +247,12 @@ header {
     width: 30px;
     height: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+
+    img {
+        padding-bottom: 5px;
+    }
 }
 
-.dropbtn img {
-    padding-bottom: 5px;
-}
 
 .dropdown-content {
     display: none;
@@ -254,21 +263,22 @@ header {
     min-width: 160px;
     border-radius: 5px;
     z-index: 1;
+
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    a:hover {
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    }
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-    border-radius: 5px;
-}
-
-.dropbtn:hover{
+.dropbtn:hover {
     background-color: #f1f1f1;
 }
 
@@ -286,29 +296,33 @@ header {
     padding-top: 120px;
     padding-bottom: 10px;
     transition: color 0.3s ease;
+    a {
+        text-decoration: none;
+        color: grey;
+    }
 }
 
 
-.location a {
-    text-decoration: none;
-    color: grey;
-}
-
-#actual-location{
+#actual-location {
     color: white;
 }
 
 .container {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
     gap: 10px;
+    width: 1000px;
 }
 
 
 .contact-info {
     border-radius: 10px;
+
+    h2 {
+        margin: 11px;
+        color: #003366;
+    }
 }
 
 .profile-info {
@@ -317,40 +331,77 @@ header {
     border-radius: 10px;
     text-align: center;
     background-color: #f8f3f3a1;
-    height: 690px;
+    height: 500px;
     box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+
+    .uploaded-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-top: 80px;
+        object-fit: cover;
+    }
+
+    h2 {
+        margin: 11px;
+        color: #003366;
+    }
+
+    p {
+        color: #666;
+        margin-bottom: 20px;
+    }
 }
 
-.profile-info img {
-    width: 200px;
-    height: 200px;
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-picture {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    margin-top: 50px;
     object-fit: cover;
 }
 
-.profile-info h2,
-.contact-info h2 {
-    margin: 11px;
-    color: #003366;
+.edit-photo {
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+    transform: translate(50%, 50%);
+    padding: 8px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 45px;
+
+    &:hover {
+        background-color: whitesmoke;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
 }
 
-.profile-info p {
-    color: #666;
-    margin-bottom: 20px;
-}
 
 .stats {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
     display: flex;
+
+    div {
+        text-align: center;
+        font-size: 14px;
+    }
 }
 
-.stats div {
-    text-align: center;
-    font-size: 14px;
-}
 
 .btn {
     display: block;
@@ -364,46 +415,13 @@ header {
     border: none;
 }
 
-.upload-btn {
-    background-color: #65A8E5;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 100px;
-    height: 40px;
-}
-
-.upload-btn:hover {
-    background-color: white;
-    color: #003366;
-    border: 1px solid black;
-    height: 40px;
-}
-
-.delete-btn {
-    background-color: rgb(196, 0, 0);
-    color: white;
-    border: black;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.delete-btn:hover {
-    background-color: white;
-    color: black;
-    height: 39px;
-}
-
 .profile-main {
     border-radius: 10px;
-    display: grid;
-    gap: 40px;
     position: relative;
-}
 
-.profile-main h2 {
-    color: #003366;
+    h2 {
+        color: #003366;
+    }
 }
 
 label {
@@ -432,12 +450,12 @@ select {
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"]{
+input[type="password"] {
     background-color: #ccc;
     border: #003366 solid 0.5px;
 }
 
-select:hover{
+select:hover {
     background-color: whitesmoke;
     cursor: pointer;
     color: rgb(34, 34, 34);
@@ -449,12 +467,12 @@ select:hover{
     display: flex;
     align-items: center;
     flex: 1;
-}
 
-.password-container input {
-    flex: 1;
-    padding-right: 40px;
-    /* Espacio para el ícono */
+    input {
+        flex: 1;
+        padding-right: 40px;
+        /* Espacio para el ícono */
+    }
 }
 
 .toggle-password {
@@ -470,20 +488,21 @@ select:hover{
     background-color: #003366;
     color: #fff;
     padding: 10px 20px;
-    margin-top: 30px;
     border: none;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 45px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        background-color: white;
+        color: #003366;
+        border: 0.5px solid black;
+        height: 40px;
+    }
 }
 
-.btn.update-btn:hover {
-    background-color: white;
-    color: #003366;
-    border: 0.5px solid black;
-    height: 40px;
-}
 
 .form-section {
     font-size: 15px;
@@ -493,13 +512,14 @@ select:hover{
     border-radius: 10px;
     display: grid;
     box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px;
+    }
 }
 
-.form-section h2 {
-    font-size: 20px;
-    text-align: center;
-    margin: 10px;
-}
 
 .birthdate {
     display: grid;
@@ -512,29 +532,30 @@ nav ul li a {
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    &:hover {
+        color: #fff;
+    }
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
 
 .styled-table {
     border-radius: 20px;
@@ -542,18 +563,54 @@ nav ul li a:hover {
     border-collapse: collapse;
     font-size: 15px;
     text-align: center;
+
+    th {
+        font-weight: normal;
+        text-align: left;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    td {
+        padding-left: 5px;
+        text-align: left;
+    }
 }
 
-.styled-table th {
-    font-weight: normal;
-    text-align: left;
-    padding-left: 5px;
-    padding-top: 5px;
+.profile-main {
+    width: 100%;
+    height: 650px;
+    /* Altura fija para el contenedor con scroll */
+    overflow-y: auto;
+    /* Habilita el scroll vertical */
+    border: 2px solid #f8f3f3a1;
+    padding: 25px;
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho y alto total */
+    scroll
 }
 
-.styled-table td {
-    padding-left: 5px;
-    text-align: left;
+.profile-info .profile-main{
+    height: 1000px; /* Altura del contenido para permitir el desplazamiento */
+    background: linear-gradient(to bottom, red, #f0f0f0);
+}
+
+.profile-main::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.profile-main::-webkit-scrollbar-thumb {
+    background-color: #003366; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 8px; /* Bordes redondeados del pulgar */
+}
+
+.profile-main::-webkit-scrollbar-thumb:hover {
+    background-color: #004e9c; /* Color del pulgar al pasar el ratón por encima */
+}
+
+.profile-main::-webkit-scrollbar-track {
+    background-color: #0033664f; /* Color de la pista de la barra de desplazamiento */
+    border-radius: 8px; /* Bordes redondeados de la pista */
 }
 
 .form-section:first-child,
@@ -568,15 +625,6 @@ nav ul li a:hover {
     background-color: #f8f3f3a1;
     border-radius: 10px;
     padding-bottom: 19px;
-}
-
-.contact-info .form-section:last-child {
-    margin: 0;
-    background-color: #f8f3f3a1;
-    padding-top: 7px;
-    padding-bottom: 3px;
-    padding-left: 45px;
-    padding-right: 20px;
 }
 
 #addRowButton {
@@ -629,13 +677,14 @@ label {
 input {
     flex: 1;
     padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #003366;
 }
 
 .edit-icon {
     cursor: pointer;
     margin-left: 5px;
     background: none;
-    margin-bottom: 15px;
     color: #003366;
 }
 
@@ -645,9 +694,12 @@ input {
 
 
 .fa-times {
-    color: #333; /* Color gris oscuro */
-    font-size: 20px; /* Tamaño */
-    cursor: pointer; /* Cambiar cursor al pasar sobre el ícono */
+    color: #333;
+    /* Color gris oscuro */
+    font-size: 20px;
+    /* Tamaño */
+    cursor: pointer;
+    /* Cambiar cursor al pasar sobre el ícono */
 }
 
 .linea {
@@ -659,11 +711,12 @@ input {
 }
 
 
-.final{
+.final {
     padding: 10px 10px;
     text-align: center;
     padding-top: 0;
-    p{
+
+    p {
         font-size: .7rem;
         color: white;
     }
