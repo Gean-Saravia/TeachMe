@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del DOM
     const container = document.getElementById('container');
@@ -11,6 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const password = document.querySelector('#password');
     const repeatPassword = document.querySelector('#repeat-password');
     const passwordLogin = document.querySelector('#password-login');
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
+
+    //menu
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    })
+    
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    })
 
     // Funciones de toggle
     toggleToSignUp.addEventListener('click', function(event) {
