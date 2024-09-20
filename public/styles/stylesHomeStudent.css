@@ -37,56 +37,10 @@ header {
     padding-right: 100px;
     }
 
-.my-classes, main, .profile-section{
-    margin-top: 90px;
-}
-
 .logo img {
     margin-top: 10px;
     height: 70px;
     padding-left: 60px;
-}
-
-.search-bar {
-    padding-top: 15px;
-}
-
-.search-input {
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative;
-    border-radius: 20px;
-    width: 300px;
-    font-size: 15px;
-}
-
-#search-bar {
-    width: 300px;
-    position: relative;
-    background-color: white;
-    border: none;
-}
-
-.search-icon {
-    position: relative;
-    top: 20px;
-    right: 35px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 14.4px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 14px;
-    color: grey;
-    appearance: none;
 }
 
 .nav-links {
@@ -204,22 +158,25 @@ nav ul li a:hover {
 
 .container {
     display: flex;
-    padding: 50px 100px;
+    padding-top: 120px;
+    padding-left: 50px;
+    padding-right: 50px;
     gap: 30px;
 }
 
-.my-classes {
-    width: 25%;
+.catalogo {
+    width: 20%;
     height: fit-content;
     background-color: #f5f1f18c;
     border-radius: 10px;
+    padding-top: 10px;
     padding-right: 20px;
     padding-bottom: 20px;
     font-size: 11px;
     box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.my-classes h2 {
+.catalogo h2 {
     color: #094067;
     font-size: 30px;
     padding-left: 20px;
@@ -270,11 +227,12 @@ ul#class-list li.selected:hover {
 }
 
 main {
-    width: 100%;
+    flex: 1;
+    height: 40px;
 }
 
 .profile-section {
-    width: 600px;
+    width: 30%;
     background-color: #f5f1f18c;
     border-radius: 20px;
     text-align: center;
@@ -283,8 +241,8 @@ main {
 }
 
 .profile-section img {
-    height: 200px;
-    width: 200px;
+    height: 125px;
+    width: 125px;
     object-fit: cover;
     border-radius: 50%;
     padding: 10px 10px;
@@ -293,10 +251,12 @@ main {
 
 .profile-section h2 {
     margin: 0;
+    color: #094067;
 }
 
 .profile-info{
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .welcome {
@@ -309,9 +269,9 @@ main {
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
     width: auto;
-    height: 190px;
+    height: 70px;
     text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -321,8 +281,6 @@ main {
     /* Distribuye el espacio entre los elementos */
     align-items: center;
     /* Alinea verticalmente los elementos al centro */
-    padding: 5px;
-    /* Opcional: Añade un poco de padding alrededor del contenedor */
 }
 
 .section h2 {
@@ -348,13 +306,17 @@ main {
 
 .subjects {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin-top: 5px;
+}
+
+.subject h3{
+    font-size: 16px;
 }
 
 .subject {
     background: linear-gradient(to right, #fffefe4e 0%, #fffefe4e 4%, #66b3ff 50%, #66b3ff 100%);
-    padding: 10px;
+    padding: 5px;
     padding-left: 20px;
     border-radius: 20px;
     color: #FFFFFF;
@@ -363,7 +325,6 @@ main {
     box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
     text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    font-size: 16px;
 }
 
 .subject:hover {
@@ -372,6 +333,7 @@ main {
 }
 
 .subject p {
+    font-size: 12px;
     margin-right: 10px;
     /* Espacio entre el texto y el ícono */
 }
@@ -385,17 +347,58 @@ main {
     /* Hace el borde redondo */
 }
 
-.class-table table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
+.class-table,
 .class-table th,
 .class-table td {
-    border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+    border: none;
+    /* Elimina todos los bordes */
+    padding: 10px;
+    /* Ajusta el relleno según sea necesario */
+}
+
+.class-table {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-collapse: collapse;
+    /* Asegúrate de que los bordes estén colapsados */
+}
+
+.border-top-left-table{
+    border-top-left-radius: 10px;
+}
+
+.border-top-right-table{
+    border-top-right-radius: 10px;
+}
+
+.class-table th {
+    background-color: #12A4E3;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.class-table td {
+    color: #333;
+    font-size: 12px;
+}
+
+.class-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.class-table tbody tr:hover {
+    background-color: #e0f7ff;
+    /* Celeste claro */
+    transform: scale(1.02);
+}
+
+.class-table tr:hover td {
+    color: #007acc;
+    /* Cambia el color del texto al pasar el mouse */
 }
 
 /* Estilos calendario */
@@ -418,7 +421,7 @@ main {
 #calendar {
     max-width: 100%;
     margin: 0 auto;
-    height: 350px;
+    height: 200px;
     /* Altura fija de 350px */
 }
 
@@ -473,53 +476,6 @@ main {
     background-color: #f5f5f5;
     border-radius: 10px;
     font-size: 12px;
-}
-
-.class-table {
-    margin-top: 20px;
-    width: 100%;
-    background-color: #ffffff;
-    border-collapse: collapse;
-    /* Asegúrate de que los bordes estén colapsados */
-}
-
-.class-table,
-.class-table th,
-.class-table td {
-    border: none;
-    /* Elimina todos los bordes */
-    padding: 10px;
-    /* Ajusta el relleno según sea necesario */
-}
-
-.class-table th {
-    background-color: #12A4E3;
-    color: #ffffff;
-    text-align: center;
-}
-
-.class-table tbody tr {
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.class-table tbody tr:hover {
-    background-color: #e0f7ff;
-    /* Celeste claro */
-    transform: scale(1.02);
-}
-
-.class-table td {
-    color: #333;
-    font-size: 15px;
-}
-
-.class-table th {
-    font-size: 20px;
-}
-
-.class-table tr:hover td {
-    color: #007acc;
-    /* Cambia el color del texto al pasar el mouse */
 }
 
 .fa-bell {
