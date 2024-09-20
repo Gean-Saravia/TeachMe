@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Función para manejar labels
+    // Función para manejar los labels
     function handleLabels() {
         document.querySelectorAll('.form-group input').forEach(input => {
             input.addEventListener('blur', () => {
