@@ -156,184 +156,12 @@ nav ul li a:hover::after {
     display: flex;
     height: 90vh;
     background-color: #90B4CE;
-    padding: 5px;
+    padding: 5px 10px;
     margin-top: 3%;
     align-items: center;
     gap: 1vw;
     justify-content: center;
 }
-/*Empieza la edicion del cuadro perfil*/
-.perfil{
-    display: flex;
-    flex-direction: column;
-    background-color: #C4E0EF;
-    height: 80%;
-    width: 17.969vw;
-    border-radius: 50px;
-    gap: 2vh;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-
-}
-
-.title{
-
-    margin-top: 4VH;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    color: #000000;
-
-}
-
-.imagen-usuario{
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-.imagen-usuario img{
-    height: 16vh;
-    width: 8vw;
-    border-radius: 50%;
-}
-.datos{
-    color: #616161;
-    word-wrap: break-word; /* Permite que las palabras largas se rompan en varias líneas */
-    text-align: center; /* Centra el texto */
-    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Ajusta el tamaño de la fuente de manera responsiva */
-    margin: 0;
-    text-align: center;
-    font-size: 1rem;
-}
-.datos h1{
-    font-weight: bold;
-    color: #000000;
-}
-
-.datos p{
-    font-family: 'Alegreya Sans SC';
-    color: #616161;
-}
-.datos-tecnicos{
-
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Espacio equitativo entre los elementos */
-    align-items: center;
-    padding: 5px;
-    box-sizing: border-box;
-    font-family: "Alegreya Sans SC", sans-serif;
-
-}
-.datos-tecnicos p{
-    font-weight: 600;
-    font-style: normal;
-}
-
-.idiomas{
-    padding: 5px;
-    display: flex;
-
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    overflow-wrap: break-word;
-    width: 33.33%; /* Ocupa un tercio del contenedor */
-    box-sizing: border-box;
-    word-break: break-word;
-}
-.idiomas p {
-    margin: 0;
-    line-height: 1.2;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    word-wrap: break-word;
-    white-space: normal;
-    font-size: 1.5rem;
-    color: #333333;
-}
-
-.clases{
-    padding: 5px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    overflow-wrap: break-word;
-    width: 33.33%; /* Ocupa un tercio del contenedor */
-    box-sizing: border-box;
-    word-break: break-word;
-}
-.clases p {
-    margin: 0;
-    line-height: 1.2;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    word-wrap: break-word;
-    white-space: normal;
-    font-size: 1.5rem;
-    color: #333333;
-}
-
-.alumnos{
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    overflow-wrap: break-word;
-    width: 33.33%; /* Ocupa un tercio del contenedor */
-    box-sizing: border-box;
-    word-break: break-word;
-}
-.alumnos p {
-    margin: 0;
-    line-height: 1.2;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    word-wrap: break-word;
-    white-space: normal;
-    font-size: 1.5rem;
-    color: #333333;
-}
-.title-tecnico{
-    font-weight: bold;
-    color: blue;
-}
-
-.boton{
-    margin-top: 10%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-
-
-.ver-mas{
-    background-color: #65A8E5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3vh;
-    width: 8vw;
-    padding: 10px;
-    color: white;
-    border: none;
-    font-family: 'alata';
-    font-size: 1.5rem;
-    border-radius: 30px;
-    transition: all 0.3s ease; /* Esto aplica la animación suave */
-}
-
-.ver-mas:hover{
-    background-color: #65A8E5;
-    transform: scale(1.1); /* Aumenta el tamaño del botón */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Agrega sombra al botón */
-    cursor: pointer; /* Hace que el cursor cambie a una mano */
-
-}
-
 /*Edicion de cuadro profesor*/
 .contenido-profesor{
     height: 70%;
@@ -864,7 +692,7 @@ h2 {
 
 
 h2 {
-    color: var(--primary-color);
+    color: #094067;
     margin: 0 0 20px;
     font-size: 28px;
     font-weight: 500;
@@ -980,4 +808,47 @@ h2 {
         font-size: .7rem;
         color: white;
     }
+}
+
+@media (max-width: 1536px) {
+    .contenedor {
+        gap: 30px;
+        padding-bottom: 0;
+    }
+    .contenido-profesor {
+        height: 80%;
+        width: 70%;
+    }
+    .article-datos {
+        width: 30%;
+    }
+    .foto {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        padding-bottom: 70px;
+    }
+    .nombre{
+        position: absolute;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    .comentarios {
+        width: 25%;
+    }
+    .titulo-pregunta {
+        margin-top: 40px;
+    }
+    .foto-monigote {
+        img{
+            height: 100%;
+        }
+    }
+    .linea {
+        margin-top: 0;
+    }
+    .final {
+        padding: 0;
+    }
+    
 }
