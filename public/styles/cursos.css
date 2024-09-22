@@ -146,8 +146,8 @@ nav ul li a:hover {
 }
 
 .profile-pic {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -351,5 +351,37 @@ nav ul li a:hover {
             font-size: .7rem;
             color: var(--white);
         }
+    }
+}
+
+/*Resolución 1024px x 768px */
+@media screen and (max-width: 1024px) {
+    .logo img{
+        padding-left: 0px;
+    }
+
+    #search-bar {
+        width: 210px;
+    }
+
+    .search-bar {
+        display: flex;
+    }
+
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+        gap: 10px;
+    }
+
+    .profile-menu p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .profile-menu p{
+        display: none;
     }
 }
