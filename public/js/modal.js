@@ -48,3 +48,28 @@ document.getElementById('paymentForm').addEventListener('submit', function (e) {
 });
 
 document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+
+// Script para manejar el dropdown
+document.querySelector('.btn-dropdown').addEventListener('click', function() {
+    document.querySelector('.dropdown-menu').classList.toggle('show');
+});
+
+// Cerrar el dropdown cuando se selecciona una opción
+document.querySelectorAll('.dropdown-menu li a').forEach(function(item) {
+    item.addEventListener('click', function() {
+        document.querySelector('.btn-dropdown').textContent = this.textContent;
+        document.querySelector('.dropdown-menu').classList.remove('show');
+    });
+});
+
+// Cerrar el dropdown si se hace clic fuera
+window.addEventListener('click', function(e) {
+    if (!e.target.matches('.btn-dropdown')) {
+        var dropdowns = document.querySelectorAll('.dropdown-menu');
+        dropdowns.forEach(function(dropdown) {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    }
+});
