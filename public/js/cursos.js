@@ -84,3 +84,4 @@ searchBar.addEventListener('input', () => {
 })
 
 generarCursos(cursos)
+
