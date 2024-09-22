@@ -451,7 +451,7 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"] {
-    background-color: #ccc;
+    background-color: #ffffff;
     border: #003366 solid 0.5px;
 }
 
@@ -719,5 +719,29 @@ input {
     p {
         font-size: .7rem;
         color: white;
+    }
+}
+
+/* Resolución 1920px */
+
+@media screen and (max-width: 1920px){
+    .container {
+        gap: 50px;
+    }
+
+    .btn.update-btn {
+        margin-left: 54%
+    }
+
+    .location {
+        padding-left: 110px;
+    }
+
+    .nav-links {
+        padding-left: 30px;
+    }
+
+    .linea {
+        margin-top: 80px;
     }
 }
