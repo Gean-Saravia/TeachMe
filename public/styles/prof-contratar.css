@@ -79,10 +79,6 @@ header {
     border-radius: 50%;
 }
 
-.dropdown {
-    position: relative;
-}
-
 .dropbtn {
     background-color: #65A8E5;
     border: none;
@@ -470,12 +466,10 @@ nav ul li a:hover::after {
 }
 
 .img-pago {
-    background-color: #EAFAF1;
     width: 14%;
     height: 25%;
     border-radius: 90%;
     margin-top: -5%;
-    border: 1px solid green;
 }
 
 .img-pago img {
@@ -488,6 +482,31 @@ nav ul li a:hover::after {
     height: 85%;
     width: 100%;
     border-radius: 20px;
+}
+
+/*Desplegable modal*/
+
+
+
+.btn-dropdown:hover {
+    background-color: #2980b9;
+}
+
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.hide {
+    display: none;
 }
 
 /*Editando cosas*/
@@ -665,20 +684,6 @@ h2 {
 }
 
 
-
-
-#qrCode {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    color: #666;
-}
-
 .modal-overlay.show .modal {
     transform: scale(1);
 }
@@ -732,20 +737,124 @@ h2 {
     text-align: center;
 }
 
+/* estilos dentro del modal */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97.5%;
+    gap: 2vw;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-dropdown {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 112px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Hacer que el botón llene el espacio disponible */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+.option-button {
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: not-allowed;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Hacer que los campos de correo y clase llenen el espacio */
+#classEmailGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.readonly-input {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Estilo del botón de aceptar */
+.close-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 97.5%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.close-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
 
 
 /*Alineando con grid*/
-/* Estilos de grid para los campos "Clase de" y "Correo Electrónico" */
-#classEmailGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    gap: 20px; /* Espacio entre los campos */
-}
+
 
 .form-group select,
 .form-group input {
     width: 90%;
-    padding: 10px;
+    padding: 10px 6px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
@@ -757,12 +866,6 @@ h2 {
     color: #333; /* Color de texto para mejorar la visibilidad */
 }
 
-#qrCode {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    display: block;
-}
 
 /* Estilos para el botón de cierre del modal */
 .close-modal-btn {
@@ -851,4 +954,105 @@ h2 {
         padding: 0;
     }
     
+}
+
+@media (min-width: 1920px) {
+
+    .contenedor {
+        gap: 50px;
+        padding-bottom: 0;
+    }
+    .contenido-profesor {
+        height: 80%;
+        width: 70%;
+    }
+    .article-datos {
+        width: 30%;
+    }
+    .foto {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        padding-bottom: 70px;
+    }
+
+    .container-modal-pago {
+        display: none; /* Inicialmente oculto */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        height: auto;
+        width: 40vw;
+        border-radius: 20px;
+        gap: .5vh;
+        position: fixed; /* Para posicionar el botón de cierre */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrar el modal */
+        z-index: 1000; /* Asegurar que el modal esté por encima de otros elementos */
+    }
+
+    .btn-dropdown {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 130px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%; /* Hacer que el botón llene el espacio disponible */
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .skill {
+        background-color: rgba(9, 64, 103, .6);
+        padding: 1px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+
+    }
+
+    .botones a {
+        width: 100px;
+    }
+
+    .titulo-nombre h1 {
+        padding-left: 20px;
+        padding-bottom: 15px;
+    }
+
+    .resumen-perfil {
+        height: 50%;
+    }
+
+    .descripcion-rol p {
+        padding-left: 20px;
+        padding-bottom: 30px;
+    }
+
+    .titulo-pregunta p {
+        text-align: center;
+    }
+
+    .comentario-persona p {
+        font-size: medium;
+    }
+
+    .personas-comentarios {
+        padding-top: 10px;
+    }
+
+    .titulo-pregunta {
+        height: 12%;
+        width: 80%;
+    }
+
+    .btn-dropdown {
+        padding-top: 10px;
+        padding-right: 33px;
+    }
 }
