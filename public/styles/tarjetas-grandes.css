@@ -283,6 +283,10 @@ ul#class-list li.selected:hover {
     /* Aumenta el tamaño al pasar el mouse */
 }
 
+section{
+    width: 100%;
+}
+
 .banner {
     background: linear-gradient(to right, #1A7196 0%, #1A7196 4%, #578CCA 50%, #578CCA 100%);
     font-family: var(--alata);
@@ -452,8 +456,4 @@ iframe{
 
 .btn-consultar:hover{
     background-color: var(--azul-oscuro);
-}
-
-section{
-    width: 100%;
 }

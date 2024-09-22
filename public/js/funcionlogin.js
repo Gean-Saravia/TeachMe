@@ -1,3 +1,4 @@
+const BACK_URL = "http://localhost:3000/api"
 
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del DOM
@@ -173,22 +174,98 @@ document.addEventListener('DOMContentLoaded', function() {
     signUpForm.addEventListener('submit', function(e) {
         e.preventDefault();
         if (validateForm(this)) {
-            showToast('Registro exitoso!');
-            setTimeout(() => {
-                location.href = "./inicio-estudiante.html"
-            }, 1000);
-            // enviar el formulario o realizar otras acciones
+            const formData = new FormData(signUpForm)
+            const nombre = formData.get('nombre');
+            const apellido = formData.get('apellido');
+            const email = formData.get('email');
+            const fecha_nacimiento = formData.get('fecha_nacimiento');
+            const contrasenia = formData.get('contrasenia');
+            console.log("email:",email,"psw:", contrasenia, "nombre:", nombre, "apellido:", apellido, "fecha:", fecha_nacimiento);
+            console.log(JSON.stringify({
+                email: email,
+                contrasenia: contrasenia,
+                nombre: nombre,
+                apellido: apellido,
+                fecha_nacimiento: fecha_nacimiento
+            }));
+            fetch(`${BACK_URL}/users/sign-up`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nombre,
+                    apellido,
+                    email,
+                    fecha_nacimiento,
+                    contrasenia
+                })
+            })
+            .then(response => {
+                // Verifica si la respuesta es JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    throw new Error('La respuesta no es JSON');
+                }
+            })
+            .then(data => {
+                showToast(data.msg)
+                
+                if(data.success){
+                    setTimeout(() => {
+                        location.href = "./login.html"
+                    }, 1000);
+                }
+            })
+            .catch((error) => console.error('Error:', error));
         }
     });
 
     signInForm.addEventListener('submit', function(e) {
         e.preventDefault();
         if (validateForm(this)) {
-            showToast('Inicio de sesión exitoso!');
-            setTimeout(() => {
-                location.href = "./prof-inicio.html"
-            }, 1000);
-            // enviar el formulario o realizar otras acciones
+            const formData = new FormData(signInForm)
+            const email = formData.get('email');
+            const contrasenia = formData.get('contrasenia');
+            console.log("email:",email,"psw:", contrasenia);
+            console.log(JSON.stringify({
+                email: email,
+                contrasenia: contrasenia
+            }));
+            
+            
+            fetch(`${BACK_URL}/users/sign-in`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    contrasenia: contrasenia,
+                })
+            })
+            .then(response => {
+                // Verifica si la respuesta es JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    throw new Error('La respuesta no es JSON');
+                }
+            })
+            .then(data => {
+                showToast(data.msg)
+                localStorage.setItem('token', data.token)
+                
+                if(data.success){
+                    setTimeout(() => {
+                        location.href = "./inicio-estudiante.html"
+                    }, 1000);
+                }
+            })
+            .catch((error) => console.error('Error:', error));
         }
     });
 

@@ -176,47 +176,6 @@ header {
     padding-left: 60px;
 }
 
-.search-bar {
-    padding-top: 15px;
-}
-
-.search-input {
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative;
-    border-radius: 20px;
-    width: 300px;
-    font-size: 15px;
-}
-
-#search-bar {
-    width: 300px;
-    position: relative;
-    background-color: white;
-    border: none;
-}
-
-.search-icon {
-    position: relative;
-    top: 20px;
-    right: 35px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 14px;
-    color: grey;
-    appearance: none;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
