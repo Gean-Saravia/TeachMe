@@ -17,17 +17,6 @@
             <div class="logo">
                 <a href="/index.html"><img src="/assets/logo-lau.png" alt="TeachMe Logo"></a>
             </div>
-            <div class="search-bar">
-                <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
-                <button class="search-icon">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
-                        <!-- Gris claro -->
-                        <path
-                            d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-
-                </button>
-            </div>
             <ul class="nav-links">
                 <li><a href="./prof-inicio.html">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
@@ -91,20 +80,17 @@
                 <div class="form-section">
                     <label for="name">Nombre:</label>
                     <div class="form-group" id="name-group">
-                        <input type="text" id="name" value="Felipe" readonly>
-                        <i class="fas fa-edit edit-icon" onclick="editField('name')"></i>
+                        <input type="text" id="name" value="" placeholder="Ingrese su nombre">
                     </div>
 
                     <label for="name">Apellido:</label>
                     <div class="form-group" id="name-group">
-                        <input type="text" id="name" value="Argento" readonly>
-                        <i class="fas fa-edit edit-icon" onclick="editField('lastname')"></i>
+                        <input type="text" id="name" value="" placeholder="Ingrese su apellido">
                     </div>
 
                     <label for="dni">DNI:</label>
                     <div class="form-group" id="name-group">
-                        <input type="number" id="dni" value="43654452" readonly>
-                        <i class="fas fa-edit edit-icon" onclick="editField('dni')"></i>
+                        <input type="number" id="dni" value="" placeholder="xx-xxx-xxx">
                     </div>
 
                     <label for="gender">Género</label>
@@ -116,22 +102,20 @@
 
                     <label for="birthdate">Fecha de Nacimiento:</label>
                     <div class="form-group">
-                        <input type="date" id="birthdate" name="birthdate" value="1994-10-12">
+                        <input type="date" id="birthdate" name="birthdate" value="">
                     </div>
 
                     <label for="email">Email:</label>
                     <div class="form-group" id="email-group">
-                        <input type="email" id="email" value="argentofelipe@example.com" readonly>
-                        <i class="fas fa-edit edit-icon" onclick="editField('email')"></i>
+                        <input type="email" id="email" value="" placeholder="argento@mail.com">
                     </div>
 
                     <label for="password">Contraseña:</label>
                     <div class="password-container">
-                        <input type="password" id="password" value="holiwi123" readonly>
+                        <input type="password" id="password" value="">
                         <span class="toggle-password" onclick="togglePassword()">
                             <i class="fas fa-eye-slash" id="eye-icon"></i>
                         </span>
-                        <i class="fas fa-edit edit-icon" onclick="editField('password')"></i>
                     </div>
 
                 </div>
@@ -206,18 +190,15 @@
                         <label for="linkedin">LinkedIn</label>
                         <div class="form-group" id="linkedin-group">
                             <input type="url" id="linkedin" placeholder="Linkedin.com/in/felipe-argento-863sg66"
-                                readonly>
-                            <i class="fas fa-edit edit-icon" onclick="editField('linkedin')"></i>
+                                >
                         </div>
                         <label for="github">GitHub</label>
                         <div class="form-group" id="github-group">
-                            <input type="url" id="github" placeholder="Github.com/felipe-argento-93t66tdb" readonly>
-                            <i class="fas fa-edit edit-icon" onclick="editField('github')"></i>
+                            <input type="url" id="github" placeholder="Github.com/felipe-argento-93t66tdb">
                         </div>
                         <label for="social">Red social</label>
                         <div class="form-group" id="social-group">
-                            <input type="text" id="social" placeholder="Ingrese su medio de contacto" readonly>
-                            <i class="fas fa-edit edit-icon" onclick="editField('social')"></i>
+                            <input type="text" id="social" placeholder="Ingrese su medio de contacto">
                         </div>
                     </div>
                 </div>
