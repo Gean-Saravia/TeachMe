@@ -261,7 +261,7 @@ main {
 
 .welcome {
     display: flex;
-    background-color: #12A4E3;
+    background: linear-gradient(to right, #12A4E3 0%, #12A4E3 4%, #12A4E3 50%, #578CCA 100%);
     padding: 20px;
     border-radius: 20px;
     color: white;

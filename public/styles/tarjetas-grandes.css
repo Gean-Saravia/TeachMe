@@ -291,7 +291,6 @@ section{
     background: linear-gradient(to right, #1A7196 0%, #1A7196 4%, #578CCA 50%, #578CCA 100%);
     font-family: var(--alata);
     padding: 45px;
-    padding-right: 1rem;
     box-sizing: border-box;
     margin: 10px;
     margin-bottom: 40px;
@@ -334,7 +333,7 @@ section{
 }
 
 /* Card Styles */
-.card{
+.card, .card-r{
     flex: 1 1 calc(20% - 30px); /* Tres tarjetas por fila menos el espacio del gap */
     box-sizing: border-box;
     background-color: var(--blanco);
@@ -350,7 +349,7 @@ section{
     }
 }
 
-.card:hover{
+.card:hover, .card-r:hover{
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
@@ -456,4 +455,67 @@ iframe{
 
 .btn-consultar:hover{
     background-color: var(--azul-oscuro);
+}
+
+@media( 1280px <= width <= 1366px ){
+    body{
+        padding: 0;
+    }
+    main{
+        padding: 40px 40px 0 40px;
+        margin: 85px 15px 0 15px;
+    }
+    .container{
+        gap: 22px;
+    }
+    .catalogo{
+        width: 35%;
+        padding-bottom: 1rem;
+        margin-top: .7rem;
+    }
+    .catalogo h2{
+        font-size: 22px;
+        margin: .7rem;
+        padding-bottom: .3rem;
+    }
+    ul#class-list li{
+        padding: 6px;
+    }
+    .banner{
+        font-size: 15px;
+        padding: 30px;
+        margin-bottom: 15px;
+
+        img{
+            position: absolute;
+            top: 4.4rem;
+            right: 23rem;
+            width: 180px;
+            height: 180px;
+        }
+    }
+    section{
+        width: 90%;
+    }
+    .cards-conteiner{
+        margin-left: 25px;
+    }
+    .card{
+        padding: 19px 13px;
+    }
+    .card-r{
+        display: none;
+    }
+    .video{
+        padding: 10px 20px;
+    }
+    iframe{
+        height: 210px;
+    }
+    .tenes-alguna-duda{
+        height: 295px;
+        margin-bottom: 0;
+        border-radius: 10px;
+        padding: 2.4rem 0;
+    }
 }
