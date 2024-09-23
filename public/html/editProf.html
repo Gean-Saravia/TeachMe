@@ -24,7 +24,7 @@
             </ul>
             <div class="profile-menu">
                 <p>Usuario</p>
-                <img src="/assets/Icon-user.png" alt="Foto de perfil" class="profile-pic">
+                <img src="/assets/minimalistic-user.jpeg" alt="Foto de perfil" class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
@@ -58,10 +58,11 @@
     <div class="container">
         <aside class="profile-info">
             <div class="image-container">
-                <img class="uploaded-photo" src="/assets/Icon-user.png" alt="Foto de perfil">
-                <button class="edit-photo">
+                <img class="uploaded-photo" src="/assets/minimalistic-user.jpeg" alt="Foto de perfil" id="profileImage">
+                <button class="edit-photo" id="editPhotoBtn">
                     <img class="icon" src="/assets/camara.png" alt="">
                 </button>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
             </div>
             <h2>Usuario</h2>
             <p>Programación</p>
@@ -229,6 +230,28 @@
             <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editPhotoBtn = document.getElementById('editPhotoBtn');
+            const fileInput = document.getElementById('fileInput');
+            const profileImage = document.getElementById('profileImage');
+        
+            editPhotoBtn.addEventListener('click', function() {
+                fileInput.click();
+            });
+        
+            fileInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        profileImage.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+        </script>
     
     <script src="../js/funcionEditProf.js"></script>
 </body>
