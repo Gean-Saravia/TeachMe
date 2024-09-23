@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -64,7 +66,9 @@
                 </div>
                 <div class="resumen-perfil">
                     <p>
-                        Soy un estudiante avanzado en programación. Apasionado por la tecnología y la enseñanza, ofrezco tutorías personalizadas para ayudar a otros a comprender conceptos complejos y mejorar sus habilidades de codificación.
+                        Soy un estudiante avanzado en programación. Apasionado por la tecnología y la enseñanza, ofrezco
+                        tutorías personalizadas para ayudar a otros a comprender conceptos complejos y mejorar sus
+                        habilidades de codificación.
                     </p>
                 </div>
                 <div class="precio">
@@ -129,46 +133,52 @@
         </aside>
 
         <!-- Empieza el modal -->
-  <div id="pageOverlay"></div>
-   <div class="container-modal-pago" id="modalOverlay">
-    <button id="closeModalBtn" class="close-modal-btn"><i class="fas fa-times"></i></button>
-    <div class="img-pago">
-        <img src="/assets/Logo_Pago_Modal.png" alt="Logo de pago TeachMe">
-    </div>
-    <div class="container-labels">
-        <form id="paymentForm">
-            <div class="form-row">
-                <div class="form-group">
-                    <label class="agrandar-label">Contratar por:</label>
-                    <div class="dropdown">
-                        <button class="btn-dropdown" type="button">Hora</button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                        </ul>
+        <div id="pageOverlay"></div>
+        <div class="container-modal-pago" id="modalOverlay">
+            <button id="closeModalBtn" class="close-modal-btn"><i class="fas fa-times"></i></button>
+            <div class="img-pago">
+                <img src="/assets/Logo_Pago_Modal.png" alt="Logo de pago TeachMe">
+            </div>
+            <div class="container-labels">
+                <form id="paymentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="agrandar-label">Cantidad de horas:</label>
+                            <div class="dropdown">
+                                <button class="btn-dropdown" type="button">Hora</button>
+                                <ul class="dropdown-menu">
+                                    <li data-value="1"><a href="#">1</a></li>
+                                    <li data-value="2"><a href="#">2</a></li>
+                                    <li data-value="3"><a href="#">3</a></li>
+                                    <li data-value="4"><a href="#">4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Precio por hora:</label>
+                            <button type="button" class="option-button" id="precio" disabled>$5000</button>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label>Precio por hora:</label>
-                    <button type="button" class="option-button" disabled>$5000</button>
-                </div>
+                    <div id="classEmailGrid">
+                        <div class="form-group">
+                            <label>Clase de:</label>
+                            <input type="text" name="classType" value="MongoDB" readonly class="readonly-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Correo Electrónico:</label>
+                            <input type="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div class="form-group">
+                            <label>Total:</label>
+                            <button type="button" class="option-button" disabled></button>
+                        </div>
+                    </div>
+                    <button type="submit" class="close-btn">Contratar</button>
+                </form>
             </div>
-            <div id="classEmailGrid">
-                <div class="form-group">
-                    <label>Clase de:</label>
-                    <input type="text" name="classType" value="MongoDB" readonly class="readonly-input">
-                </div>
-                <div class="form-group">
-                    <label>Correo Electrónico:</label>
-                    <input type="email" name="email" required placeholder="tu@email.com">
-                </div>
-            </div>
-            <button type="submit" class="close-btn">Contratar</button>
-        </form>
-      </div>
-  </div>
+        </div>
 
     </main>
     <footer>
@@ -182,4 +192,6 @@
 <script src="../js/modal.js"></script>
 <script src="../js/funcionInicioEstudiante.js"></script>
 <script src=""></script>
+<script src="../js/Calculando-total-a-pagar.js"></script>
+
 </html>
