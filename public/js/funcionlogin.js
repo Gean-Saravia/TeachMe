@@ -66,12 +66,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para mostrar toast
-    function showToast(message) {
+    function showToast(message, success = false) {
         const toastContainer = document.getElementById('toast-container');
         const toast = document.createElement('div');
         toast.classList.add('toast');
         toast.textContent = message;
         toastContainer.appendChild(toast);
+        if(success){
+            toast.classList.add('success-toast')
+            toast.classList.remove('failure-toast')
+        }
+        if(!success){
+            toast.classList.add('fail-toast')
+            toast.classList.remove('success-toast')
+        }
 
         // Trigger reflow
         toast.offsetHeight;
@@ -211,13 +219,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
             .then(data => {
-                showToast(data.msg)
-                
                 if(data.success){
+                    showToast(data.msg, true)
                     setTimeout(() => {
                         location.href = "./login.html"
                     }, 1000);
                 }
+                if (!data.success) showToast(data.msg)
             })
             .catch((error) => console.error('Error:', error));
         }
@@ -256,14 +264,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
             .then(data => {
-                showToast(data.msg)
                 localStorage.setItem('token', data.token)
                 
                 if(data.success){
+                    showToast(data.msg, true)
                     setTimeout(() => {
                         location.href = "./inicio-estudiante.html"
                     }, 1000);
                 }
+                if(!data.success) showToast(data.msg)
             })
             .catch((error) => console.error('Error:', error));
         }
