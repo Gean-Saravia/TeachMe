@@ -544,6 +544,16 @@ main {
   opacity: 1;
 }
 
+.success-toast{
+  background-color: #4de927;
+  color: black;
+}
+
+.failure-toast{
+  background-color: #ff3860;
+  color: white;
+}
+
 @media (max-width: 480px) {
   .circles,
   .circles li,
