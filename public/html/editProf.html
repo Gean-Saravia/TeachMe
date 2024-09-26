@@ -23,8 +23,8 @@
                 <li><a href="./faqs.html">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <p>Usuario</p>
-                <img src="/assets/minimalistic-user.jpeg" alt="Foto de perfil" class="profile-pic">
+                <p id="user-name-nav"></p>
+                <img id="user-picture-nav" class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
@@ -64,8 +64,8 @@
                 </button>
                 <input type="file" id="fileInput" accept="image/*" style="display: none;">
             </div>
-            <h2>Usuario</h2>
-            <p>Programación</p>
+            <h2 id='user-name-perfil'></h2>
+            <p id="user-since"></p>
             <div class="stats">
                 <div><strong>4</strong> <br>IDIOMAS</div>
                 <div><strong>100</strong> <br>CLASES</div>
@@ -84,9 +84,9 @@
                         <input type="text" id="name" value="" placeholder="Ingrese su nombre">
                     </div>
 
-                    <label for="name">Apellido:</label>
+                    <label for="surname">Apellido:</label>
                     <div class="form-group" id="name-group">
-                        <input type="text" id="name" value="" placeholder="Ingrese su apellido">
+                        <input type="text" id="surname" value="" placeholder="Ingrese su apellido">
                     </div>
 
                     <label for="dni">DNI:</label>
@@ -121,7 +121,7 @@
 
                 </div>
                 <div class="form-section">
-
+                <!-- 
                     <div class="box">
                         <label for="marital-status">Localidad</label>
                         <select id="marital-status">
@@ -129,7 +129,8 @@
                             <option>Soltero</option>
                             <option>Casado</option>
                         </select>
-                    </div>
+                    </div> 
+                -->
 
                     <div class="box">
                         <label for="nationality">Pais</label>
@@ -160,7 +161,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <select class="language">
+                                        <select class="language" id="language">
                                             <option value="language">Seleccionar</option>
                                             <option value="Inglés">Inglés</option>
                                             <option value="Alemán">Alemán</option>
@@ -169,7 +170,7 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="level">
+                                        <select class="level" id="level-language">
                                             <option value="level">Seleccionar</option>
                                             <option value="Básico">Básico</option>
                                             <option value="Intermedio">Intermedio</option>
@@ -197,7 +198,7 @@
                         <div class="form-group" id="github-group">
                             <input type="url" id="github" placeholder="Github.com/felipe-argento-93t66tdb">
                         </div>
-                        <label for="social">Red social</label>
+                        <label for="social">Otra red social</label>
                         <div class="form-group" id="social-group">
                             <input type="text" id="social" placeholder="Ingrese su medio de contacto">
                         </div>
@@ -231,29 +232,11 @@
         </div>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const editPhotoBtn = document.getElementById('editPhotoBtn');
-            const fileInput = document.getElementById('fileInput');
-            const profileImage = document.getElementById('profileImage');
-        
-            editPhotoBtn.addEventListener('click', function() {
-                fileInput.click();
-            });
-        
-            fileInput.addEventListener('change', function(event) {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        profileImage.src = e.target.result;
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-        });
+
         </script>
     
-    <script src="../js/funcionEditProf.js"></script>
+    <script type="module" src="../js/navbar.js"></script>
+    <script type="module" src="../js/funcionEditProf.js"></script>
 </body>
 
 </html>
