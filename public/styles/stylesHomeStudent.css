@@ -193,11 +193,11 @@ ul#class-list {
     text-align: center;
 }
 
-ul#class-list li {
+ul#class-list li, .item-cc {
     border-left: 10px solid #12A4E3;
     /* Borde gris por defecto, prueba para ver cambios */
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.565);
     padding: 8px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -215,6 +215,7 @@ ul#class-list li.selected {
 .item {
     transition: transform 0.3s ease;
     /* Transición suave para el zoom */
+    display: none;
 }
 
 ul#class-list li.selected:hover {
@@ -492,7 +493,6 @@ main {
     margin-top: 30px;
 }
 
-
 .final{
     padding: 10px 10px;
     text-align: center;
@@ -500,5 +500,45 @@ main {
     p{
         font-size: .7rem;
         color: white;
+    }
+}
+
+@media(1280px < width <= 1366px){
+    #calendar{
+        height: 225px;
+    }
+    .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events{
+        font-size: .5em;
+        min-height: 0;
+    }
+    .profile-section{
+        padding-bottom: 12px;
+        img{
+            height: 80px;
+            width: 80px;
+        }
+    }
+    .profile-info{
+        padding-bottom: 10px;
+    }
+}
+
+@media(800px < width <= 1280px){
+    .welcome{
+        padding: 10px;
+        font-size: 16px;
+    }
+    .profile-section{
+        padding-bottom: 5px;
+        img{
+            height: 90px;
+            width: 90px;
+        }
+    }
+    .section h2{
+        font-size: 20px;
+    }
+    .class-table td{
+        font-size: 10px;
     }
 }
