@@ -283,6 +283,23 @@ ul#class-list li.selected:hover {
     /* Aumenta el tamaño al pasar el mouse */
 }
 
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button{
+        color: white;
+        background-color: #1D4F74;
+        cursor: pointer;
+        border-radius: 20px;
+        box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
+        border: none;
+        padding: 10px;
+        transition: transform 0.3s ease;
+    }
+}
+
 section{
     width: 100%;
 }
@@ -497,6 +514,10 @@ iframe{
     section{
         width: 90%;
     }
+    .section button{
+        font-size: 12px;
+        padding: 5px;
+    }
     .cards-conteiner{
         margin-left: 25px;
     }
@@ -507,15 +528,50 @@ iframe{
         display: none;
     }
     .video{
-        padding: 10px 20px;
+        padding: 10px 10px;
     }
     iframe{
-        height: 210px;
+        height: 230px;
     }
     .tenes-alguna-duda{
         height: 295px;
-        margin-bottom: 0;
+        margin: 2px 8px 0px 8px;
         border-radius: 10px;
-        padding: 2.4rem 0;
+        padding: 2.4rem 2px 15px 2px;
+    }
+}
+
+@media(800px < width <= 1280px){
+    container {
+        gap: 20px;
+    }
+    .section button{
+        font-size: 10px;
+        padding: 3px;
+    }
+    ul#class-list li{
+        padding: 4.3px;
+    }
+    .catalogo{
+        padding-bottom: .5rem;
+    }
+    .catalogo h2{
+        font-size: 20px;
+    }
+    .card{
+        padding: 10px 9px;
+    }
+    .right-section{
+        padding: 0;
+    }
+    .video{
+        padding: 10px 10px;
+    }
+    iframe{
+        height: 235px;
+    }
+    .tenes-alguna-duda{
+        margin: 10px 8px 8px 8px;
+        padding: 2.4px 0;
     }
 }
