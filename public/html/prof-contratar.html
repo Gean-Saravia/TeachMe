@@ -39,98 +39,40 @@
             </div>
         </nav>
     </header>
-    <main class="contenedor">
-        <section class="contenido-profesor">
-            <div class="article-datos">
-                <div class="foto">
-                    <img src="/assets/perfil-keanu.png" alt="">
+    <main class="container">
+        <section class="profesor-card">
+            <div class="profesor-foto-container">
+                <img src="/assets/perfil-keanu.png" alt="Foto del profesor">
+                <div class="calificacion">
+                    <div class="estrellas">★★★★☆</div>
+                    <p>4.5 / 5</p>
+                    <p>(125 estudiantes)</p>
                 </div>
-                <div class="nombre">
-                    <h2>Felipe Argento</h2>
-                </div>
+            </div>
+            <div class="profesor-info">
+                <h2>Felipe Argento</h2>
                 <div class="conocimientos">
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">Python</div>
-                    <div class="skill">React</div>
-                    <div class="skill">Node.js</div>
-                    <div class="skill">MongoDB</div>
+                    <span class="conocimiento">Matemáticas Avanzadas</span>
+                    <span class="conocimiento">Estadística</span>
+                    <span class="conocimiento">Machine Learning</span>
                 </div>
+                <p class="descripcion">Únete a mis clases de matemáticas avanzadas y descubre cómo aplicarlas en el mundo real. Aprenderás desde conceptos fundamentales hasta aplicaciones en inteligencia artificial y análisis de datos. Mi enfoque práctico te ayudará a desarrollar habilidades analíticas cruciales para tu carrera.</p>
+                <p class="precio">Precio por hora: $50 USD</p>
+                <button href="#" id="openModalBtn" class="btn_contratar">Contratar Ahora</button>
             </div>
-            <div class="descripcion">
-                <div class="titulo-nombre">
-                    <h1>Felipe Argento</h1>
-                </div>
-                <div class="descripcion-rol">
-                    <p>Profesor de fundamentos de programación</p>
-                </div>
-                <div class="resumen-perfil">
-                    <p>
-                        Soy un estudiante avanzado en programación. Apasionado por la tecnología y la enseñanza, ofrezco
-                        tutorías personalizadas para ayudar a otros a comprender conceptos complejos y mejorar sus
-                        habilidades de codificación.
-                    </p>
-                </div>
-                <div class="precio">
-                    <p>Precio por hora: $5000</p>
-                </div>
-
-                <div class="botones">
-                    <a href="#" id="openModalBtn" class="btn_contratar">Contratar</a>
-                    <a href="" class="btn_ver-perfil">Ver Perfil</a>
-                </div>
-            </div>
-
         </section>
-        <aside class="comentarios">
-            <div class="titulo-pregunta">
-                <p>¿Qué dicen los estudiantes?</p>
-            </div>
-            <div class="personas-comentarios">
-                <div class="persona-foto">
-                    <div class="img-persona">
-                        <img src="/assets/Female-user.png" alt="">
-                    </div>
-                    <div class="persona-comentario">
-                        <div class="nombre-persona">
-                            <p>Lucia</p>
-                        </div>
-                        <div class="comentario-persona">
-                            <p>Clases increíbles!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="persona-foto">
-                    <div class="img-persona">
-                        <img src="/assets/User-Male.png" alt="">
-                    </div>
-                    <div class="persona-comentario">
-                        <div class="nombre-persona">
-                            <p>Iván</p>
-                        </div>
-                        <div class="comentario-persona">
-                            <p>Explica muy bien.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="persona-foto">
-                    <div class="img-persona">
-                        <img src="/assets/Female-user.png" alt="">
-                    </div>
-                    <div class="persona-comentario">
-                        <div class="nombre-persona">
-                            <p>Maria</p>
-                        </div>
-                        <div class="comentario-persona">
-                            <p>Excelente profe</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="foto-monigote">
-                <img src="/assets/monigote.png" alt="Persona mirando al frente">
+        <aside class="aside">
+            <div class="tenes-alguna-duda">
+                <h3>¿Tenés alguna duda?</h3>
+                <img src="/assets/question.png" alt="">
+                <button class="btn-consultar">Consultar</button>
             </div>
         </aside>
+    </main>
+
+    <div class="comentarios-container">
+        <h3>Comentarios de los estudiantes</h3>
+    </div>
 
         <!-- Empieza el modal -->
         <div id="pageOverlay"></div>
@@ -193,5 +135,6 @@
 <script src="../js/funcionInicioEstudiante.js"></script>
 <script src=""></script>
 <script src="../js/Calculando-total-a-pagar.js"></script>
+<script src="../js/comentarios.js"></script>
 
 </html>
