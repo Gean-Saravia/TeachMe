@@ -118,3 +118,79 @@ const displayFAQ = () => {
 
 // Call the function to display FAQ when the page loads
 document.addEventListener('DOMContentLoaded', displayFAQ);
+
+
+// Funcionalidad para el formulario de contacto
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    if (name && email && message) {
+        // Enviar los datos a un servidor (ejemplo)
+        fetch('https://tuservidor.com/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Si el envío es exitoso, puedes manejar la respuesta aquí
+            console.log('Datos enviados:', data);
+        })
+        .catch(error => {
+            console.error('Error al enviar los datos:', error);
+        });
+
+        // Limpia el formulario sin mostrar alertas
+        this.reset();
+    }
+});
+
+
+// Funcionalidad de la notificación tipo "toast"
+const contactForm = document.getElementById('contactForm');
+const toast = document.querySelector('.toast');
+const closeIcon = document.querySelector('.close');
+const progress = document.querySelector('.progress');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // Evita el envío del formulario
+
+    // Mostrar la notificación
+    toast.classList.add('active');
+    progress.classList.add('active');
+
+    // Ocultar la notificación después de un tiempo
+    setTimeout(() => {
+        toast.classList.remove('active');
+        progress.classList.remove('active');
+        
+        // Recargar la página después de que se oculta la notificación
+        location.reload();
+    }, 5000);
+});
+
+// Cerrar la notificación al hacer clic en el icono de cerrar
+closeIcon.addEventListener('click', () => {
+    toast.classList.remove('active');
+    progress.classList.remove('active');
+    
+});
+
+const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
+
+    //menu
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    })
+    
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    })
