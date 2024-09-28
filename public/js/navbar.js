@@ -2,10 +2,9 @@ import { d, BACK_URL } from "./variables.js"
 
 const userNameNav = d.querySelector('#user-name-nav')
 const userPictureNav = d.querySelector('#user-picture-nav')
-
 const token = localStorage.getItem('token')
-//console.log(token);
 
+//console.log(token);
 
 async function usuarioNavbar(){
     
@@ -19,8 +18,20 @@ async function usuarioNavbar(){
         console.log("response", response);
         
         if (!response.ok) {
-            alert('Su sesión expiró, por favor vuelva a logearse')
-            location.href = "./login.html"
+            Swal.fire({
+                icon: "warning",
+                title: "Upss...",
+                text: "Su sesión expiró. Por favor vuelva a logearse!",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                confirmButtonText: 'Iniciar Sesión',
+                footer: '<a href="../../index.html">Volver al inicio</a>'
+            }).then((result) => {
+                if (result.isConfirmed){
+                    location.href = "./login.html"
+                }
+            })
+            //alert('Su sesión expiró, por favor vuelva a logearse')
             throw new Error(`Error: ${response.status}`);
         }
         const data = await response.json();

@@ -354,6 +354,10 @@ nav ul li a:hover {
     }
 }
 
+.swal2-popup{
+    font-family: var(--fredoka);
+}
+
 /*Resolución 1024px x 768px */
 @media screen and (max-width: 1024px) {
     .logo img{

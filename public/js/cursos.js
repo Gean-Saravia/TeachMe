@@ -68,24 +68,30 @@ async function generarCursos(busqueda){
             throw new Error(`Error: ${response.status}`);
         }
         data = await response.json();
-        console.log(data);
+        //console.log(data);
         
         sectionCursos.innerHTML = '';
         if(data.length > 0){
             data.forEach(curso => {
+                
                 const card = d.createElement('article');
                 card.className = 'article-cursos';
                 card.innerHTML = `
                 <div class="texto-article-cursos">
                 <h2>${curso.nombre_materia}</h2>
                 <p>${curso.descripcion}</p>
-                <button><a href="./tarjetas-grandes.html">Ver profes</a></button>
+                <button data-curso-id=${curso.id}>Ver profes</button>
                 </div>
                 <div class="imagen-article-cursos">
                 <img src="${curso.imagen_cargada}" alt="Curso de ${curso.nombre_materia}">
                 </div>
                 `;
                 sectionCursos.appendChild(card);
+
+                card.querySelector('button').addEventListener('click', (event) => {
+                    const cursoId = event.target.dataset.cursoId;
+                    window.location.href = `tarjetas-grandes.html?curso=${cursoId}`;
+                });
             })
         } else {
             sectionCursos.innerHTML = `<p class="busqueda-sin-exito">No se encontraron resultados, intente con otro término!</p>`
