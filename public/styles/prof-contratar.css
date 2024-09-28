@@ -20,6 +20,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #90B4CE;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 /*Empieza el nav*/
 
@@ -148,285 +151,216 @@ nav ul li a:hover::after {
 }
 
 /*Empezamos con la edicion del main*/
-.contenedor{
+.container {
     display: flex;
-    height: 90vh;
     background-color: #90B4CE;
-    padding: 5px 10px;
-    margin-top: 3%;
-    align-items: center;
-    gap: 1vw;
-    justify-content: center;
-}
-/*Edicion de cuadro profesor*/
-.contenido-profesor{
-    height: 70%;
-    width: 52.99vw;
-    background-color: #90B4CE;
-    border-radius: 50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 3vh;
+    width: 100%;
+    max-width: 1700px;
+    margin: 5% auto 0 auto;
+    padding: 30px;
 }
 
+/*Edicion de cuadro profesor*/
+.profesor-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.profesor-foto-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profesor-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4CAF50;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.calificacion {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.estrellas {
+    color: #FFD700;
+    font-size: 28px;
+}
 
 /*Empieza el armado del contenido de profesor*/
-.article-datos{
-    height: 90%;
-    width: 18vw;
-    background-color: rgba(255, 255, 255, .5);
-    border-radius: 26px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2.5vh;
-}
-
-/*Editando imagen de datos*/
-.foto{
-    height: 56%;
-    width: 17vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.foto img{
-    height: 100%;
-    width: 90%;
+.profesor-info {
+    padding: 20px;
+    flex: 1;
+    h2{
+        font-family: 'Alata', sans-serif;
+        margin: 20px 0 20px 0;
+        color: #094067;
+        font-size: 2em;
+        text-align: left;
+    }
 }
 
 .conocimientos {
-    /* ... tus estilos existentes ... */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta 100px según el ancho mínimo deseado para cada elemento */
-    gap: 5px; /* Ajusta el espacio entre elementos según prefieras */
-    height: 25%;
-    width: 75%;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.skill {
-    background-color: rgba(9, 64, 103, .6); /* O el color que desees para el fondo de cada habilidad */
-    padding: 10px; 
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-}
-
-/*Se edita descripcion*/
-.descripcion{
-    height: 80%;
-    width: 55%;
-    border-radius: 25px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1vh;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.titulo-nombre{
-    height: 15%;
-    width: 100%;
-
-    border-radius: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-.titulo-nombre h1{
-    font-family: 'Alata';
-    font-size: 2rem;
-    padding: 20px;
-    font-weight: bold;
-}
-.descripcion-rol{
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.descripcion-rol p{
-    font-family: 'Alata';
-    font-size: 1.5rem;
-    padding: 20px;
-}
-.resumen-perfil{
-
-    height: 30%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: rgba(0, 0, 0, .7);
-    background-color: rgba(255, 255, 255, .5);
-    border-radius: 26px;
-
-}
-.resumen-perfil p{
-    font-family: 'alata';
-    font-size: 1.2rem;
-    padding: 26px;
-}
-
-.precio{
-    margin-top: 2%;
-    height: 12%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: rgba(255, 255, 255, .5);
-    border-radius: 26px;
-}
-.precio p{
-    font-family: 'alata';
-    font-size: 1.5rem;
-    padding: 26px;
-}
-
-.botones{
-    height: 15%;
-    width: 100%;
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 2vw;
-}
-
-.botones a{
-    height: 2vh;
-    width: 8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.conocimiento {
     background-color: #094067;
-    padding: 15px;
     color: white;
-    list-style: none;
-    font-family: 'alata';
-    font-size: 1.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease; /* Esto aplica la animación suave */
-
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
 }
-.botones a:hover{
+
+.descripcion {
+    color: #666;
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #094067;
+    margin-bottom: 20px;
+}
+
+.btn_contratar {
     background-color: #65A8E5;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+    transition: background-color 0.3s ease;
+}
+
+.btn_contratar:hover {
+    background-color: #65a7e5a6;
     transform: scale(1.1); /* Aumenta el tamaño del botón */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Agrega sombra al botón */
-
-}
-/*Pasamos a la parte de comentarios*/
-.comentarios{
-    height: 80%;
-    width: 17.969vw;
-    background-color: #C4E0EF;
-    border-radius: 50px;
-    gap: .7vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-
-    
 }
 
-.titulo-pregunta{
-    height: 7%;
-    width: 95%;
-    color: #000000;
-    background-color: #8FBFC9;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.titulo-pregunta p{
-    font-size: 1.5rem;
-    padding: 7px;
-}
-
-.personas-comentarios{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 50%;
-    width: 100%;
-    gap: 2vh;
-}
-
-.persona-foto{
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25%;
-    width: 100%;
-}
-
-.img-persona{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 100%;
-}
-
-.persona-comentario{
-
-    width: 85%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.nombre-persona{
-    height: 40%;
-
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.nombre-persona p{
+.aside {
+    width: 300px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 10px;
     padding: 20px;
-    font-family: 'Alata';
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, .7);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.comentario-persona{
+.tenes-alguna-duda {
+    width: auto;
+    height: auto;
+    background: linear-gradient(to bottom, #1A7196 0%, #1A7196 4%, #578CCA 50%, #578CCA 100%);
+    padding: 2.4rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    h3{
+        font-family: 'Alata', sans-serif;
+        font-size: 24px;
+        color: white;
+    }
+    img{
+        width: 120px;
+        height: auto;
+        padding-bottom: 1rem;
+    }
+}
+
+.btn-consultar{
+    background-color: #99BBDB;
+    color: white;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 60%;
+    box-shadow:  0 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-consultar:hover{
+    background-color: #094067;
+}
+
+.comentarios-container {
+    max-width: 1700px;
+    margin: 10px auto;
+    padding: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    h3{
+        margin-left: 20px;
+        color: #094067;
+    }
+}
+
+.comentario {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 60%;
-    width: 80%;
-    border-radius: 20px;
-    border: 2px solid rgba(0, 0, 0, .6);
-    margin-left: 10px;
-
-}
-.comentario-persona p{
-    font-size: 1.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.foto-monigote{
-    height: 35%;
+.comentario:last-child {
+    border-bottom: none;
+}
+
+.comentario-foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.comentario-contenido {
+    flex: 1;
+}
+
+.comentario-nombre {
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.comentario-estrellas {
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.comentario-texto {
+    color: #555;
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 20px 25px 20px 0;
+}
+
+.comentario-clase {
+    font-style: italic;
+    color: #236391;
+    margin-top: 10px;
 }
 
 /*Edicion MODAL*/
@@ -914,147 +848,44 @@ h2 {
     }
 }
 
-@media (max-width: 1536px) {
-    .contenedor {
-        gap: 30px;
-        padding-bottom: 0;
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
     }
-    .contenido-profesor {
-        height: 80%;
-        width: 70%;
+    .aside {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
     }
-    .article-datos {
-        width: 30%;
+}
+
+@media (max-width: 768px) {
+    .profesor-card {
+        flex-direction: column;
     }
-    .foto {
-        height: 170px;
-        width: 170px;
-        border-radius: 50%;
-        padding-bottom: 70px;
+    .profesor-foto {
+        width: 150px;
+        height: 150px;
     }
-    .nombre{
-        position: absolute;
-        padding-top: 70px;
-        padding-bottom: 30px;
+    .comentario {
+        flex-direction: column;
     }
-    .comentarios {
-        width: 25%;
+    .comentario-foto {
+        margin-bottom: 10px;
     }
-    .titulo-pregunta {
-        margin-top: 40px;
+}
+
+@media (1280px < width <= 1366px){
+    .container{
+        max-width: 1200px;
     }
-    .foto-monigote {
-        img{
-            height: 100%;
+    .comentarios-container{
+        max-width: 1200px;
+        h3{
+            margin-left: 10px;
         }
     }
-    .linea {
-        margin-top: 0;
-    }
-    .final {
-        padding: 0;
-    }
-    
-}
-
-@media (min-width: 1920px) {
-
-    .contenedor {
-        gap: 50px;
-        padding-bottom: 0;
-    }
-    .contenido-profesor {
-        height: 80%;
-        width: 70%;
-    }
-    .article-datos {
-        width: 30%;
-    }
-    .foto {
-        height: 170px;
-        width: 170px;
-        border-radius: 50%;
-        padding-bottom: 70px;
-    }
-
-    .container-modal-pago {
-        display: none; /* Inicialmente oculto */
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #fff;
-        height: auto;
-        width: 40vw;
-        border-radius: 20px;
-        gap: .5vh;
-        position: fixed; /* Para posicionar el botón de cierre */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Centrar el modal */
-        z-index: 1000; /* Asegurar que el modal esté por encima de otros elementos */
-    }
-
-    .btn-dropdown {
-        background-color: #3498db;
-        color: white;
-        padding: 10px 130px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        width: 100%; /* Hacer que el botón llene el espacio disponible */
+    .comentario-foto{
+        margin: 2px 5px;
     }
 }
-
-@media screen and (max-width: 1024px){
-
-    .skill {
-        background-color: rgba(9, 64, 103, .6);
-        padding: 1px;
-        text-align: center;
-        border-radius: 5px;
-        color: white;
-
-    }
-
-    .botones a {
-        width: 100px;
-    }
-
-    .titulo-nombre h1 {
-        padding-left: 20px;
-        padding-bottom: 15px;
-    }
-
-    .resumen-perfil {
-        height: 50%;
-    }
-
-    .descripcion-rol p {
-        padding-left: 20px;
-        padding-bottom: 30px;
-    }
-
-    .titulo-pregunta p {
-        text-align: center;
-    }
-
-    .comentario-persona p {
-        font-size: medium;
-    }
-
-    .personas-comentarios {
-        padding-top: 10px;
-    }
-
-    .titulo-pregunta {
-        height: 12%;
-        width: 80%;
-    }
-
-    .btn-dropdown {
-        padding-top: 10px;
-        padding-right: 33px;
-    }
-}
-
