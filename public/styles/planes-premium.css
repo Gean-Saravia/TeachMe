@@ -24,7 +24,7 @@
 .container-fondo {
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg,#90b4ce,#8ab3f1,#e8eeed,#a2c3da);
+    background: linear-gradient(45deg,#6699cb,#70a3c8,#a2c3da,#a2c3da);
     position: absolute;
     z-index: -1;
     background-size: 300% 300%;
@@ -43,63 +43,194 @@
     }
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px;
-    background-color: #a2c3da;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/*Empieza el nav*/
+
+header{
+  background-color: var(--celesteFondo);
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #A2C3DA; /* Ajusta el color de fondo según tu diseño */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  display: flex; /* Alinea los elementos dentro del nav */
+  justify-content: space-between; /* Ajusta la alineación horizontal */
+  padding: 10px 20px; /* Añade un poco de espacio alrededor del contenido */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra suave para mejorar la visibilidad */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  align-items: center;
+  padding-right: 100px;
   }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 40px;
-  }
-  
-  .logo {
-    margin-top: 10px;
-    height: 70px;
-    padding-left: 60px;
-  }
-  
-  .nav-list {
-    display: flex;
-    list-style-type: none;
-    gap: 1rem;
-  }
-  
-  .nav-list a {
-    color: #094067;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-    font-weight: 500;
-  }
-  
-  .nav-list a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-  }
-  
-  .nav-list a:hover {
-    color: #fff;
-  }
-  
-  .nav-list a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
+
+.logo img {
+  margin-top: 10px;
+  height: 70px;
+  padding-left: 60px;
+}
+
+.search-bar {
+  text-align: center;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 20px;
+  width: 300px;
+  font-size: 15px;
+}
+
+#search-bar {
+  width: 300px;
+  position: relative;
+  background-color: white;
+  border: none;
+  text-align: center;
+}
+
+.search-icon {
+  position: relative;
+  top: 20px;
+  right: 35px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 14.4px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  color: grey;
+  appearance: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #094067;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.profile-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-menu p {
+  color: whitesmoke;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #65A8E5;
+  padding: 10px;
+  width: auto;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  ;
+}
+
+.dropbtn img {
+  padding-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  right: 0;
+  min-width: 160px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.active {
+  background-color: white;
+  border: px solid #ccc;
+}
   
   .abrir-menu,
   .cerrar-menu {
@@ -159,7 +290,7 @@ header {
 
 section {
     margin-left: 305px;
-    margin-top: 30px;
+    margin-top: 130px;
 }
 
   .banner {
@@ -223,7 +354,7 @@ section {
     list-style-type: none;
     padding: 0;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: #666;
     flex-grow: 1;
 }
 .card ul li {
