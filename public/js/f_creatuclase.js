@@ -113,4 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
             link.parentElement.classList.add('active');
         });
     });
+
+    function highlightItem(selectedItem) {
+        // Elimina la clase 'selected' de todos los ítems
+        var items = document.querySelectorAll('#class-list .item');
+        items.forEach(function (item) {
+            item.classList.remove('selected');
+        });
+    
+        // Añade la clase 'selected' al ítem que se ha hecho clic
+        selectedItem.classList.add('selected');
+    }
 });
