@@ -1,7 +1,7 @@
 const integrantes = [
     {
         nombre: "Jazmin Ferreyra",
-        rol: "Lider de Proyecto",
+        rol: "Scrum master",
         github: "https://github.com/Jazm1nne",
         linkedin: "https://www.linkedin.com/in/jazmin-ferreyra/",
         email: "belenjazminferreyra@gmail.com",
@@ -9,7 +9,7 @@ const integrantes = [
     },
     {
         nombre: "Fabrizio Catanzaro",
-        rol: "Lider de Proyecto",
+        rol: "Backend developer",
         github: "https://github.com/FabrizioCatanzaro",
         linkedin: "https://www.linkedin.com/in/luciano-fabrizio-catanzaro-pfahler/",
         email: "fabriziocatanzaro1@gmail.com",
@@ -17,7 +17,7 @@ const integrantes = [
     },
     {
         nombre: "Laura Fernández",
-        rol: "Lider de Proyecto",
+        rol: "Project manager",
         github: "https://github.com/MelioraImpera",
         linkedin: "https://www.linkedin.com/in/fernandez-laura-belen/",
         email: "fernandezlaurabelen@gmail.com",
@@ -25,7 +25,7 @@ const integrantes = [
     },
     {
         nombre: "Gean Saravia",
-        rol: "Lider de Proyecto",
+        rol: "Full stack developer",
         github: "https://github.com/Gean-Saravia",
         linkedin: "https://www.linkedin.com/in/gean04/",
         email: "geansaravia2004@gmail.com",
@@ -33,7 +33,7 @@ const integrantes = [
     },
     {
         nombre: "Camila Cardozo",
-        rol: "Lider de Proyecto",
+        rol: "Frontend developer",
         github: "https://github.com/Camscript",
         linkedin: "https://www.linkedin.com/in/camila-cardozo-851a61253/",
         email: "camilaagustina2901@gmail.com",
