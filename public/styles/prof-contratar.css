@@ -19,80 +19,162 @@ body {
     font-family: 'Alata', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #90B4CE;
+    background-color: #A2C3DA;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 /*Empieza el nav*/
 
-header {
-    background-color: #A2C3DA;
+header{
+    background-color: var(--celesteFondo);
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
+
+.navbar{
     position: fixed;
-    height: 9%;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #A2C3DA;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    background-color: #A2C3DA; /* Ajusta el color de fondo según tu diseño */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    display: flex; /* Alinea los elementos dentro del nav */
+    justify-content: space-between; /* Ajusta la alineación horizontal */
+    padding: 10px 20px; /* Añade un poco de espacio alrededor del contenido */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra suave para mejorar la visibilidad */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
     align-items: center;
-}
+    padding-right: 100px;
+    }
 
 .logo img {
+    margin-top: 10px;
     height: 70px;
-    padding-left: 20px;
+    padding-left: 60px;
+}
+
+.search-bar {
+    text-align: center;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 15px;
+}
+
+#search-bar {
+    width: 300px;
+    position: relative;
+    background-color: white;
+    border: none;
+    text-align: center;
+}
+
+.search-icon {
+    position: relative;
+    top: 20px;
+    right: 35px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 14.4px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    color: grey;
+    appearance: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 30px;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
 }
 
-.nav-links li {
+nav ul li a {
+    color: #094067;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
     display: inline-block;
 }
 
-.profile-menu {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-right: 40px;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
 }
 
-.profile-menu p{
-    color: white;
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+.profile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-menu p {
+    color: whitesmoke;
 }
 
 .profile-pic {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown {
+    position: relative;
 }
 
 .dropbtn {
     background-color: #65A8E5;
+    padding: 10px;
+    width: auto;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     width: 30px;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    ;
+}
+
+.dropbtn img {
+    padding-bottom: 10px;
 }
 
 .dropdown-content {
@@ -115,45 +197,26 @@ header {
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+    background-color: #f1f1f1;
 }
 
 .show {
     display: block;
 }
 
-nav ul li a {
-    color: #094067;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover{
-    color: #fff;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+.active {
+    background-color: white;
+    border: px solid #ccc;
 }
 
 /*Empezamos con la edicion del main*/
 .container {
     display: flex;
-    background-color: #90B4CE;
+    background-color: #A2C3DA;
     width: 100%;
     max-width: 1700px;
     margin: 5% auto 0 auto;
