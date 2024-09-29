@@ -1,21 +1,21 @@
 const comentarios = [
     {
         nombre: "Ana García",
-        foto: "estudiante1.jpg",
+        foto: "/assets/imagen-por-defecto.jpg",
         estrellas: 5,
         texto: "El profesor Carlos es excelente. Sus explicaciones son claras y siempre está dispuesto a resolver dudas. Gracias a sus clases, pude mejorar significativamente mi comprensión de las matemáticas avanzadas.",
         clase: "Cálculo Multivariable"
     },
     {
         nombre: "Juan Pérez",
-        foto: "estudiante2.jpg",
+        foto: "/assets/imagen-por-defecto.jpg",
         estrellas: 4,
         texto: "Las clases de estadística con el profesor Carlos son muy prácticas. Aprecio mucho cómo relaciona los conceptos teóricos con aplicaciones del mundo real. Recomiendo sus clases a cualquiera que quiera profundizar en esta área.",
         clase: "Estadística Aplicada"
     },
     {
         nombre: "María López",
-        foto: "estudiante3.jpg",
+        foto: "/assets/imagen-por-defecto.jpg",
         estrellas: 5,
         texto: "Increíble experiencia de aprendizaje. El profesor Carlos tiene una habilidad única para explicar conceptos complejos de machine learning de manera sencilla. Sus clases me han ayudado enormemente en mi proyecto de tesis.",
         clase: "Introducción al Machine Learning"
