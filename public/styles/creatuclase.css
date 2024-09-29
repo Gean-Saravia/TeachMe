@@ -24,43 +24,87 @@ body {
 
 header {
     background-color: #A2C3DA;
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #A2C3DA; /* Ajusta el color de fondo según tu diseño */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    display: flex; /* Alinea los elementos dentro del nav */
+    justify-content: space-between; /* Ajusta la alineación horizontal */
+    padding: 10px 20px; /* Añade un poco de espacio alrededor del contenido */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra suave para mejorar la visibilidad */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
     align-items: center;
-    padding: 5px 40px;
-}
+    padding-right: 100px;
+    }
 
 .logo img {
+    margin-top: 10px;
     height: 70px;
-    padding-left: 20px;
+    padding-left: 60px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
-    margin-right: -100px; /* Ajustado para que los enlaces no estén tan a la derecha */
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links li {
+nav ul li a {
+    color: #094067;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
     display: inline-block;
 }
 
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
 .profile-menu {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-right: 10px; /* Añadido para separar el perfil del borde derecho */
+    gap: 10px;
+}
+
+.profile-menu p {
+    color: whitesmoke;
 }
 
 .profile-pic {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .dropdown {
@@ -69,15 +113,19 @@ header {
 
 .dropbtn {
     background-color: #65A8E5;
+    padding: 10px;
+    width: auto;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     width: 30px;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    ;
+}
+
+.dropbtn img {
+    padding-bottom: 10px;
 }
 
 .dropdown-content {
@@ -100,40 +148,20 @@ header {
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+    background-color: #f1f1f1;
 }
 
 .show {
     display: block;
 }
 
-
-nav ul li a {
-    color: #094067;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover{
-    color: #fff;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+.active {
+    background-color: white;
+    border: px solid #ccc;
 }
 
 
@@ -455,10 +483,13 @@ ul#class-list li.selected:hover {
     .my-classes {
         height: 750px;
         font-size: 20px;
+        padding-top: 50px;
+        margin-top: 120px;
     }
 
     .my-classes h2 {
         font-size: 35px;
+        padding-left: 60px;
     }
 
     ul#class-list li {
@@ -468,6 +499,7 @@ ul#class-list li.selected:hover {
 
     .main-content {
         height: 750px;
+        margin-top: 120px;
     }
 
     form {
@@ -508,20 +540,31 @@ ul#class-list li.selected:hover {
         font-size: 20px;
         margin-top: 15px;
     }
+
+    .top-1 {
+        margin-top: 120px;
+    }
 }
 
 @media screen and (max-width: 1366px) {
     .main-content {
         height: 600px;
+        margin-top: 80px;
     }
 
     .top-1, .help-section {
         padding: 20px 10px;
     }
 
+    .top-1 {
+        margin-top: 80px;
+    }
+
     .my-classes {
         height: 598px;
         font-size: 18px;
+        margin-top: 80px;
+        padding-top: 60px;
     }
 
     input, textarea {
