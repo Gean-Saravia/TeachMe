@@ -541,4 +541,34 @@ main {
     .class-table td{
         font-size: 10px;
     }
+    .profile-info{
+        img{
+            width: 70px;
+            height: 70px;
+        }
+        h2{
+            font-size: 20px;
+        }
+    }
+    #calendar{
+        height: 245px;
+    }
+    .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events{
+        font-size: .4em;
+        min-height: 0;
+    }
+    .profile-info{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .reminders{
+        height: 105px;
+        h3{
+            margin-top: 5px;
+        }
+    }
+    .fc .fc-toolbar-title {
+        font-size: 1.2em;
+        margin: 0;
+    }
 }
