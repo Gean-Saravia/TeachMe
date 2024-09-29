@@ -727,7 +727,7 @@ input {
 
 /* Resolución 1920px */
 
-@media screen and (max-width: 1920px){
+@media screen and (min-width: 1920px){
     .container {
         gap: 50px;
     }
@@ -746,6 +746,14 @@ input {
 
     .linea {
         margin-top: 80px;
+    }
+
+    .area {
+        height: 1080px;
+    }
+
+    .circles {
+        height: 1080px;
     }
 }
 
