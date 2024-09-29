@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-AR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../styles/tarjetas-grandes.css">
     <script src="../js/tarjetas-grandes.js"></script>
 </head>
@@ -19,17 +22,7 @@
                 <div class="logo">
                     <a href=""><img src="/assets/logo-lau.png" alt="TeachMe Logo"></a>
                 </div>
-                <div class="search-bar">
-                    <input id="search-bar" type="text" placeholder="Busca por asignatura..." class="search-input">
-                    <button class="search-icon">
-    
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
-                            <!-- Gris claro -->
-                            <path
-                                d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-    
-                    </button>
-                </div>
+
                 <ul class="nav-links">
                     <li><a href="/index.html">Inicio</a></li>
                     <li><a href="./cursos.html">Cursos</a></li>
@@ -57,7 +50,7 @@
 
         <main>
             <div class="container">
-                <aside class="catalogo">
+                <!-- <aside class="catalogo">
                     <div class="section">
                         <h2>Asignaturas</h2>
                         <button type="button">Ver todos>></button>
@@ -75,8 +68,8 @@
                         <li class="item" onclick="highlightItem(this)">React</li>
                         <li class="item" onclick="highlightItem(this)">PHP</li>
                     </ul>
-                </aside>
-                
+                </aside> -->
+
                 <section>
                     <div class="banner">
                         <h1>Un camino de aprendizaje te espera</h1>
@@ -84,7 +77,20 @@
                             <img src="/assets/imagen-banner.png.png" alt="">
                         </div>
                     </div>
-                    
+
+                    <div class="search-bar">
+                        <input id="search-bar" type="text" placeholder="Buscá tu clase" class="search-input">
+                        <button class="search-icon">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="#ccc">
+                                <!-- Gris claro -->
+                                <path
+                                    d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+
+                        </button>
+                    </div>
+
                     <div class="cards-conteiner">
                         <article class="card">
                             <div class="image-card">
@@ -199,10 +205,11 @@
                     </div>
                 </section>
                 <aside class="right-section">
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed/_ovuX--_LSg?si=WEOhsFxztyYxTJaBautoplay=0showinfo=0" 
-                        frameborder="0" 
-                        allow="encrypted-media; referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <div class="video"  >
+                        <video controls autoplay muted loop>
+                            <source src="/assets/teachme.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
                     </div>
                     <div class="tenes-alguna-duda">
                         <h3>¿Tenés alguna duda?</h3>
@@ -214,4 +221,5 @@
         <footer class="Footer"></footer>
     </div>
 </body>
+
 </html>
