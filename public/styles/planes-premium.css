@@ -13,7 +13,7 @@
   }
   
   body {
-    background-color: #90b4ce;
+    background-color: #a2c3da;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -24,7 +24,7 @@
 .container-fondo {
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg,#90b4ce,#8ab3f1,#e8eeed,#23c0d5);
+    background: linear-gradient(45deg,#90b4ce,#8ab3f1,#e8eeed,#a2c3da);
     position: absolute;
     z-index: -1;
     background-size: 300% 300%;
@@ -60,7 +60,9 @@ header {
   }
   
   .logo {
-    max-width: 9rem;
+    margin-top: 10px;
+    height: 70px;
+    padding-left: 60px;
   }
   
   .nav-list {
@@ -334,10 +336,20 @@ button:hover {
 
 @media screen and (min-width: 1920px){
     .banner {
-        width: 50%;
+        width: 80%;
     }
 
-    section{
-        margin-left: 630px;
+    .card {
+      width: 400px;
+      height: 500px;
+    }
+
+    .btn {
+      padding: 15px 20px;
+      font-size: 20;
+    }
+
+    .card ul li {
+      font-size: 15;
     }
 }
