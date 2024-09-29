@@ -172,6 +172,7 @@ nav ul li a:hover::after {
 }
 
 .profesor-foto-container {
+    background-color: #C4E0EF;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -191,15 +192,19 @@ nav ul li a:hover::after {
 .calificacion {
     margin-top: 15px;
     text-align: center;
+    p{
+        color: #666;
+    }
 }
 
 .estrellas {
-    color: #FFD700;
+    color: var(--primary-color);
     font-size: 28px;
 }
 
 /*Empieza el armado del contenido de profesor*/
 .profesor-info {
+    background-color: #C4E0EF;
     padding: 20px;
     flex: 1;
     h2{
@@ -219,8 +224,8 @@ nav ul li a:hover::after {
 }
 
 .conocimiento {
-    background-color: #094067;
-    color: white;
+    background-color: white;
+    color: #094067;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9em;
@@ -252,16 +257,16 @@ nav ul li a:hover::after {
 }
 
 .btn_contratar:hover {
-    background-color: #65a7e5a6;
+    background-color: var(--secondary-color);
     transform: scale(1.1); /* Aumenta el tamaño del botón */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Agrega sombra al botón */
 }
 
 .aside {
-    width: 300px;
-    margin-left: 20px;
-    background-color: white;
+    width: 25%;
+    background: linear-gradient(to bottom, #1A7196 0%, #1A7196 4%, #578CCA 50%, #578CCA 100%);
     border-radius: 10px;
+    margin-left: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -269,19 +274,17 @@ nav ul li a:hover::after {
 .tenes-alguna-duda {
     width: auto;
     height: auto;
-    background: linear-gradient(to bottom, #1A7196 0%, #1A7196 4%, #578CCA 50%, #578CCA 100%);
     padding: 2.4rem;
     border-radius: 5px;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     h3{
         font-family: 'Alata', sans-serif;
-        font-size: 24px;
+        font-size: 32px;
         color: white;
     }
     img{
-        width: 120px;
+        width: 210px;
         height: auto;
         padding-bottom: 1rem;
     }
@@ -292,11 +295,12 @@ nav ul li a:hover::after {
     color: white;
     font-family: 'Alata', sans-serif;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    font-size: 24px;
+    padding: 1rem 1.5rem;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    width: 60%;
+    width: 80%;
     box-shadow:  0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -308,12 +312,13 @@ nav ul li a:hover::after {
     max-width: 1700px;
     margin: 10px auto;
     padding: 0;
-    background-color: white;
+    background-color: #C4E0EF;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     h3{
         margin-left: 20px;
-        color: #094067;
+        color: white;
+        text-shadow: 1px 1px 2px #666;
     }
 }
 
@@ -321,7 +326,7 @@ nav ul li a:hover::after {
     display: flex;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #90B4CE;
 }
 
 .comentario:last-child {
@@ -341,12 +346,13 @@ nav ul li a:hover::after {
 }
 
 .comentario-nombre {
+    color: #094067;
     font-weight: bold;
     margin-bottom: 16px;
 }
 
 .comentario-estrellas {
-    color: #FFD700;
+    color: var(--primary-color);
     margin-bottom: 5px;
 }
 
@@ -878,6 +884,7 @@ h2 {
 @media (1280px < width <= 1366px){
     .container{
         max-width: 1200px;
+        padding: 20px 30px 10px 30px;
     }
     .comentarios-container{
         max-width: 1200px;
@@ -887,5 +894,104 @@ h2 {
     }
     .comentario-foto{
         margin: 2px 5px;
+    }
+    .profesor-foto-container{
+        padding: 30px 30px 0px 30px;
+        img{
+            width: 250px;
+            height: 250px;
+        }
+    }
+    .profesor-info{
+        h2{
+            font-size: 34px;
+            font-weight: bold;
+        }
+    }
+    .descripcion{
+        font-size: 16px;
+    }
+    .btn-contratar{
+        font-size: 10px;
+    }
+    .tenes-alguna-duda{
+        padding: 10px 38px 0 38px;
+        h3{
+            font-size: 26px;
+        }
+    }
+    .btn-consultar{
+        padding: .5rem 1rem;
+    }
+    .comentarios-container{
+        h3{
+            margin-left: 35px;
+        }
+    }
+    .comentario-foto{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .comentario-nombre{
+        margin-bottom: 5px;
+    }
+    .comentario-texto{
+        font-size: 16px;
+    }
+}
+@media (800px < width <= 1280px){
+    .container{
+        max-width: 1000px;
+        max-height: 400px;
+    }
+    .profesor-foto-container{
+        padding: 30px 40px 0px 40px;
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .profesor-foto{
+        width: 100px;
+        height: 100px;
+    }
+    .profesor-info{
+        h2{
+            font-size: 30px;
+            margin: 0 0 20px 0;
+        }
+    }
+    .conocimiento{
+        font-size: .6em;
+        padding: 5px 10px;
+    }
+    .descripcion{
+        font-size: 12px;
+    }
+    .precio{
+        font-size: 20px;
+    }
+    .tenes-alguna-duda{
+        padding: 0;
+        h3{
+            font-size: 22px;
+        }
+        img{
+            width: 170px;
+        }
+    }
+    .btn-consultar{
+        font-size: 18px;
+        padding: .5rem 1rem;
+        margin-top: 1rem;
+    }
+    .comentarios-container{
+        max-width: 1000px;
+        h3{
+            margin-left: 40px;
+        }
+    }
+    .comentario-texto{
+        font-size: 14px;
     }
 }
