@@ -12,6 +12,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .btn{
@@ -225,6 +226,91 @@
         }
     }
 }
+
+.profile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-menu p {
+    color: whitesmoke;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #65A8E5;
+    padding: 10px;
+    width: auto;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    ;
+}
+
+.dropbtn img {
+    padding-bottom: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    right: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+    background-color: #f1f1f1;
+}
+
+.display-none{
+    display: none;
+}
+
+.display-block{
+    display: block;
+}
+
+.right-1000{
+    display: none;
+    position: absolute;
+    right: -1000;
+}
+
+.show {
+    display: block;
+}
+
 
 .main-index{
     display: flex;

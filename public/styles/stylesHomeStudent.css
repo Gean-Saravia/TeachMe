@@ -192,8 +192,26 @@ ul#class-list {
     color: #5686E1;
     text-align: center;
 }
+#class-list .item-c{
+    /* Borde gris por defecto, prueba para ver cambios */
+    border-radius: 10px;
+    background-color: blue;
+    padding: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.274);
+}
 
-ul#class-list li, .item-cc {
+#class-list .item-c a{
+    text-decoration: none;
+    color: wheat;
+}
+.item {
+    transition: transform 0.3s ease;
+    /* Transición suave para el zoom */
+}
+ul#class-list li .item{
     border-left: 10px solid #12A4E3;
     /* Borde gris por defecto, prueba para ver cambios */
     border-radius: 10px;
@@ -212,11 +230,7 @@ ul#class-list li.selected {
     margin-left: -30px;
 }
 
-.item {
-    transition: transform 0.3s ease;
-    /* Transición suave para el zoom */
-    display: none;
-}
+
 
 ul#class-list li.selected:hover {
     transform: scale(1.0);

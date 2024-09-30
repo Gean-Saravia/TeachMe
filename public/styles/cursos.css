@@ -293,8 +293,10 @@ nav ul li a:hover {
 
                 img{
                     padding: 10px;
-                    width: 80px;
+                    width: 100%;
+                    height: 100%;
                     object-fit: cover;
+                    border-radius: 50%;
                 }
             }
         }
