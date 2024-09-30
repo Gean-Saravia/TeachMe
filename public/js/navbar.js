@@ -3,8 +3,7 @@ import { d, BACK_URL } from "./variables.js"
 const userNameNav = d.querySelector('#user-name-nav')
 const userPictureNav = d.querySelector('#user-picture-nav')
 const token = localStorage.getItem('token')
-
-//console.log(token);
+const botonCerrarSesion = d.querySelector('#cerrar-sesion')
 
 async function usuarioNavbar(){
     
@@ -46,5 +45,33 @@ async function usuarioNavbar(){
         
     }
 }
+botonCerrarSesion.addEventListener('click', () => {
+    Swal.fire({
+        icon: "warning",
+        title: "Upss...",
+        text: "Su sesión expiró. Por favor vuelva a logearse!",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        confirmButtonText: 'Iniciar Sesión',
+        footer: '<a href="../../index.html">Volver al inicio</a>'
+    }).then((result) => {
+        if (result.isConfirmed){
+            location.href = "./login.html"
+        }
+    })
+    Swal.fire({
+        title: "¿Cerrar sesión?",
+        showCancelButton: true,
+        confirmButtonText: "Si, salir",
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            localStorage.removeItem('token')
+            location.href = "./login.html"
+        }
+    });
+})
+
+//botonCerrarSesion.addEventListener('click', () => cerrarSesion())
 
 usuarioNavbar()
