@@ -18,22 +18,21 @@
                 <a href="/index.html"><img src="/assets/logo-lau.png" alt="TeachMe Logo"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="/index.html">Mis clases</a></li>
+                <li><a href="#">Mis clases</a></li>
                 <li><a href="./cursos.html">Cursos</a></li>
                 <li><a href="./faqs.html">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <p>Lucia Acosta</p>
-                <img src="/assets/imagen-por-defecto.jpg" alt="Foto de perfil"
-                    class="profile-pic">
+                <p id="user-name-nav"></p>
+                <img id="user-picture-nav" class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                     </button>
                     <div class="dropdown-content" id="subMenu">
                         <a href="./inicio-estudiante.html">Mi perfil</a>
-                        <a href="./editarPerfilEstudiante.html">Editar perfil</a>
-                        <a href="#">Cerrar sesión</a>
+                        <a href="./editProf.html">Editar perfil</a>
+                        <a href="#" id="cerrar-sesion">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
@@ -42,19 +41,10 @@
 
     <div class="container">
         <aside class="catalogo">
-            <h2>Mis Clases</h2>
+            <h2>Mis clases</h2>
             <ul id="class-list">
-                <li class="item-c" onclick="highlightItem(this)">Tus clases creadas</li>
+                <li class="item-c"><a href="./creatuclase.html">Creá tu clase</a></li>
                 <li class="item" onclick="highlightItem(this)">.NET</li>
-                <li class="item" onclick="highlightItem(this)">Java</li>
-                <li class="item" onclick="highlightItem(this)">JavaScript</li>
-                <li class="item" onclick="highlightItem(this)">Python</li>
-                <li class="item" onclick="highlightItem(this)">SQL</li>
-                <li class="item" onclick="highlightItem(this)">Ruby</li>
-                <li class="item" onclick="highlightItem(this)">HTML</li>
-                <li class="item" onclick="highlightItem(this)">Física</li>
-                <li class="item" onclick="highlightItem(this)">Introducción a la Programación</li>
-                <li class="item" onclick="highlightItem(this)">Matemática</li>
             </ul>
         </aside>
 
@@ -148,6 +138,7 @@
         </div>
     </footer>
     <script src="../js/funcionInicioEstudiante.js"></script>
+    <script type="module" src="../js/navbar.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/es.js'></script>
 

@@ -18,15 +18,6 @@
             <div class="logo">
                 <a href="#"><img src="./assets/logo-lau.png" alt="TeachMe Logo"></a>
             </div>
-            <!-- <div class="search-bar">
-                <input id="search-bar" type="text" placeholder="Buscar en mis clases..." class="search-input">
-                <button class="search-icon">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ccc">
-                        <path
-                            d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                </button>
-            </div> -->
             <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="./public/html/cursos.html">Cursos</a></li>
@@ -37,6 +28,21 @@
                 <button class="btn" id="btnSignin" >
                     <a href="./public/html/login.html">Iniciar Sesión</a>
                 </button>
+            </div>
+            <div class="profile-menu">
+                <p id="user-name-nav"></p>
+                <img id="user-picture-nav" class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" id="dropdownButton">
+                        <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi perfil</a>
+                        <a href="#">Editar perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar sesión</a>
+                    </div>
+                </div>
             </div>
         </nav>
         <section class="section-bienvenida">
@@ -160,7 +166,10 @@
     <script>
         AOS.init()
     </script>
+    <script type="module" src="./public/js/navbar.js"></script>
     <script src="./public/js/integrantes.js"></script>
     <script src="./public/js/carrusel-testimonios.js"></script>
+    <script type="module" src="./public/js/index.js"></script>
+    <script type="module" src="./public//js/navbar.js"></script>
 </body>
 </html>
