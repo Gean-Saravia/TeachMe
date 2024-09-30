@@ -23,7 +23,7 @@ li {
 	--light-blue: #CFE8FF;
 	--grey: #eee;
 	--dark-grey: #AAAAAA;
-	--dark: #342E37;
+	--dark: #666;
 	--red: #DB504A;
 	--yellow: #FFCE26;
 	--light-yellow: #FFF2C6;
@@ -39,16 +39,14 @@ body.dark {
 	--light: #0C0C1E;
 	--grey: #060714;
 	--dark: #FBFBFB;
+	--light-blue: #060714;
 }
 
 body {
     font-family: 'Alata';
-	background: var(--grey);
+	background: var(--light-blue);
 	overflow-x: hidden;
 }
-
-
-
 
 
 /* SIDEBAR */
@@ -103,7 +101,7 @@ body {
 	padding: 4px;
 }
 #sidebar .side-menu li.active {
-	background: var(--grey);
+	background: #C4E0EF;
 	position: relative;
 }
 #sidebar .side-menu li.active::before {
@@ -135,7 +133,7 @@ body {
 	display: flex;
 	align-items: center;
 	border-radius: 48px;
-	font-size: 16px;
+	font-size: 18px;
 	color: var(--dark);
 	white-space: nowrap;
 	overflow-x: hidden;
@@ -323,7 +321,7 @@ body {
 	flex-wrap: wrap;
 }
 #content main .head-title .left h1 {
-	font-size: 36px;
+	font-size: 40px;
 	font-weight: 600;
 	margin-bottom: 10px;
 	color: var(--dark);
@@ -337,8 +335,9 @@ body {
 	color: var(--dark);
 }
 #content main .head-title .left .breadcrumb li a {
-	color: var(--dark-grey);
+	color: var(--dark);
 	pointer-events: none;
+	font-size: 18px;
 }
 #content main .head-title .left .breadcrumb li a.active {
 	color: var(--blue);
@@ -396,12 +395,13 @@ body {
 	color: var(--orange);
 }
 #content main .box-info li .text h3 {
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: 600;
 	color: var(--dark);
 }
 #content main .box-info li .text p {
-	color: var(--dark);	
+	color: var(--dark);
+	font-size: 18px;	
 }
 
 
@@ -430,7 +430,7 @@ body {
 }
 #content main .table-data .head h3 {
 	margin-right: auto;
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: 600;
 }
 #content main .table-data .head .bx {
@@ -447,12 +447,13 @@ body {
 }
 #content main .table-data .order table th {
 	padding-bottom: 12px;
-	font-size: 13px;
+	font-size: 20px;
 	text-align: left;
 	border-bottom: 1px solid var(--grey);
 }
 #content main .table-data .order table td {
 	padding: 16px 0;
+	font-size: 18px;
 }
 #content main .table-data .order table tr td:first-child {
 	display: flex;
@@ -461,8 +462,8 @@ body {
 	padding-left: 6px;
 }
 #content main .table-data .order table td img {
-	width: 36px;
-	height: 36px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	object-fit: cover;
 }
@@ -478,12 +479,15 @@ body {
 }
 #content main .table-data .order table tr td .status.completed {
 	background: var(--blue);
+	font-size: 18px;
 }
 #content main .table-data .order table tr td .status.process {
 	background: var(--yellow);
+	font-size: 18px;
 }
 #content main .table-data .order table tr td .status.pending {
 	background: var(--orange);
+	font-size: 18px;
 }
 
 
