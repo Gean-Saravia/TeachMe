@@ -1,3 +1,10 @@
+//Función del navbar
+function toggleMenu() {
+    const menu = document.getElementById('subMenu');
+    const button = document.getElementById('dropdownButton');
+    menu.classList.toggle('show');
+    button.classList.toggle('active');
+}
 function seleccionarPlan(plan) {
     // Mostrar el modal
     const modal = document.getElementById("myModal");
