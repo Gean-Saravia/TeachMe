@@ -165,12 +165,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 //Función para el dropdown del nav
-function toggleMenu() {
-    const menu = document.getElementById('subMenu');
-    const button = document.getElementById('dropdownButton');
+
+const menu = document.getElementById('subMenu');
+const button = document.getElementById('dropdownButton');
+button.addEventListener('click', (e) =>{
     menu.classList.toggle('show');
     button.classList.toggle('active');
-}
+})
 /*
 const chatButton = document.querySelector('.chat-button')
 console.log(chatButton);
