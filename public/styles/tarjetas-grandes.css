@@ -13,7 +13,6 @@
 }
 
 body{
-    width: 100%;
     font-family: 'Alata', sans-serif;
     background-color: var(--celesteFondo);
     padding: 5px;
