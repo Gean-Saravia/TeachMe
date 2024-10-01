@@ -211,7 +211,7 @@ ul#class-list {
     transition: transform 0.3s ease;
     /* Transición suave para el zoom */
 }
-ul#class-list li .item{
+.item{
     border-left: 10px solid #12A4E3;
     /* Borde gris por defecto, prueba para ver cambios */
     border-radius: 10px;
