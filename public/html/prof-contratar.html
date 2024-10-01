@@ -75,6 +75,24 @@
     <div class="comentarios-container">
         <h3>Comentarios de los estudiantes</h3>
     </div>
+    <div id="commentHistory"></div>
+    <div id="commentContainer">
+      <button id="commentButton">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        Comentar
+      </button>
+    </div>
+    
+    <div id="thankYouModal" class="modal">
+      <div class="modal-content">
+        <h2>¡Muchas gracias!</h2>
+        <p>Agradecemos tu reseña al profesor. Tu opinión es muy valiosa para nosotros.</p>
+        <button class="modal-close">Cerrar</button>
+      </div>
+    </div>
+    
 
         <!-- Empieza el modal -->
         <div id="pageOverlay"></div>
@@ -141,5 +159,5 @@
 <script type="module" src="../js/navbar.js"></script>>
 <script src="../js/Calculando-total-a-pagar.js"></script>
 <script src="../js/comentarios.js"></script>
-
+<script src="../js/btn-comentario.js"></script>
 </html>
