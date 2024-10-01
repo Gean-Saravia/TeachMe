@@ -1,4 +1,4 @@
-const BACK_URL = "http://localhost:3000/api"
+import { d, BACK_URL } from "./variables.js"
 
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del DOM

@@ -1,3 +1,4 @@
+import { d, BACK_URL } from "./variables.js"
 // Inicializa MercadoPago
 const mp = new MercadoPago('APP_USR-6ae9430e-e780-4773-8df7-135245e71d20', {
   locale: "es-AR"
@@ -51,7 +52,7 @@ const updateCheckoutButton = async () => {
           console.log("Datos de la orden:", orderData);
 
           // Crear preferencia en el backend
-          const response = await fetch("http://localhost:3000/api/payment/create_preference", {
+          const response = await fetch(`${BACK_URL}/payment/create_preference`, {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",
