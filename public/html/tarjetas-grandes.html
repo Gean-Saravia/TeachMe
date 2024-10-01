@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka:wght@550&family=Kumbh+Sans:wght@600..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/tarjetas-grandes.css">
-    <script src="../js/tarjetas-grandes.js"></script>
+    <script type="module" src="../js/tarjetas-grandes.js"></script>
     <script src="../../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </head>
 
@@ -33,7 +33,7 @@
                     <p id="user-name-nav"></p>
                     <img id="user-picture-nav" class="profile-pic">
                     <div class="dropdown">
-                        <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <button class="dropbtn" id="dropdownButton">
                             <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                         </button>
                         <div class="dropdown-content" id="subMenu">
@@ -81,125 +81,16 @@
                         <button class="search-icon">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                                fill="#ccc"></svg>
+                                fill="#ccc">
                                 <!-- Gris claro -->
                                 <path
                                     d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-
+                            </svg>
                         </button>
                     </div>
 
                     <div class="cards-conteiner">
-                        <article class="card">
-                            <div class="image-card">
-                                <img src="/assets/lionel-messi.jpg" alt="Imagen de Lionel Messi">
-                            </div>
-                            <div class="card-content">
-                                <h3>Lionel Messi</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★★★</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="image-card">
-                                <img src="/assets/henry-cavil.jpg" alt="Imagen de Henry Cavil">
-                            </div>
-                            <div class="card-content">
-                                <h3>Henry Cavil</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★★☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="image-card">
-                                <img src="/assets/adele-adkins.jpg" alt="Imagen de Adele Adkins">
-                            </div>
-                            <div class="card-content">
-                                <h3>Adele Adkins</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="image-card">
-                                <img src="/assets/paulo-dybala.jpg" alt="Imagen de Paulo Dybala">
-                            </div>
-                            <div class="card-content">
-                                <h3>Paulo Dybala</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="image-card">
-                                <img src="/assets/pedro-martin.jpg" alt="Imagen de Pedro Martin">
-                            </div>
-                            <div class="card-content">
-                                <h3>Pedro Martin</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="image-card">
-                                <img src="/assets/mirtha-legrand.jpg" alt="Imagen de Mirtha Legrand">
-                            </div>
-                            <div class="card-content">
-                                <h3>Mirtha L.</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card-r">
-                            <div class="image-card">
-                                <img src="/assets/keanu.jpg" alt="Imagen de Mirtha Legrand">
-                            </div>
-                            <div class="card-content">
-                                <h3>Felipe Argento</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c"><a href="./prof-contratar.html">Contratar</a></button>
-                            </div>
-                        </article>
-                        <article class="card-r">
-                            <div class="image-card">
-                                <img src="/assets/tom-cruise.jpg" alt="Imagen de Tom Cruise">
-                            </div>
-                            <div class="card-content">
-                                <h3>Tom Cruise</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card-r">
-                            <div class="image-card">
-                                <img src="/assets/emilia-mernes.jpg" alt="Imagen de Emilia Mernes">
-                            </div>
-                            <div class="card-content">
-                                <h3>Emilia Mernes</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
-                        <article class="card-r">
-                            <div class="image-card">
-                                <img src="/assets/ricky-fort.jpg" alt="Imagen de Ricky Fort">
-                            </div>
-                            <div class="card-content">
-                                <h3>Ricky Fort</h3>
-                                <button class="btn-py">Python</button>
-                                <div class="rating">★★★☆☆</div>
-                                <button class="btn-c">Contratar</button>
-                            </div>
-                        </article>
+                        <!-- ACÁ SE IMPRIMEN LAS CARDS DE LAS CLASES DE FORMA DINÁMICA -->
                     </div>
                 </section>
                 <aside class="right-section">
@@ -219,6 +110,7 @@
         <footer class="Footer"></footer>
     </div>
     <script type="module" src="../js/navbar.js"></script>
+    <script type="module" src="../js/variables.js"></script>
 </body>
 
 </html>
