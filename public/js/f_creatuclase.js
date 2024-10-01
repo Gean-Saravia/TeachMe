@@ -1,3 +1,5 @@
+import { d, BACK_URL } from "./variables.js"
+const token = localStorage.getItem('token')
 
 document.addEventListener('DOMContentLoaded', () => {
     const createButton = document.querySelector('.btn-crear');
@@ -5,10 +7,73 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById("overlay");
 
     // Función para abrir el popup
-    function openPopup(event) {
+    async function crearClase(event) {
+        
         event.preventDefault(); // Previene el envío del formulario
-        popup.classList.add("open-popup");
-        overlay.style.display = "block";
+        const materiaForm = d.getElementById('dropdown').value
+        const precioForm = d.getElementById('precio').value
+        const nombreForm = d.getElementById('nombreClase').value
+        const descripcionForm = d.getElementById('descripcion').value
+        try{
+    
+            const formulario = {
+                materiaForm,
+                precioForm: parseFloat(precioForm),
+                nombreForm,
+                descripcionForm
+            }
+    
+            console.log("info del form:", formulario);
+            const responseToken = await fetch(`${BACK_URL}/users/token`, {
+                method: 'GET',
+                headers: {
+                    'token': token
+                }
+            })
+            //console.log("response de token", response);
+            
+            if (!responseToken.ok) {
+                //alert('Su sesión expiró, por favor vuelva a logearse')
+                throw new Error(`Error: ${responseToken.status}`);
+            }
+            const data = await responseToken.json();
+            const usuario = data.user[0]
+            const idUsuario = usuario.id
+            //console.log("usuario",usuario);
+
+            if (!(materiaForm && precioForm && descripcionForm && nombreForm)) {
+                alert("Complete todos los campos del formulario");
+                return; // Prevent further execution if fields are empty
+            }
+            
+            const responseClases = await fetch(`${BACK_URL}/classes`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        "id_profesor": parseFloat(idUsuario), 
+                        "id_materias": parseFloat(materiaForm),
+                        "titulo": nombreForm,
+                        "descripcion": descripcionForm,
+                        "precio_hora": parseFloat(precioForm)
+                    })
+                })
+                //console.log("responseClases", responseClases);
+                
+                if (!responseClases.ok) {
+                    throw new Error(`Error: ${responseClases.status}`);
+                }
+                const dataClasesProf = await responseClases.json()
+                //console.log("response de CLASES CONTRATADAS:",dataClasesProf);
+                popup.classList.add("open-popup");
+                overlay.style.display = "block";
+                d.querySelector('.main-content form').reset()
+            
+            
+        } catch(error){
+            console.error('Hubo un problema con la petición:', error);
+        }
     }
 
     // Función para cerrar el popup
@@ -34,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Evento para abrir el popup al hacer clic en el botón
-    createButton.addEventListener('click', openPopup);
+    createButton.addEventListener('click', crearClase);
 
     // Evento para cerrar el popup si se hace clic en el overlay
     overlay.addEventListener('click', closePopup);
@@ -124,4 +189,104 @@ document.addEventListener('DOMContentLoaded', () => {
         // Añade la clase 'selected' al ítem que se ha hecho clic
         selectedItem.classList.add('selected');
     }
+
+    const claseProfeLista = d.querySelector('#class-list')
+
+    async function mostrarClasesProfesor(){
+    
+        try{
+            const responseToken = await fetch(`${BACK_URL}/users/token`, {
+                method: 'GET',
+                headers: {
+                    'token': token
+                }
+            })
+            //console.log("response de token", response);
+            
+            if (!responseToken.ok) {
+                //alert('Su sesión expiró, por favor vuelva a logearse')
+                throw new Error(`Error: ${responseToken.status}`);
+            }
+            const data = await responseToken.json();
+            const usuario = data.user[0]
+            const idUsuario = usuario.id
+            //console.log("usuario",usuario);
+    
+            const responseClases = await fetch(`${BACK_URL}/classes?id_profesor=${idUsuario}`, {
+                method: 'GET',
+            })
+            
+            if (!responseClases.ok) {
+                throw new Error(`Error: ${responseClases.status}`);
+            }
+            const dataClasesProf = await responseClases.json()
+            //console.log("response de CLASES CONTRATADAS:",dataClasesProf);
+    
+            if(dataClasesProf.length > 0){
+                dataClasesProf.forEach(clase => {
+                    
+                    const claseListada = d.createElement('li');
+                    claseListada.className = 'item';
+                    claseListada.innerText = `${clase.titulo}`;
+    
+                    claseListada.addEventListener('click', () => highlightItem(this))
+    
+                    claseProfeLista.appendChild(claseListada)
+                    
+                })
+            } else {
+                console.log("No hay clases contratadas!");
+            }
+            
+        } catch(error){
+            console.error('Hubo un problema con la petición:', error);
+        }
+    }
+
+    const dropdownMaterias = d.querySelector('#dropdown')
+
+    async function mostrarMateriasDisponibles(){
+        try{
+            const response = await fetch(`${BACK_URL}/courses`, {
+                method: 'GET'
+            })
+            //console.log("response de token", response);
+            
+            if (!response.ok) {
+                //alert('Su sesión expiró, por favor vuelva a logearse')
+                throw new Error(`Error: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log("data de crea tu clase",data);
+
+            if(data.length > 0){
+                data.forEach(materia => {
+                    
+                    const materiaListada = d.createElement('option');
+                    materiaListada.value = `${materia.id}`;
+                    materiaListada.innerText = `${materia.nombre_materia}`;
+    
+                    dropdownMaterias.appendChild(materiaListada)
+                    
+                })
+            } else {
+                console.log("No hay clases contratadas!");
+            }
+        } catch(error){
+            console.error('Hubo un problema con la petición:', error);
+        }
+    }
+    mostrarClasesProfesor()
+    mostrarMateriasDisponibles()
 });
+
+
+function toggleMenu() {
+    const menu = document.getElementById('subMenu');
+    const button = document.getElementById('dropdownButton');
+    menu.classList.toggle('show');
+    button.classList.toggle('active');
+}
+
+const dropdownButton = d.querySelector('#dropdownButton')
+dropdownButton.addEventListener('click', toggleMenu)

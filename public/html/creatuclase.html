@@ -21,16 +21,15 @@
                 <li><a href="./faqs.html">Contacto</a></li>
             </ul>
             <div class="profile-menu">
-                <p>Usuario</p>
-                <img src="/assets/minimalistic-user.jpeg" alt="Foto de perfil"
-                    class="profile-pic">
+                <p id="user-name-nav"></p>
+                <img id="user-picture-nav" class="profile-pic">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
                         <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
                     </button>
                     <div class="dropdown-content" id="subMenu">
                         <a href="./inicio-estudiante.html">Mi perfil</a>
-                        <a href="./editarPerfilEstudiante.html">Editar perfil</a>
+                        <a href="./editProf.html">Editar perfil</a>
                         <a href="#" id="cerrar-sesion">Cerrar sesión</a>
                     </div>
                 </div>
@@ -41,28 +40,26 @@
             <aside class="my-classes">
                 <h2>Mis clases</h2>
                 <ul id="class-list">
-                    <li class="item" onclick="highlightItem(this)">React</li>
+                    <!-- <li class="item" onclick="highlightItem(this)">React</li> -->
                 </ul>
             </aside>
         <section class="main-content">
             <h1>Crea tu clase</h1>
             <form>
                 <!-- Formulario para crear clases -->
-                 <div class="form-row">
-        <div class="form-group">
-            <label for="dropdown">Selecciona una materia</label>
-            <select id="dropdown" name="materia-dropdown">
-                <option value="matematica">Matemática</option>
-                <option value="fisica">Física</option>
-                <option value="quimica">Química</option>
-                <option value="historia">Historia</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="precio">Precio por hora</label>
-            <input type="text" id="precio" name="precio" placeholder="Ingresar precio por hora">
-        </div>
-    </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dropdown">Selecciona una materia</label>
+                        <select id="dropdown" name="materia-dropdown">
+                            <option value="" >Selecciona una materia</option>
+                            <option value="OTRA_OPCION">Otra</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio por hora</label>
+                        <input type="text" id="precio" name="precio" placeholder="Ingresar precio por hora">
+                    </div>
+                </div>
                 <div class="form-group">
                     <label for="anotaciones">Nombre de clase</label>
                     <input type="text" id="nombreClase" name="nombreClase" placeholder="Ingresar nombre de la clase">
@@ -71,7 +68,7 @@
                     <label for="descripcion">Descripción de la clase</label>
                     <textarea maxlength="1000" id="descripcion" name="descripcion" placeholder="¿Qué temas/módulos se van a ver en tu clase? ¿Qué duración tendrá? ¿A qué tipo de alumnos va dirigido?"></textarea>
                 </div>
-                <button type="submit" class="btn-crear" onclick="openPopup(event)">Crear</button>
+                <button type="button" class="btn-crear">Crear</button>
             </form>
         </section>
         <aside class="right-sidebar">
@@ -96,10 +93,11 @@
             <img src="/assets/tilde-celeste.png" alt="tilde celeste">
             <h2>¡Perfecto!</h2>
             <p>Tu clase ha sido creada correctamente</p>
-            <button type="button" onclick="closePopup()">OK</button>
+            <button type="button">OK</button>
         </div>
     
     
 </body>
-<script src="../js/f_creatuclase.js"></script>
+<script type="module" src="../js/f_creatuclase.js"></script>
+<script type="module" src="../js/navbar.js"></script>
 </html>

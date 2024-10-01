@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachMe Estudiante</title>
+    <title>TeachMe | Mis Clases</title>
     <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../styles/stylesHomeStudent.css">
+    <script src="../../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
@@ -44,7 +45,7 @@
             <h2>Mis clases</h2>
             <ul id="class-list">
                 <li class="item-c"><a href="./creatuclase.html">Creá tu clase</a></li>
-                <li class="item" onclick="highlightItem(this)">.NET</li>
+                <!-- ACÁ SE IMPRIMEN LAS CLASES QUE CREÓ EL USUARIO -->
             </ul>
         </aside>
 
@@ -58,56 +59,21 @@
             </div>
 
             <section class="subjects">
-                <div class="subject">
-                    <h3>Física</h3>
-                    <span class="profile-icon">👨‍💼</span>
-                    <p>Docente: Felipe Argento</p>
-                </div>
-                <div class="subject">
-                    <h3>Introducción a la programación</h3>
-                    <span class="profile-icon">👨‍💼</span>
-                    <p>Docente: Felipe Argento</p>
-                </div>
-                <div class="subject">
-                    <h3>Matemática</h3>
-                    <span class="profile-icon">👨‍💼</span>
-                    <p>Docente: Felipe Argento</p>
-                </div>
+                <!-- ACÁ SE IMPRIMEN LAS CLASES QUE ASISTÍ -->
             </section>
 
             <table class="class-table">
 
                 <thead>
                     <tr>
-                        <th class="border-top-left-table">Clase</th>
+                        <th class="border-top-left-table">Materia</th>
                         <th>Profesor/a</th>
-                        <th>Materia</th>
-                        <th>Inicio</th>
-                        <th class="border-top-right-table">Termina</th>
+                        <th>Precio</th>
+                        <th class="border-top-right-table">Fecha</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Nº1</td>
-                        <td>Felipe Argento</td>
-                        <td>Física</td>
-                        <td>09/04/24</td>
-                        <td>18/04/24</td>
-                    </tr>
-                    <tr>
-                        <td>Nº1</td>
-                        <td>Felipe Argento</td>
-                        <td>Introducción a la Programación</td>
-                        <td>09/04/24</td>
-                        <td>15/04/24</td>
-                    </tr>
-                    <tr>
-                        <td>Nº1</td>
-                        <td>Felipe Argento</td>
-                        <td>Matemática</td>
-                        <td>09/04/24</td>
-                        <td>18/04/24</td>
-                    </tr>
+                    <!-- ACÁ SE MUESTRAN LAS CLASES ASISTIDAS CON MÁS INFORMACION -->
                 </tbody>
 
             </table>
@@ -137,7 +103,7 @@
             <p>TeachMe &copy; 2024 | Todos los derechos reservados | Política de privacidad</p>
         </div>
     </footer>
-    <script src="../js/funcionInicioEstudiante.js"></script>
+    <script type="module" src="../js/funcionInicioEstudiante.js"></script>
     <script type="module" src="../js/navbar.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/es.js'></script>

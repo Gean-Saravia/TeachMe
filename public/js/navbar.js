@@ -5,6 +5,16 @@ const userPictureNav = d.querySelector('#user-picture-nav')
 const token = localStorage.getItem('token')
 const botonCerrarSesion = d.querySelector('#cerrar-sesion')
 
+function toggleMenu() {
+    const menu = document.getElementById('subMenu');
+    const button = document.getElementById('dropdownButton');
+    menu.classList.toggle('show');
+    button.classList.toggle('active');
+}
+
+const dropdownButton = d.querySelector('#dropdownButton')
+dropdownButton.addEventListener('click', toggleMenu)
+
 async function usuarioNavbar(){
     
     try{
@@ -14,7 +24,7 @@ async function usuarioNavbar(){
                 'token': token
             }
         })
-        console.log("response", response);
+        //console.log("response", response);
         
         if (!response.ok) {
             Swal.fire({

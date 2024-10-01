@@ -42,7 +42,8 @@
     </header>
     
     <main class="container">
-        <section class="profesor-card">
+        <section class="profesor-card">    
+            <!--
             <div class="profesor-foto-container">
                 <img src="/assets/perfil-keanu.png" alt="Foto del profesor">
                 <div class="calificacion">
@@ -50,18 +51,19 @@
                     <p>4.5 / 5</p>
                     <p>(125 estudiantes)</p>
                 </div>
-            </div>
+            </div> 
             <div class="profesor-info">
-                <h2>Felipe Argento</h2>
-                <div class="conocimientos">
-                    <span class="conocimiento">Matemáticas Avanzadas</span>
-                    <span class="conocimiento">Estadística</span>
-                    <span class="conocimiento">Machine Learning</span>
+                    <h2>Felipe Argento</h2>
+                    <div class="conocimientos">
+                        <span class="conocimiento">Matemáticas Avanzadas</span>
+                        <span class="conocimiento">Estadística</span>
+                        <span class="conocimiento">Machine Learning</span>
+                    </div>
+                    <p class="descripcion">Únete a mis clases de matemáticas avanzadas y descubre cómo aplicarlas en el mundo real. Aprenderás desde conceptos fundamentales hasta aplicaciones en inteligencia artificial y análisis de datos. Mi enfoque práctico te ayudará a desarrollar habilidades analíticas cruciales para tu carrera.</p>
+                    <p class="precio">Precio por hora: $5000 ARS</p>
+                    <button href="#" id="openModalBtn" class="btn_contratar">Contratar Ahora</button>
                 </div>
-                <p class="descripcion">Únete a mis clases de matemáticas avanzadas y descubre cómo aplicarlas en el mundo real. Aprenderás desde conceptos fundamentales hasta aplicaciones en inteligencia artificial y análisis de datos. Mi enfoque práctico te ayudará a desarrollar habilidades analíticas cruciales para tu carrera.</p>
-                <p class="precio">Precio por hora: $5000 ARS</p>
-                <button href="#" id="openModalBtn" class="btn_contratar">Contratar Ahora</button>
-            </div>
+                -->
         </section>
         <aside class="aside">
             <div class="tenes-alguna-duda">
@@ -118,13 +120,13 @@
                         </div>
                         <div class="form-group">
                             <label>Precio por hora:</label>
-                            <button type="button" class="option-button" id="precio" disabled>$5000</button>
+                            <button type="button" class="option-button" id="precio" disabled></button>
                         </div>
                     </div>
                     <div id="classEmailGrid">
                         <div class="form-group">
                             <label>Clase de:</label>
-                            <input id="asignatura" type="text" name="classType" value="MongoDB" readonly class="readonly-input">
+                            <input id="asignatura" type="text" name="classType" value="" readonly class="readonly-input">
                         </div>
                         <div class="form-group">
                             <label>Correo Electrónico:</label>
@@ -154,7 +156,7 @@
         </div>
     </footer>
 </body>
-<script src="../js/modal.js"></script>
+<script type="module" src="../js/modal.js"></script>
 <script src="../js/funcionInicioEstudiante.js"></script>
 <script type="module" src="../js/navbar.js"></script>>
 <script src="../js/Calculando-total-a-pagar.js"></script>

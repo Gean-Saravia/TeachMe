@@ -1,49 +1,5 @@
 import { d, BACK_URL } from "./variables.js"
-const lorem_ipsum = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita a voluptatibus laborum, tempore deserunt?"
-/*
-const cursos = [
-    {
-        nombre: "Programación",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/hombre-computadora-estudia.png"
-    },
-    {
-        nombre: "Idiomas",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/idiomas-cursos.png"
-    },
-    {
-        nombre: "Geografía",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/geografia-cursos.png"
-    },
-    {
-        nombre: "Álgebra",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/algebra-cursos.png"
-    },
-    {
-        nombre: "Electrónica",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/electronica-cursos.png"
-    },
-    {
-        nombre: "Inteligencia Artificial",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/ia-cursos.png"
-    },
-    {
-        nombre: "Literatura",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/literatura-cursos.png"
-    },
-    {
-        nombre: "Guitarra",
-        descripcion: `${lorem_ipsum}`,
-        imagen: "/assets/guitarra-cursos.png"
-    },
-]
-*/
+
 const botonVolver = d.querySelector('.volver-cursos')
 const sectionCursos = d.querySelector('.main-cursos>section')
 const searchBar = d.querySelector('#search-bar')
@@ -133,3 +89,14 @@ searchBar.addEventListener('input', () => {
 })
 
 generarCursos()
+
+
+function toggleMenu() {
+    const menu = document.getElementById('subMenu');
+    const button = document.getElementById('dropdownButton');
+    menu.classList.toggle('show');
+    button.classList.toggle('active');
+}
+
+const dropdownButton = d.querySelector('#dropdownButton')
+dropdownButton.addEventListener('click', toggleMenu)

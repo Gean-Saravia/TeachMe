@@ -17,9 +17,18 @@ const level_LanguageForm = d.querySelector('#level-language');
 const linkedinForm = d.querySelector('#linkedin');
 const githubForm = d.querySelector('#github');
 const socialForm = d.querySelector('#social');
-//console.log("userName", userNamePerfil);
-//console.log("name form value:", nameForm);
+const imagenPerfil = d.querySelector('#profileImage')
+console.log("iamgen perfil:", imagenPerfil);
 
+function toggleMenu() {
+    const menu = document.getElementById('subMenu');
+    const button = document.getElementById('dropdownButton');
+    menu.classList.toggle('show');
+    button.classList.toggle('active');
+}
+
+const dropdownButton = d.querySelector('#dropdownButton')
+dropdownButton.addEventListener('click', toggleMenu)
 
 async function traerDatos(){
     //console.log(token);
@@ -38,7 +47,7 @@ async function traerDatos(){
         }
         const data = await response.json();
         const usuario = data.user[0]
-        //console.log("usuario",usuario);
+        console.log("usuario",usuario);
 
         const fechaInicial = new Date(usuario.fecha_registro);
         const fechaNacimiento = new Date(usuario.fecha_nacimiento)
@@ -65,6 +74,7 @@ async function traerDatos(){
 
         userSince.innerHTML = `Miembro desde el ${fechaFormateada(fechaInicial, 'DDMMYYYY')}`
         userNamePerfil.innerHTML = usuario.nombre
+        imagenPerfil.src = usuario.foto_perfil ==  null ? "/assets/minimalistic-user.jpeg" : `${usuario.foto_perfil}`
 
         //console.log(fechaFormateada(fechaNacimiento, 'YYYYMMDD'));
         
@@ -197,9 +207,4 @@ if (passwordInput.type === 'password') {
     eyeIcon.classList.add('fa-eye-slash');
 }
 }
-
-
-
-
-
 
