@@ -1,3 +1,5 @@
+import { d, BACK_URL } from "./variables.js"
+
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del DOM
     const container = document.getElementById('container');
@@ -11,7 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const password = document.querySelector('#password');
     const repeatPassword = document.querySelector('#repeat-password');
     const passwordLogin = document.querySelector('#password-login');
-
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
+    /*
+    //menu
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    })
+    
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    })
+    */
     // Funciones de toggle
     toggleToSignUp.addEventListener('click', function(event) {
         event.preventDefault();
@@ -52,12 +66,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para mostrar toast
-    function showToast(message) {
+    function showToast(message, success = false) {
         const toastContainer = document.getElementById('toast-container');
         const toast = document.createElement('div');
         toast.classList.add('toast');
         toast.textContent = message;
         toastContainer.appendChild(toast);
+        if(success){
+            toast.classList.add('success-toast')
+            toast.classList.remove('failure-toast')
+        }
+        if(!success){
+            toast.classList.add('fail-toast')
+            toast.classList.remove('success-toast')
+        }
 
         // Trigger reflow
         toast.offsetHeight;
@@ -160,26 +182,103 @@ document.addEventListener('DOMContentLoaded', function() {
     signUpForm.addEventListener('submit', function(e) {
         e.preventDefault();
         if (validateForm(this)) {
-            showToast('Registro exitoso!');
-            setTimeout(() => {
-                location.href = "./inicio-estudiante.html"
-            }, 1000);
-            // enviar el formulario o realizar otras acciones
+            const formData = new FormData(signUpForm)
+            const nombre = formData.get('nombre');
+            const apellido = formData.get('apellido');
+            const email = formData.get('email');
+            const fecha_nacimiento = formData.get('fecha_nacimiento');
+            const contrasenia = formData.get('contrasenia');
+            console.log("email:",email,"psw:", contrasenia, "nombre:", nombre, "apellido:", apellido, "fecha:", fecha_nacimiento);
+            console.log(JSON.stringify({
+                email: email,
+                contrasenia: contrasenia,
+                nombre: nombre,
+                apellido: apellido,
+                fecha_nacimiento: fecha_nacimiento
+            }));
+            fetch(`${BACK_URL}/users/sign-up`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nombre,
+                    apellido,
+                    email,
+                    fecha_nacimiento,
+                    contrasenia
+                })
+            })
+            .then(response => {
+                // Verifica si la respuesta es JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    throw new Error('La respuesta no es JSON');
+                }
+            })
+            .then(data => {
+                if(data.success){
+                    showToast(data.msg, true)
+                    setTimeout(() => {
+                        location.href = "./login.html"
+                    }, 1000);
+                }
+                if (!data.success) showToast(data.msg)
+            })
+            .catch((error) => console.error('Error:', error));
         }
     });
 
     signInForm.addEventListener('submit', function(e) {
         e.preventDefault();
         if (validateForm(this)) {
-            showToast('Inicio de sesión exitoso!');
-            setTimeout(() => {
-                location.href = "./prof-inicio.html"
-            }, 1000);
-            // enviar el formulario o realizar otras acciones
+            const formData = new FormData(signInForm)
+            const email = formData.get('email');
+            const contrasenia = formData.get('contrasenia');
+            console.log("email:",email,"psw:", contrasenia);
+            console.log(JSON.stringify({
+                email: email,
+                contrasenia: contrasenia
+            }));
+            
+            
+            fetch(`${BACK_URL}/users/sign-in`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    contrasenia: contrasenia,
+                })
+            })
+            .then(response => {
+                // Verifica si la respuesta es JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    throw new Error('La respuesta no es JSON');
+                }
+            })
+            .then(data => {
+                localStorage.setItem('token', data.token)
+                
+                if(data.success){
+                    showToast(data.msg, true)
+                    setTimeout(() => {
+                        location.href = "./inicio-estudiante.html"
+                    }, 1000);
+                }
+                if(!data.success) showToast(data.msg)
+            })
+            .catch((error) => console.error('Error:', error));
         }
     });
 
-    // Función para manejar labels
+    // Función para manejar los labels
     function handleLabels() {
         document.querySelectorAll('.form-group input').forEach(input => {
             input.addEventListener('blur', () => {

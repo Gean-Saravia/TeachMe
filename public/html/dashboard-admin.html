@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Usuarios</title>
+    <link rel="stylesheet" href="/public/styles/dashboard-admin.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href=""><img src="/assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">Mis clases</a></li>
+                <li><a href="./cursos.html">Cursos</a></li>
+                <li><a href="./faqs.html">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <p>Lucia Acosta</p>
+                <img src="/assets/imagen-por-defecto.jpg" alt="Foto de perfil"
+                    class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi perfil</a>
+                        <a href="#">Editar perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Inicio</a></li>
+                    <li><a href="/usuarios">Usuarios</a></li>
+                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="/pagos">Pagos</a></li>
+                    <li><a href="/reportes">Reportes</a></li>
+                    <li><a href="/configuracion">Configuración</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="header">
+                <h1>Bienvenido, Administrador</h1>
+            </div>
+            <section class="stats-container">
+                <div class="stat-card">
+                    <h3>Total de Usuarios</h3>
+                    <p>1,801</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Usuarios Activos</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Servicios Activos</h3>
+                    <p>89</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Ingresos Mensuales</h3>
+                    <p>$12,345</p>
+                </div>
+            </section>
+            <section class="recent-activity">
+                <h3>Actividad Reciente</h3>
+                <ul class="activity-list">
+                    <li>Nuevo usuario registrado: María González</li>
+                    <li>Perfil de usuario actualizado: Carlos Rodríguez</li>
+                    <li>Nuevo servicio añadido: Consultoría de Marketing</li>
+                    <li>Pago recibido: $150 - Diseño Gráfico</li>
+                    <li>Reporte generado: Rendimiento de usuarios Q2</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="/public/js/dashboard-admin.js"></script>
+</body>
+</html>

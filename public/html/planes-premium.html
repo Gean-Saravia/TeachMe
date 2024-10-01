@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contratar Premium</title>
+        <link rel="shortcut icon" href="../../assets/teachme-favicon.svg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+        <link rel="stylesheet" href="../styles/planes-premium.css">
+</head>
+<body>
+
+    <div class="container-fondo">
+
+    </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href=""><img src="/assets/logo-lau.png" alt="TeachMe Logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="./inicio-estudiante.html">Mis clases</a></li>
+                <li><a href="./cursos.html">Cursos</a></li>
+                <li><a href="./faqs.html">Contacto</a></li>
+            </ul>
+            <div class="profile-menu">
+                <p>Lucia Acosta</p>
+                <img src="/assets/imagen-por-defecto.jpg" alt="Foto de perfil"
+                    class="profile-pic">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()" id="dropdownButton">
+                        <img src="/assets/flecha-hacia-abajo-para-navegar.png" alt="button" style="width: 10px; ">
+                    </button>
+                    <div class="dropdown-content" id="subMenu">
+                        <a href="#">Mi perfil</a>
+                        <a href="#">Editar perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+    <div class="banner">
+        <h1>Conocé nuestros mejores planes</h1>
+    </div>
+</section>
+
+    <div class="container">
+        <div class="card">
+            <div>
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                    </svg>
+                </div>
+                <h2>Plan Básico</h2>
+                <div class="price">$19.99/mes</div>
+                <ul>
+                    <li>Acceso a 5 cursos</li>
+                    <li>Soporte por email</li>
+                    <li>Aprendizaje seguro</li>
+                </ul>
+            </div>
+            <button class="btn" onclick="seleccionarPlan('Básico')"><span>Contratar</span></button>
+        </div>
+        <div class="card">
+            <div>
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zm0 14c-3.87 0-6-1.5-6-2v-1.67c1.01.67 3.4 1.67 6 1.67s4.99-1 6-1.67V17c0 .5-2.13 2-6 2zm0-4c-3.87 0-6-1.5-6-2v-1.67c1.01.67 3.4 1.67 6 1.67s4.99-1 6-1.67V13c0 .5-2.13 2-6 2zm0-4c-3.87 0-6-1.5-6-2V9.33c1.01.67 3.4 1.67 6 1.67s4.99-1 6-1.67V11c0 .5-2.13 2-6 2z"/>
+                    </svg>
+                </div>
+                <h2>Plan Estándar</h2>
+                <div class="price">$39.99/mes</div>
+                <ul>
+                    <li>Acceso a 15 cursos</li>
+                    <li>Soporte por email y chat</li>
+                    <li>Certificado de finalización</li>
+                    <li>Tutorías grupales</li>
+                </ul>
+            </div>
+            <button class="btn" onclick="seleccionarPlan('Estándar')"><span>Contratar</span></button>
+        </div>
+        <div class="card">
+            <div>
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v5.7c0 4.83-3.4 9.16-7 10.26-3.6-1.1-7-5.43-7-10.26V6.3l7-3.12zm-1 7.82h2v2h-2v-2zm0-6h2v4h-2V5z"/>
+                    </svg>
+                </div>
+                <h2>Plan Premium</h2>
+                <div class="price">$59.99/mes</div>
+                <ul>
+                    <li>Acceso ilimitado a cursos</li>
+                    <li>Soporte prioritario 24/7</li>
+                    <li>Certificado de finalización</li>
+                    <li>Tutorías individuales</li>
+                    <li>Contenido exclusivo</li>
+                </ul>
+            </div>
+            <button class="btn" onclick="seleccionarPlan('Premium')"><span>Contratar</span></button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2>¡Gracias por tu interés!</h2>
+        <p>Nos pondremos en contacto contigo para brindarte más información.</p>
+        <button type="button" onclick="closeModal()">OK</button>
+    </div>
+</div>
+
+    <script src="../js/planes-premium.js"></script>
+</body>
+</html>

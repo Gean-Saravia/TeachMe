@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../styles/faqs.css">
     <link rel="shortcut icon" href="/assets/teachme-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="../../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
 
@@ -26,15 +29,15 @@
     </div>
 
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="/index.html"><img src="/assets/logoTM.png" alt="TeachMe Logo"></a>
-            </div>
-            <ul class="nav-links">
+        <img class="logo" src="/Assets/logoTM.png" alt="Logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
                 <li><a href="/index.html">Inicio</a></li>
                 <li><a href="./cursos.html">Cursos</a></li>
                 <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./faqs.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -68,24 +71,37 @@
                 <div class="right-side">
                     <div class="topic-text">Envíanos un mensaje</div>
                     <p>Si tienes alguna pregunta o consulta, puedes enviarnos un mensaje desde aquí. Estaremos encantados de ayudarte.</p>
-                    <form action="#">
+                    <form action="#" id="contactForm" >
                         <div class="input-box">
-                            <input type="text" placeholder="Ingresa tu nombre">
+                            <input type="text" id="name" placeholder="Ingresa tu nombre" required>
                         </div>
                         <div class="input-box">
-                            <input type="text" placeholder="Ingresa tu email">
+                            <input type="text" id="email" placeholder="Ingresa tu email" required>
                         </div>
                         <div class="input-box message-box">
-                            <textarea placeholder="Ingresa tu mensaje"></textarea>
+                            <textarea id="message" placeholder="Ingresa tu mensaje" required></textarea>
                         </div>
                         <div class="button">
-                            <input type="button" value="Enviar Ahora">
+                            <input type="submit" value="Enviar Ahora">
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
     </main>
+    <!-- Nueva notificación toast -->
+    <div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+            <div class="message">
+                <span class="text text-1">¡Perfecto!</span>
+                <span class="text text-2">Tu mensaje ha sido enviado</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="progress"></div>
+    </div>
 
     <script src="../js/faqs.js"></script>
 </body>
