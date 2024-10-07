@@ -1,3 +1,4 @@
+//Arregle notificacion(copie cosas del archivo q subio cami)
 const FAQData = [
     {
         question: "¿Qué es TeachMe?",
@@ -30,21 +31,17 @@ const FAQData = [
         ],
     },
 ];
-
 const FAQContainer = document.querySelector(".faq-container");
-
 const removeAllExpanded = () => {
     const questionContainers = document.querySelectorAll(
         ".faq-container .question-container"
     );
-
     questionContainers.forEach((q) => {
         q.classList.remove("expanded");
         const answerContainer = q.querySelector(".answer-container");
         answerContainer.style.maxHeight = "0";
     });
 };
-
 const displayFAQ = () => {
     FAQData.forEach((q) => {
         const answerHTML = q.answer
@@ -68,7 +65,6 @@ const displayFAQ = () => {
         </div>`
             )
             .join("");
-
         const html = `<div class="question">
             ${q.question}
             <span class="question-icon">
@@ -88,27 +84,20 @@ const displayFAQ = () => {
                 </svg>
             </span>
         </div>
-
         <div class="answer-container">
             ${answerHTML}
         </div>`;
-
         const questionContainer = document.createElement("div");
         questionContainer.classList.add("question-container");
         questionContainer.innerHTML = html;
-
         FAQContainer.appendChild(questionContainer);
-
         const question = questionContainer.querySelector(".question");
-
         question.addEventListener("click", () => {
             if (!questionContainer.classList.contains("expanded")) {
                 removeAllExpanded();
             }
-
             questionContainer.classList.toggle("expanded");
             const isExpanded = questionContainer.classList.contains("expanded");
-
             const answerContainer = questionContainer.querySelector(".answer-container");
             const contentHeight = answerContainer.scrollHeight;
             answerContainer.style.maxHeight = isExpanded ? `${contentHeight}px` : "0";
@@ -123,11 +112,11 @@ document.addEventListener('DOMContentLoaded', displayFAQ);
 // Funcionalidad para el formulario de contacto
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
-    
+
     if (name && email && message) {
         // Enviar los datos a un servidor (ejemplo)
         fetch('https://tuservidor.com/api/contact', {
@@ -169,7 +158,7 @@ contactForm.addEventListener('submit', (e) => {
     setTimeout(() => {
         toast.classList.remove('active');
         progress.classList.remove('active');
-        
+
         // Recargar la página después de que se oculta la notificación
         location.reload();
     }, 5000);
@@ -179,7 +168,7 @@ contactForm.addEventListener('submit', (e) => {
 closeIcon.addEventListener('click', () => {
     toast.classList.remove('active');
     progress.classList.remove('active');
-    
+
 });
 
 const nav = document.querySelector("#nav");
@@ -190,7 +179,7 @@ const nav = document.querySelector("#nav");
     abrir.addEventListener("click", () => {
         nav.classList.add("visible");
     })
-    
+
     cerrar.addEventListener("click", () => {
         nav.classList.remove("visible");
     })
